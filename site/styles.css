@@ -1,0 +1,30 @@
+/*
+ * Design tokens. Every value must come from reference/computed.json
+ * (captured in phase 0 by scripts/capture-reference.mjs). No guessed values.
+ */
+:root {
+  color-scheme: light;
+  --font: /* exact site stack */ Arial, sans-serif;
+  --bg: transparent; /* page bg is supplied by the CMS; site bg TBC (#f5f5f5?) */
+  --fg: #000;
+  --fg-muted: /* breadcrumb grey */ ;
+  --size-body: ; --lh-body: ;
+  --size-head: ; --lh-head: ;
+  --pill-bg: #000; --pill-fg: #fff; --pill-pad: ; --pill-radius: 999px;
+  --gutter: ;
+}
+
+html,
+body {
+  margin: 0;
+  background: transparent;
+  color-scheme: light;
+}
+
+/* Set by embed-child.js once the parent answers the hello handshake. */
+html.is-autoheight,
+html.is-autoheight body {
+  overflow: hidden;
+}
+
+/* Layout: phase 2. */

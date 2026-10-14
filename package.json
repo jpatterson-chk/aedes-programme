@@ -1,0 +1,16 @@
+{
+  "name": "aedes-programme",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Exhibition programme embed for chybik-kristof.com (Aedes, Berlin, 2026)",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "capture": "node scripts/capture-reference.mjs",
+    "check-embed": "node scripts/check-embed.mjs",
+    "serve:site": "npx --yes http-server site -p 8000 -c-1",
+    "serve:dev": "npx --yes http-server dev -p 8001 -c-1"
+  },
+  "devDependencies": {}
+}

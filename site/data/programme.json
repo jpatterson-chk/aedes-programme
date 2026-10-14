@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Exhibition programme",
+    "timezone": "Europe/Berlin",
+    "startDate": "2026-10-22",
+    "endDate": "2026-12-03",
+    "defaultLocation": "Aedes – Architecture and Space, Christinenstrasse 18–19, 10119 Berlin"
+  },
+  "types": [
+    { "id": "lecture",   "label": "Lecture" },
+    { "id": "screening", "label": "Film screening" },
+    { "id": "workshop",  "label": "Workshop" },
+    { "id": "other",     "label": "Event" }
+  ],
+  "events": []
+}
