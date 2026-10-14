@@ -5,24 +5,24 @@
     "startDate": "2026-10-22",
     "endDate": "2026-12-03",
     "defaultLocation": "Aedes – Architecture and Space, Christinenstrasse 18–19, 10119 Berlin",
+    "defaultLocationShort": "Aedes",
     "registrationEmail": "berlin@chybik-kristof.com",
     "intro": "Open Studio: 5 architects, 5 days a week, 8 hours a day, for 42 days. Mon–Fri 09:00–17:00. Stop by for a cuppa and a chat!",
     "footer": "Free entry. The programme is subject to change."
   },
   "types": [
-    { "id": "lecture",     "label": "lecture",        "group": "Lectures" },
-    { "id": "screening",   "label": "film screening", "group": "Film screenings" },
-    { "id": "workshop",    "label": "workshop",       "group": "Workshops" },
-    { "id": "review",      "label": "public review",  "group": "Public reviews" },
-    { "id": "meetup",      "label": "meet-up",        "group": "Talks & meet-ups" },
-    { "id": "walk",        "label": "walk / run",     "group": "Walks & runs" },
-    { "id": "opening",     "label": "special event",  "group": "Opening & finissage" },
-    { "id": "recommended", "label": "recommended",    "group": "Recommended elsewhere" }
+    { "id": "lecture", "label": "lecture", "group": "Lectures" },
+    { "id": "screening", "label": "film screening", "group": "Film screenings" },
+    { "id": "workshop", "label": "workshop", "group": "Workshops" },
+    { "id": "review", "label": "public review", "group": "Public reviews" },
+    { "id": "meetup", "label": "meet-up", "group": "Talks & meet-ups" },
+    { "id": "walk", "label": "walk / run", "group": "Walks & runs" },
+    { "id": "opening", "label": "special event", "group": "Opening & finissage" }
   ],
   "themes": [
-    { "id": "play",     "label": "PLAY" },
-    { "id": "live",     "label": "LIVE" },
-    { "id": "adapt",    "label": "ADAPT" },
+    { "id": "play", "label": "PLAY" },
+    { "id": "live", "label": "LIVE" },
+    { "id": "adapt", "label": "ADAPT" },
     { "id": "activate", "label": "ACTIVATE" }
   ],
   "dayLabels": {
@@ -36,8 +36,7 @@
       "type": "opening",
       "title": "Exhibition opening + Open Studio launch",
       "people": ["Miriam Mlecek", "Dunya Bouchi", "Ondřej Chybík", "Michal Krištof", "Anna Beata Háblová"],
-      "description": "Opening of the Building the Existing City exhibition and launch of the Open Studio, with the announcement of the projects selected in the open call 4 Transformations for Berlin.\n\nSpeeches: Miriam Mlecek + Dunya Bouchi, Aedes, Berlin; Ondřej Chybík + Michal Krištof, CHYBÍK + KRIŠTOF, Bratislava, Brno, London, Prague.\n\nSlam poetry: Anna Beata Háblová, Prague.",
-      "missing": ["end time"]
+      "description": "Opening of the Building the Existing City exhibition and launch of the Open Studio, with the announcement of the projects selected in the open call 4 Transformations for Berlin.\n\nSpeeches: Miriam Mlecek + Dunya Bouchi, Aedes, Berlin; Ondřej Chybík + Michal Krištof, CHYBÍK + KRIŠTOF, Bratislava, Brno, London, Prague.\n\nSlam poetry: Anna Beata Háblová, Prague."
     },
     {
       "id": "2026-10-26-film-czechoslovak-architecture-58-89",
@@ -47,16 +46,14 @@
       "title": "Czechoslovak Architecture 58–89",
       "themes": ["play"],
       "description": "Director: Jan Zajíček, Czech Republic / Slovakia, 2024, 126 min.\n\nTracing the ambitious architecture of Czechoslovakia from 1958 to 1989, this documentary explores buildings conceived for collective life, culture, sport and public encounter. Through architecture and the people behind it, it asks what remains of their civic promise today.\n\nLanguage: English.",
-      "registration": true,
-      "missing": ["end time"]
+      "registration": true
     },
     {
       "id": "2026-10-27-public-review",
       "date": "2026-10-27",
       "start": "17:00",
       "type": "review",
-      "title": "4 Transformations for Berlin: public review",
-      "missing": ["end time"]
+      "title": "4 Transformations for Berlin: public review"
     },
     {
       "id": "2026-10-27-opening-lecture",
@@ -66,8 +63,7 @@
       "title": "CHYBÍK + KRIŠTOF: opening lecture & discussion",
       "people": ["Ondřej Chybík"],
       "description": "Ondřej Chybík: Building the Existing City.\n\nHow can architecture contribute to the future of cities by working with what already exists rather than continuously building anew? In his opening lecture, Ondřej Chybík, founding partner of CHYBÍK + KRIŠTOF Architects, introduces the ideas and architectural approach behind Building the Existing City. Drawing on selected projects from the studio’s practice, he explores how adaptive reuse, urban regeneration and carefully considered interventions can unlock the potential of existing buildings, public spaces and urban structures.\n\nMoving between different scales and contexts, the lecture reflects on architecture as a catalyst for social interaction, cultural continuity and sustainable urban development. It also considers the evolving role of architects — not only as designers of buildings, but as active participants in shaping the future of cities. The lecture sets the conceptual framework for the six-week open studio at Aedes, where CHYBÍK + KRIŠTOF will investigate four sites in Berlin through the themes of PLAY, LIVE, ACTIVATE and ADAPT, inviting dialogue between architectural practice, local expertise and the wider public.\n\nLanguage: English.",
-      "registration": true,
-      "missing": ["end time"]
+      "registration": true
     },
     {
       "id": "2026-10-28-archi-breakfast-1",
@@ -87,15 +83,14 @@
       "location": "Berlin, meeting point tba",
       "themes": ["activate"],
       "description": "Guided architectural walk with Bettina Güldner around Berlin.",
-      "missing": ["meeting point", "end time"]
+      "missing": ["meeting point"]
     },
     {
       "id": "2026-10-28-municipality-day-1",
       "date": "2026-10-28",
       "start": "18:00",
       "type": "meetup",
-      "title": "Municipality Day #1: open discussion",
-      "missing": ["end time"]
+      "title": "Municipality Day #1: open discussion"
     },
     {
       "id": "2026-10-29-51n4e-guest-lecture",
@@ -106,7 +101,7 @@
       "people": ["51N4E"],
       "themes": ["adapt"],
       "description": "How can we transform existing buildings and urban structures to respond to changing social, environmental and spatial needs? In this lecture, Brussels-based architecture practice 51N4E explores the potential of adaptation as a creative approach to architecture and urban transformation. Drawing on its experience with adaptive reuse, urban regeneration and the reactivation of existing spaces, the studio reflects on how architecture can build upon what is already there while introducing new uses, meanings and possibilities. As part of Building the Existing City, the lecture contributes to the theme ADAPT, opening a broader discussion on how thoughtful transformation can shape more resilient, inclusive and sustainable cities.\n\n+ Thursday Beer",
-      "missing": ["end time", "registration (not stated in draft)"]
+      "missing": ["registration (not stated in draft)"]
     },
     {
       "id": "2026-11-02-lecture-too-young-to-be-heritage",
@@ -117,23 +112,21 @@
       "themes": ["adapt"],
       "description": "Lecture Brno–Berlin. Brno Prior, Berlin and the difficult legacy of late modernism.\n\nWhat makes a building worth keeping? The former Prior department store in Brno is a powerful case study in how cities deal with the architectural legacy of late modernism. Once a symbol of modern consumption and urban transformation, the building became contested and ultimately disposable. Its story resonates with Berlin, where post-war architecture continues to provoke debates around preservation, demolition and collective memory. This lecture considers the political, economic and emotional dimensions of architectural value. At a time when reuse and embodied carbon are central to the debate, who decides which buildings deserve a future?\n\nLanguage: English.",
       "registration": true,
-      "missing": ["speaker", "end time"]
+      "missing": ["speaker"]
     },
     {
       "id": "2026-11-03-school-workshop",
       "date": "2026-11-03",
       "start": "10:00",
       "type": "workshop",
-      "title": "School workshop: participatory modelmaking",
-      "missing": ["end time"]
+      "title": "School workshop: participatory modelmaking"
     },
     {
       "id": "2026-11-03-public-review",
       "date": "2026-11-03",
       "start": "17:00",
       "type": "review",
-      "title": "4 Transformations for Berlin: public review",
-      "missing": ["end time"]
+      "title": "4 Transformations for Berlin: public review"
     },
     {
       "id": "2026-11-03-lecture-building-the-existing-city",
@@ -142,7 +135,7 @@
       "type": "lecture",
       "title": "CHYBÍK + KRIŠTOF: Building the Existing City",
       "description": "Supported by GROHE.",
-      "missing": ["speaker", "description", "end time"]
+      "missing": ["speaker", "description"]
     },
     {
       "id": "2026-11-04-archi-breakfast-2",
@@ -161,7 +154,7 @@
       "people": ["Amin Taha"],
       "themes": ["live"],
       "description": "How can architecture respond to the changing ways we live while addressing the environmental challenges of our time? In this lecture, Amin Taha, founding partner of London-based architecture practice GROUPWORK, explores the relationship between materials, construction and architectural expression. Drawing on the studio’s experimental approach and innovative use of structural stone, he reflects on new possibilities for creating sustainable, resource-conscious and inspiring spaces. As part of Building the Existing City, the lecture contributes to the theme LIVE, opening a broader discussion on how architecture can shape the places we inhabit and the ways we live together.\n\n+ Thursday Beer",
-      "missing": ["end time", "registration (not stated in draft)"]
+      "missing": ["registration (not stated in draft)"]
     },
     {
       "id": "2026-11-09-film-panelstory",
@@ -171,34 +164,21 @@
       "title": "PanelStory, or How a Housing Development Is Born",
       "themes": ["live"],
       "description": "Original title: Panelstory aneb Jak se rodí sídliště. Director: Věra Chytilová, Czechoslovakia, 1979, 100 min. English subtitles.\n\nSet in a still-unfinished housing estate in late-1970s Prague, Věra Chytilová’s sharp, energetic satire examines what it means to inhabit a city before it is ready. Amid mud, construction materials and interrupted routines, residents negotiate their homes, neighbours and shared spaces. The film exposes the friction between large-scale planning and the unpredictability of everyday life — a provocative point of departure for LIVE.",
-      "registration": true,
-      "missing": ["end time"]
+      "registration": true
     },
     {
       "id": "2026-11-10-school-workshop",
       "date": "2026-11-10",
       "start": "10:00",
       "type": "workshop",
-      "title": "School workshop: participatory modelmaking",
-      "missing": ["end time"]
+      "title": "School workshop: participatory modelmaking"
     },
     {
       "id": "2026-11-10-public-review",
       "date": "2026-11-10",
       "start": "17:00",
       "type": "review",
-      "title": "4 Transformations for Berlin: public review",
-      "missing": ["end time"]
-    },
-    {
-      "id": "2026-11-10-archint-transition-times",
-      "date": "2026-11-10",
-      "start": "18:30",
-      "end": "21:00",
-      "type": "recommended",
-      "title": "archint2026#02 Transition Times: Learnings from Architecture and Urban Development of the 1990s",
-      "location": "BHROX bauhaus reuse, Ernst-Reuter-Platz, Berlin",
-      "description": "CHYBÍK + KRIŠTOF = ARCHITECTS recommend archint at BHROX.\n\nEvent language: English."
+      "title": "4 Transformations for Berlin: public review"
     },
     {
       "id": "2026-11-11-archi-breakfast-3",
@@ -215,7 +195,7 @@
       "type": "meetup",
       "title": "What’s Cooking",
       "description": "Aedes programme.",
-      "missing": ["description", "end time", "type (unclear what kind of event this is)"]
+      "missing": ["description", "type (unclear what kind of event this is)"]
     },
     {
       "id": "2026-11-12-np2f-guest-lecture",
@@ -226,7 +206,7 @@
       "people": ["NP2F"],
       "themes": ["play"],
       "description": "How can architecture create new opportunities for play, movement and social interaction within the city? In this lecture, Paris-based architecture practice NP2F explores the role of sport, leisure and collective activities in shaping contemporary urban spaces. Drawing on its architectural approach, the studio reflects on how buildings and public spaces can encourage movement, experimentation and new forms of shared experience. As part of Building the Existing City, the lecture contributes to the theme PLAY, opening a broader discussion on how playful and inclusive environments can transform the way we experience and inhabit our cities.\n\n+ Thursday Beer",
-      "missing": ["end time", "registration (not stated in draft)"]
+      "missing": ["registration (not stated in draft)"]
     },
     {
       "id": "2026-11-15-umherum-family-workshop",
@@ -242,7 +222,7 @@
       "start": "18:30",
       "type": "screening",
       "title": "Film screening",
-      "missing": ["film title", "theme", "description", "end time"]
+      "missing": ["film title", "theme", "description"]
     },
     {
       "id": "2026-11-17-school-workshop",
@@ -257,8 +237,7 @@
       "date": "2026-11-17",
       "start": "17:00",
       "type": "review",
-      "title": "4 Transformations for Berlin: public review",
-      "missing": ["end time"]
+      "title": "4 Transformations for Berlin: public review"
     },
     {
       "id": "2026-11-17-lecture-sandalo-moholy-instagram",
@@ -268,7 +247,7 @@
       "title": "Sandalo → Moholy → Instagram",
       "description": "Lecture Brno–Berlin. Who constructs the public image of architecture?\n\nFrom Rudolf Sandalo’s photographs of Brno modernism and Lucia Moholy’s formative images of the Bauhaus to renders, drone footage and Instagram feeds, this lecture examines how images shape architectural value, reputation and collective memory. Do buildings become iconic because of their architecture — or because of the images through which we learn to see them?\n\nLanguage: English.",
       "registration": true,
-      "missing": ["speaker", "end time"]
+      "missing": ["speaker"]
     },
     {
       "id": "2026-11-18-archi-breakfast-4",
@@ -283,18 +262,7 @@
       "date": "2026-11-18",
       "start": "17:00",
       "type": "meetup",
-      "title": "Municipality Day #2: open discussion on Berlin themes",
-      "missing": ["end time"]
-    },
-    {
-      "id": "2026-11-19-archint-film-night",
-      "date": "2026-11-19",
-      "start": "20:00",
-      "end": "22:00",
-      "type": "recommended",
-      "title": "archint2026#02A film night: Urban Disobedience Toolkit",
-      "location": "KLICK Kino, Windscheidstr. 19, 10627 Berlin",
-      "description": "CHYBÍK + KRIŠTOF = ARCHITECTS recommend archint.\n\nVeřejně prospěšné práce / Urban Disobedience Toolkit. Director: Vladimír Turner, CZ 2025, OmEU.\n\nIn collaboration with the film series Architektur & Film by AkB. Event language: English."
+      "title": "Municipality Day #2: open discussion on Berlin themes"
     },
     {
       "id": "2026-11-22-umherum-family-workshop",
@@ -312,8 +280,7 @@
       "title": "First Lady of Czech Architecture",
       "themes": ["adapt"],
       "description": "Director: Jana Chytilová, Czech Republic, 2017, 53 min, English subtitles.\n\nJana Chytilová’s documentary portrays architect Alena Šrámková and her uncompromising approach to form, material and purpose. Through her life and work — from Prague’s Main Railway Station concourse to the Faculty of Architecture at CTU — the film opens a conversation about architectural endurance, shifting needs and the cultural value of buildings over time.\n\nLanguage: English.",
-      "registration": true,
-      "missing": ["end time"]
+      "registration": true
     },
     {
       "id": "2026-11-24-school-workshop",
@@ -337,7 +304,7 @@
       "start": "18:30",
       "type": "lecture",
       "title": "Public lecture & discussion: Brno",
-      "missing": ["title", "speaker", "description", "end time"]
+      "missing": ["title", "speaker", "description"]
     },
     {
       "id": "2026-11-25-archi-breakfast-5",
@@ -356,8 +323,7 @@
       "people": ["Space Popular"],
       "themes": ["activate"],
       "description": "How can architecture activate new forms of interaction, participation and collective experience across physical and digital spaces? In this lecture, architecture and design studio Space Popular explores the evolving relationship between the built environment, digital technologies and the ways we experience space. Drawing on its experimental practice across architecture, research and virtual environments, the studio reflects on how emerging forms of spatial interaction can reshape our understanding of public space and urban life. As part of Building the Existing City, the lecture contributes to the theme ACTIVATE, opening a broader discussion on how architecture can connect people, places and new forms of shared experience.\n\n+ Wednesday Beer\n\nLanguage: English.",
-      "registration": true,
-      "missing": ["end time"]
+      "registration": true
     },
     {
       "id": "2026-11-29-community-run-ride",
@@ -369,7 +335,7 @@
       "themes": ["live", "play", "activate", "adapt"],
       "description": "A 5 km route tracking the themes LIVE, PLAY, ACTIVATE and ADAPT.",
       "registration": true,
-      "missing": ["meeting point", "end time"]
+      "missing": ["meeting point"]
     },
     {
       "id": "2026-11-30-film-bohuslav-fuchs",
@@ -379,8 +345,7 @@
       "title": "European Architect Bohuslav Fuchs",
       "themes": ["activate"],
       "description": "Director: Pavel Jirásek, Czech Republic, 2016, 57 min, English subtitles.\n\nThis documentary traces the work of Bohuslav Fuchs, a leading figure of Brno functionalism whose projects — including the Avion Hotel and Zeman Café — shaped the social and architectural life of the city. His attention to openness, light and public purpose makes his legacy a compelling starting point for the ACTIVATE theme.\n\nLanguage: English.",
-      "registration": true,
-      "missing": ["end time"]
+      "registration": true
     },
     {
       "id": "2026-12-01-school-workshop",
@@ -398,7 +363,7 @@
       "title": "Building the Existing City: Public Space in Progress",
       "description": "Supported by mmcité.\n\nCan public life begin before a place is fully built? Bringing together Mendel Square in Brno and Haus der Statistik in Berlin, this discussion explores how urban spaces can evolve through temporary interventions, adaptation and everyday use. While Mendel Square demonstrates how a targeted redesign can transform a fragmented transport hub into a welcoming public space, Haus der Statistik uses temporary cultural and social activities to test new possibilities during an ongoing transformation. Both projects raise a shared question: how can activation, experimentation and public participation shape the future of our cities? Can public space be designed through use — before it is fully designed through architecture?\n\nLanguage: English.",
       "registration": true,
-      "missing": ["speaker", "end time"]
+      "missing": ["speaker"]
     },
     {
       "id": "2026-12-03-finissage",
@@ -406,8 +371,7 @@
       "start": "18:30",
       "type": "opening",
       "title": "Finissage & closing party",
-      "description": "Public presentation of the 4 Transformations for Berlin projects.",
-      "missing": ["end time"]
+      "description": "Public presentation of the 4 Transformations for Berlin projects."
     }
   ]
 }

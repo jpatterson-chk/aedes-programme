@@ -59,7 +59,7 @@ export function validate(data) {
     if (meta.registrationEmail !== undefined && !EMAIL.test(meta.registrationEmail)) {
       errors.push(`meta: "registrationEmail" is not a valid email address: ${JSON.stringify(meta.registrationEmail)}.`);
     }
-    for (const f of ['title', 'intro', 'footer']) {
+    for (const f of ['title', 'intro', 'footer', 'defaultLocationShort']) {
       if (meta[f] !== undefined && typeof meta[f] !== 'string') errors.push(`meta: "${f}" must be text.`);
     }
   }

@@ -4,7 +4,6 @@
  */
 :root {
   color-scheme: light;
-  font-size: 24px;                 /* html: 24px; 18px at max-width 736px */
   --font: Arial, sans-serif;
   --lh: 1.2;
   --fg: black;                     /* --text-color */
@@ -14,23 +13,133 @@
   --cell-pad: .3rem;               /* table section + cell padding (desktop) */
   --row-pad: .21em;                /* #c-other-projects .table__body .row */
   --row-gap-mobile: 1.2rem;        /* section.table .row margin (mobile) */
-  --head-size-mobile: 2.66666667em;
+  --head-gap: 45px;                /* .row.heading margin: 5vh at the 900px reference height. vh can't be used in an auto-height iframe */
+  --link-opacity: .6;
   --pill-bg: black; --pill-fg: #fff;
   --pill-h: 2rem; --pill-pad: 0 .8rem; --pill-radius: 1rem;
-  --link-opacity: .6;
+  /* #c-other-projects is 2fr 1fr 1fr 1.25fr .75fr. Here: time | title | type | with.
+     The time column fits "18:30" (≈2.8em) plus cell padding and a gap. */
+  --time-col: 4em;
+  --cols: var(--time-col) 2fr 1fr 1fr;
+  --day-gap: 1.2em;                /* one blank line above each date */
 }
 
-html,
-body {
-  margin: 0;
+/* Base: html { font-size: 24px } on the site; 18px at max-width 736px (html.narrow, set by app.js). */
+html {
+  font-size: 24px;
+  font-family: var(--font);
+  line-height: var(--lh);
+  color: var(--fg);
   background: transparent;
-  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
 }
+html.narrow { font-size: 18px; }
+html:not(.embedded) { background: var(--site-bg); }   /* standalone URL looks like the site */
+
+body { margin: 0; background: transparent; }
 
 /* Set by embed-child.js once the parent answers the hello handshake. */
 html.is-autoheight,
-html.is-autoheight body {
-  overflow: hidden;
-}
+html.is-autoheight body { overflow: hidden; }
 
-/* Layout: phase 2. */
+#app { padding: var(--gutter); }
+html.embedded #app { padding: 0; }         /* the CMS column supplies the gutter */
+
+.dim { color: var(--fg-muted); }
+
+a { color: inherit; text-decoration: none; opacity: var(--link-opacity); }
+@media (hover: hover) { a:hover { opacity: 1; } }
+
+:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+
+/* Intro and footer */
+
+.intro { margin: 0; }
+.footer { margin-top: var(--head-gap); }
+.footer p { margin: 0; }
+
+/* Programme table, modelled on #c-other-projects */
+
+.programme { margin: 0 calc(-1 * var(--cell-pad)); color: var(--fg-muted); }
+.programme ol { list-style: none; margin: 0; padding: 0; }
+
+.row { display: grid; grid-template-columns: var(--cols); }
+
+.row.heading { font-size: 1rem; font-weight: 400; margin: var(--head-gap) 0; }
+.row.heading .programme__title { grid-column: 1 / 3; color: var(--fg); }
+#app > .programme:first-child .row.heading { margin-top: 0; }
+
+.day__date { font-size: 1em; font-weight: 700;  /* under test: the site itself uses 400 throughout */ margin: var(--day-gap) 0 0; padding: var(--row-pad) 0; color: var(--fg); }
+.day__date .cell { grid-column: 1 / -1; }
+.day__date .dim { font-weight: 400; }            /* bold applies to the date only */
+.day:first-of-type .day__date { margin-top: 0; }
+
+.day li .row { padding: var(--row-pad) 0; }
+.lead { display: contents; }
+
+.cell { padding: 0 var(--cell-pad); min-width: 0; overflow-wrap: break-word; }
+.cell.time { color: var(--fg-muted); }        /* like [data-index]:before */
+.cell.name { color: var(--fg); }
+
+/* Status */
+.cancelled .title { text-decoration: line-through; }
+
+/* Expandable rows: native <details>, the whole row is the summary */
+summary { display: block; list-style: none; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
+@media (hover: hover) { summary:hover .title { color: var(--fg-muted); } }  /* a[data-index]:hover { color: gray } */
+.toggle::before { content: "+"; }
+details[open] .toggle::before { content: "–"; }
+
+.details { display: grid; grid-template-columns: var(--cols); color: var(--fg); padding: .6em 0 1.2em; }
+.details__body { grid-column: 2 / 5; padding: 0 var(--cell-pad); }  /* under the title, through "With" */
+.details__body > * { margin: 0; }
+.details__body > * + * { margin-top: 1em; }
+.details__body p { white-space: pre-line; }
+.details__links a { margin-right: .6em; }
+
+/* Pill, as .btn on the site */
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  height: var(--pill-h);
+  min-width: var(--pill-h);
+  line-height: var(--pill-h);
+  padding: var(--pill-pad);
+  border-radius: var(--pill-radius);
+  background: var(--pill-bg);
+  color: var(--pill-fg);
+  font-size: 1rem;
+  opacity: 1;
+  white-space: nowrap;
+}
+@media (hover: hover) { .btn:hover { opacity: 1; } }
+
+/* Mobile (≤736px viewport): as section.table at max-width 736px */
+
+html.narrow {
+  --pill-h: 2.66666667rem; --pill-pad: 0 1.06666667rem; --pill-radius: 1.33333333rem;
+}
+html.narrow .programme { margin: 0; color: var(--fg); }   /* line 2 is black on mobile */
+html.narrow .row { display: block; }
+html.narrow .row.heading { display: none; }           /* the CMS page already titles the programme */
+html.narrow .intro + .programme { margin-top: calc(2 * var(--row-gap-mobile)); }
+html.narrow .day__date { margin-top: calc(2 * var(--row-gap-mobile)); padding: 0; }
+html.narrow .day:first-of-type .day__date { margin-top: 0; }
+html.narrow .day li { margin: var(--row-gap-mobile) 0; }
+html.narrow .day li:last-child { margin-bottom: 0; }
+html.narrow .day li .row { padding: 0; }
+html.narrow .cell { display: inline-block; padding: 0; }
+html.narrow .lead { display: block; }
+html.narrow .lead .cell { display: inline; }
+html.narrow .lead .cell.time { margin-right: .25em; }   /* "594 Title" spacing on the site */
+html.narrow .cell.empty { display: none; }
+html.narrow .cell.sec:not(.empty):has(~ .cell.sec:not(.empty))::after { content: ","; margin-right: .2em; }
+html.narrow .cell.sec:not(.empty):not(:has(~ .cell.sec:not(.empty)))::after { content: "."; }  /* line 2 ends with a full stop */
+html.narrow .cell.people::before { content: "with "; }    /* "with Ondřej Chybík, lecture." */
+html.narrow .details { display: block; padding: .6em 0 0; }
+html.narrow .details__body { padding: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

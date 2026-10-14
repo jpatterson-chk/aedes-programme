@@ -29,7 +29,8 @@ If the commit gets a red ✗, **nothing changed on the live page**. Open the run
 - Links must start with `https://`.
 - `"registration": true` shows a "Register" link that opens an email to berlin@chybik-kristof.com, with the subject "Registration: <event title>".
 - `"missing": ["end time", "speaker"]` notes details still to be confirmed. It isn't shown on the page. The validator lists all of them, so delete each item once it's filled in.
-- Private, invitation-only events (press lunches, supper clubs) don't go in this file.
+- Private, invitation-only events (press lunches, supper clubs) don't go in this file. Nor do partner events elsewhere: only our own programme.
+- Only start times are shown on the page. `"end"` is optional and isn't displayed.
 
 ### Via an AI agent
 
