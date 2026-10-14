@@ -1,23 +1,38 @@
 name: Deploy programme
 
-# Manual-only until phase 5. Then add:
-#   push:
-#     branches: [main]
+# Every push is checked. Only main is deployed, and only if the checks pass:
+# a broken programme.json stops here, so the live page stays on the last good version.
 on:
+  push:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
-  deploy:
+  check:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Validate programme.json
+        run: node scripts/validate.mjs
+      - name: Check the validator catches broken data
+        run: node scripts/test-validate.mjs
+
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,11 +41,7 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 24
-      # On error the deploy stops here and the live page stays on the last good version.
-      - run: node scripts/validate.mjs
       - run: node scripts/build.mjs
-        env:
-          GITHUB_SHA: ${{ github.sha }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
