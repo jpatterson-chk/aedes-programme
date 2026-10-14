@@ -10,8 +10,8 @@
     "build": "node scripts/build.mjs",
     "capture": "node scripts/capture-reference.mjs",
     "check-embed": "node scripts/check-embed.mjs",
-    "serve:site": "npx --yes http-server site -p 8000 -c-1",
-    "serve:dev": "npx --yes http-server dev -p 8001 -c-1"
+    "serve": "node scripts/serve.mjs",
+    "test:embed": "node scripts/test-embed.mjs"
   },
   "devDependencies": {
     "playwright": "^1.64.1"

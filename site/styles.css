@@ -42,7 +42,7 @@ body { margin: 0; background: transparent; }
 html.is-autoheight,
 html.is-autoheight body { overflow: hidden; }
 
-#app { padding: var(--gutter); }
+#app { padding: var(--gutter); display: flow-root; }   /* flow-root keeps child margins inside the measured height */
 html.embedded #app { padding: 0; }         /* the CMS column supplies the gutter */
 
 .dim { color: var(--fg-muted); }
@@ -115,30 +115,31 @@ details[open] .toggle::before { content: "–"; }
 }
 @media (hover: hover) { .btn:hover { opacity: 1; } }
 
-/* Mobile (≤736px viewport): as section.table at max-width 736px */
+/* Mobile, as section.table at max-width 736px.
+   .narrow (viewport ≤736px): type and pill sizes. .stacked (our own width ≤736px): layout. */
 
 html.narrow {
   --pill-h: 2.66666667rem; --pill-pad: 0 1.06666667rem; --pill-radius: 1.33333333rem;
 }
-html.narrow .programme { margin: 0; color: var(--fg); }   /* line 2 is black on mobile */
-html.narrow .row { display: block; }
-html.narrow .row.heading { display: none; }           /* the CMS page already titles the programme */
-html.narrow .intro + .programme { margin-top: calc(2 * var(--row-gap-mobile)); }
-html.narrow .day__date { margin-top: calc(2 * var(--row-gap-mobile)); padding: 0; }
-html.narrow .day:first-of-type .day__date { margin-top: 0; }
-html.narrow .day li { margin: var(--row-gap-mobile) 0; }
-html.narrow .day li:last-child { margin-bottom: 0; }
-html.narrow .day li .row { padding: 0; }
-html.narrow .cell { display: inline-block; padding: 0; }
-html.narrow .lead { display: block; }
-html.narrow .lead .cell { display: inline; }
-html.narrow .lead .cell.time { margin-right: .25em; }   /* "594 Title" spacing on the site */
-html.narrow .cell.empty { display: none; }
-html.narrow .cell.sec:not(.empty):has(~ .cell.sec:not(.empty))::after { content: ","; margin-right: .2em; }
-html.narrow .cell.sec:not(.empty):not(:has(~ .cell.sec:not(.empty)))::after { content: "."; }  /* line 2 ends with a full stop */
-html.narrow .cell.people::before { content: "with "; }    /* "with Ondřej Chybík, lecture." */
-html.narrow .details { display: block; padding: .6em 0 0; }
-html.narrow .details__body { padding: 0; }
+html.stacked .programme { margin: 0; color: var(--fg); }   /* line 2 is black on mobile */
+html.stacked .row { display: block; }
+html.stacked .row.heading { display: none; }           /* the CMS page already titles the programme */
+html.stacked .intro + .programme { margin-top: calc(2 * var(--row-gap-mobile)); }
+html.stacked .day__date { margin-top: calc(2 * var(--row-gap-mobile)); padding: 0; }
+html.stacked .day:first-of-type .day__date { margin-top: 0; }
+html.stacked .day li { margin: var(--row-gap-mobile) 0; }
+html.stacked .day li:last-child { margin-bottom: 0; }
+html.stacked .day li .row { padding: 0; }
+html.stacked .cell { display: inline-block; padding: 0; }
+html.stacked .lead { display: block; }
+html.stacked .lead .cell { display: inline; }
+html.stacked .lead .cell.time { margin-right: .25em; }   /* "594 Title" spacing on the site */
+html.stacked .cell.empty { display: none; }
+html.stacked .cell.sec:not(.empty):has(~ .cell.sec:not(.empty))::after { content: ","; margin-right: .2em; }
+html.stacked .cell.sec:not(.empty):not(:has(~ .cell.sec:not(.empty)))::after { content: "."; }  /* line 2 ends with a full stop */
+html.stacked .cell.people::before { content: "with "; }    /* "with Ondřej Chybík, lecture." */
+html.stacked .details { display: block; padding: .6em 0 0; }
+html.stacked .details__body { padding: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }

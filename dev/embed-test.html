@@ -5,12 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Embed test harness</title>
   <!--
-    Mimics the CMS page (site background, gutter, div.primitive.text column)
-    and contains the exact CMS snippet pointing at the dev origin.
-    Serve site/ on :8000 and dev/ on :8001 so it runs cross-origin.
-    Phase 3. See PLAN.md §8 "Local harness".
+    Mimics a chybik-kristof.com CMS page (values from reference/notes.md) and embeds the
+    exact snippet from embed/cms-snippet.html, pointed at the dev origin.
+    Run `node scripts/serve.mjs`, then open http://localhost:8001/dev/embed-test.html
+    Add ?fallback to strip the onload handler and check the fixed-height scrolling fallback.
   -->
+  <style>
+    html { font-size: 24px; font-family: Arial, sans-serif; line-height: 1.2; color: black; background: #F5F5F5; }
+    @media (max-width: 736px) { html { font-size: 18px; } }
+    body { margin: 0; }
+    nav { padding: .6rem; color: #808080; text-transform: uppercase; position: sticky; top: 0; z-index: 4; background: #F5F5F5; }
+    nav b { color: black; font-weight: 400; }
+    section.content { margin-bottom: 30vh; }
+    section.content > h2 { font-size: 2.66666667rem; font-weight: 400; margin: 10vh .6rem; }
+    .primitive.text { padding: .6rem; }
+    @media (min-width: 768px) { .primitive.text { max-width: 75vw; } }
+    .primitive.text > *:first-child { margin-top: 0; }
+    .primitive.text > *:last-child { margin-bottom: 0; }
+    a { color: inherit; text-decoration: none; opacity: .6; }
+    #harness-status { position: fixed; right: 8px; bottom: 8px; z-index: 9; font: 12px/1.4 ui-monospace, monospace; background: #fff; padding: 4px 8px; border: 1px solid #ccc; }
+  </style>
 </head>
 <body>
+  <section class="content">
+    <nav><b>Chybík</b> + <b>Krištof</b> = Programme test</nav>
+    <h2>Programme</h2>
+    <div class="primitive text" id="embed"></div>
+    <div class="primitive text"><p><a href="http://localhost:8000/" target="_blank">Open programme in a new tab</a></p></div>
+  </section>
+  <div id="harness-status" aria-hidden="true"></div>
+  <script>
+    const PROD_PAGE = 'https://jpatterson-chk.github.io/aedes-programme/';
+    const PROD_ORIGIN = 'https://jpatterson-chk.github.io';
+    const DEV_ORIGIN = 'http://localhost:8000';
+
+    (async () => {
+      const snippet = await (await fetch('/embed/cms-snippet.html', { cache: 'no-store' })).text();
+      const box = document.getElementById('embed');
+      box.innerHTML = snippet.replaceAll(PROD_PAGE, `${DEV_ORIGIN}/`).replaceAll(PROD_ORIGIN, DEV_ORIGIN);
+      const iframe = box.querySelector('iframe');
+      const fallback = new URLSearchParams(location.search).has('fallback');
+      if (fallback) iframe.removeAttribute('onload');   // runs before the iframe's load event
+
+      const status = document.getElementById('harness-status');
+      const update = () => {
+        status.textContent = `${fallback ? 'FALLBACK · ' : ''}viewport ${innerWidth}px · iframe ${Math.round(iframe.getBoundingClientRect().width)}×${Math.round(iframe.getBoundingClientRect().height)}px`;
+      };
+      new ResizeObserver(update).observe(iframe);
+      addEventListener('resize', update);
+      update();
+    })();
+  </script>
 </body>
 </html>
