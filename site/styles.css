@@ -1,17 +1,23 @@
 /*
- * Design tokens. Every value must come from reference/computed.json
- * (captured in phase 0 by scripts/capture-reference.mjs). No guessed values.
+ * Design tokens. Every value comes from reference/ (computed.json, notes.md,
+ * css/index-fabe6ffa.css), captured by scripts/capture-reference.mjs. No guessed values.
  */
 :root {
   color-scheme: light;
-  --font: /* exact site stack */ Arial, sans-serif;
-  --bg: transparent; /* page bg is supplied by the CMS; site bg TBC (#f5f5f5?) */
-  --fg: #000;
-  --fg-muted: /* breadcrumb grey */ ;
-  --size-body: ; --lh-body: ;
-  --size-head: ; --lh-head: ;
-  --pill-bg: #000; --pill-fg: #fff; --pill-pad: ; --pill-radius: 999px;
-  --gutter: ;
+  font-size: 24px;                 /* html: 24px; 18px at max-width 736px */
+  --font: Arial, sans-serif;
+  --lh: 1.2;
+  --fg: black;                     /* --text-color */
+  --fg-muted: #808080;             /* --dim-color */
+  --site-bg: #F5F5F5;              /* --background-color; the iframe itself stays transparent */
+  --gutter: .6rem;                 /* nav / .primitive.text padding */
+  --cell-pad: .3rem;               /* table section + cell padding (desktop) */
+  --row-pad: .21em;                /* #c-other-projects .table__body .row */
+  --row-gap-mobile: 1.2rem;        /* section.table .row margin (mobile) */
+  --head-size-mobile: 2.66666667em;
+  --pill-bg: black; --pill-fg: #fff;
+  --pill-h: 2rem; --pill-pad: 0 .8rem; --pill-radius: 1rem;
+  --link-opacity: .6;
 }
 
 html,

@@ -1,0 +1,2762 @@
+{
+  "capturedAt": "2026-10-14T14:09:04.323Z",
+  "widths": [
+    1440,
+    1024,
+    768,
+    390
+  ],
+  "pages": {
+    "home": {
+      "url": "https://chybik-kristof.com/",
+      "widths": {
+        "390": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF\nJihlava Municipal Arena =\na porous urban ca",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "21285.5px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 21285.5
+            }
+          },
+          "body": {
+            "selector": "body",
+            "text": "CHYBÍK + KRIŠTOF\nJihlava Municipal Arena =\na porous urban ca",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "21285.5px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 21285.5
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "10.8px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "21.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 43.2
+            }
+          },
+          "nav.link": {
+            "selector": "nav a",
+            "text": "CHYBÍK + KRIŠTOF",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "21.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 10.8,
+              "width": 165.2,
+              "height": 21.6
+            }
+          },
+          "nav.dim": {
+            "selector": "nav .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 82.8,
+              "y": 10.8,
+              "width": 10.5,
+              "height": 20
+            }
+          },
+          "table.section": {
+            "selector": "#c-other-projects",
+            "text": "Other projects\nAsllan Rusi Sport Palace Revitalisation\nTiran",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 10.8px",
+              "margin": "0px 0px 90px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "1419.78px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 19070.9,
+              "width": 390,
+              "height": 1419.8
+            }
+          },
+          "table.heading": {
+            "selector": "#c-other-projects .row.heading",
+            "text": "Other projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "48px",
+              "line-height": "57.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "45px 0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "57.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 19070.9,
+              "width": 368.4,
+              "height": 57.6
+            }
+          },
+          "table.title": {
+            "selector": "#c-other-projects .row.heading .cell:first-child",
+            "text": "Other projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "48px",
+              "line-height": "57.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "57.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 19070.9,
+              "width": 368.4,
+              "height": 57.6
+            }
+          },
+          "table.label": {
+            "selector": "#c-other-projects .row.heading .cell:nth-child(2)",
+            "text": "City",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "48px",
+              "line-height": "57.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "none",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          "table.row": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1)",
+            "text": "Asllan Rusi Sport Palace Revitalisation\nTirana, ALtransforma",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "21.6px 0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "43.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 19195.1,
+              "width": 368.4,
+              "height": 43.2
+            }
+          },
+          "table.row2": {
+            "selector": "#c-other-projects .table__body .row:nth-child(2)",
+            "text": "Nový Červeňák\n2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "21.6px 0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "43.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 19259.9,
+              "width": 368.4,
+              "height": 43.2
+            }
+          },
+          "table.rowTitle": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:first-child",
+            "text": "Asllan Rusi Sport Palace Revitalisation",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "21.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 19195.1,
+              "width": 368.4,
+              "height": 21.6
+            }
+          },
+          "table.greyCell": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:nth-child(2)",
+            "text": "Tirana, AL",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "inline-block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "21.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 19216.7,
+              "width": 90,
+              "height": 21.6
+            }
+          },
+          "table.year": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell.align-right",
+            "text": "2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "inline-block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "21.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 325.1,
+              "y": 19216.7,
+              "width": 40,
+              "height": 21.6
+            }
+          },
+          "table.expand": {
+            "selector": "#c-other-projects .table__expand",
+            "text": "View more +",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "block",
+              "padding": "0px",
+              "margin": "21.6px 0px 0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "21.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 20469.1,
+              "width": 100.2,
+              "height": 21.6
+            }
+          },
+          "table.expandDim": {
+            "selector": "#c-other-projects .table__expand .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 100.5,
+              "y": 20469.1,
+              "width": 10.5,
+              "height": 20
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "pill": {
+            "selector": ".btn",
+            "text": "Selected projects\nSelected projects\nOther projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "48px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 19.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "24px",
+              "background-color": "rgb(0, 0, 0)",
+              "height": "48px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 10.8,
+              "y": 841.2,
+              "width": 176.5,
+              "height": 48
+            }
+          },
+          "table.columns": [
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 10.8,
+              "y": 19195.1,
+              "width": 368.4,
+              "text": "Asllan Rusi Sport Palace Revitalisation"
+            },
+            {
+              "class": "cell",
+              "display": "inline-block",
+              "x": 10.8,
+              "y": 19216.7,
+              "width": 90,
+              "text": "Tirana, AL"
+            },
+            {
+              "class": "cell",
+              "display": "inline-block",
+              "x": 100.8,
+              "y": 19216.7,
+              "width": 123.7,
+              "text": "transformation"
+            },
+            {
+              "class": "cell",
+              "display": "inline-block",
+              "x": 224.5,
+              "y": 19216.7,
+              "width": 100.7,
+              "text": "competition"
+            },
+            {
+              "class": "cell align-right",
+              "display": "inline-block",
+              "x": 325.1,
+              "y": 19216.7,
+              "width": 40,
+              "text": "2025"
+            }
+          ],
+          "table.rowPitch": 64.8,
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        },
+        "768": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nJihlava Municipal Arena =\na po",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "12418.6px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 12418.6
+            }
+          },
+          "body": {
+            "selector": "body",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nJihlava Municipal Arena =\na po",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "12418.6px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 12418.6
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "14.4px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 57.6
+            }
+          },
+          "nav.link": {
+            "selector": "nav a",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 14.4,
+              "y": 14.4,
+              "width": 399.7,
+              "height": 28.8
+            }
+          },
+          "nav.dim": {
+            "selector": "nav .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 110.4,
+              "y": 14.4,
+              "width": 14,
+              "height": 27
+            }
+          },
+          "table.section": {
+            "selector": "#c-other-projects",
+            "text": "Other projects\nCity\nCategory\nStatus\nYear\nAsllan Rusi Sport P",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px 0px 90px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "655.984px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 11098.7,
+              "width": 768,
+              "height": 656
+            }
+          },
+          "table.heading": {
+            "selector": "#c-other-projects .row.heading",
+            "text": "Other projects\nCity\nCategory\nStatus\nYear",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "0px",
+              "margin": "45px 0px",
+              "gap": "normal",
+              "grid-template-columns": "251.203px 125.594px 125.609px 157px 94.2031px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 11098.7,
+              "width": 753.6,
+              "height": 28.8
+            }
+          },
+          "table.title": {
+            "selector": "#c-other-projects .row.heading .cell:first-child",
+            "text": "Other projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 11098.7,
+              "width": 251.2,
+              "height": 28.8
+            }
+          },
+          "table.label": {
+            "selector": "#c-other-projects .row.heading .cell:nth-child(2)",
+            "text": "City",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 258.4,
+              "y": 11098.7,
+              "width": 125.6,
+              "height": 28.8
+            }
+          },
+          "table.row": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1)",
+            "text": "Asllan Rusi Sport Palace Revitalisation\nTirana, AL\ntransform",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "3.36px 0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "251.203px 125.594px 125.609px 157px 94.2031px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 11172.5,
+              "width": 753.6,
+              "height": 25.9
+            }
+          },
+          "table.row2": {
+            "selector": "#c-other-projects .table__body .row:nth-child(2)",
+            "text": "Nový Červeňák\n2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "3.36px 0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "251.203px 125.594px 125.609px 157px 94.2031px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 11198.4,
+              "width": 753.6,
+              "height": 25.9
+            }
+          },
+          "table.rowTitle": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:first-child",
+            "text": "Asllan Rusi Sport Palace Revitalisation",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 11175.8,
+              "width": 251.2,
+              "height": 19.2
+            }
+          },
+          "table.greyCell": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:nth-child(2)",
+            "text": "Tirana, AL",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 258.4,
+              "y": 11175.8,
+              "width": 125.6,
+              "height": 19.2
+            }
+          },
+          "table.year": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell.align-right",
+            "text": "2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "right",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 666.6,
+              "y": 11175.8,
+              "width": 94.2,
+              "height": 19.2
+            }
+          },
+          "table.expand": {
+            "selector": "#c-other-projects .table__expand",
+            "text": "View more +",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "45px 0px 0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 11735.5,
+              "width": 103.5,
+              "height": 19.2
+            }
+          },
+          "table.expandDim": {
+            "selector": "#c-other-projects .table__expand .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 94.1,
+              "y": 11736.5,
+              "width": 9.3,
+              "height": 17
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "pill": {
+            "selector": ".btn",
+            "text": "Selected projects\nSelected projects\nOther projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "48px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 19.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "24px",
+              "background-color": "rgb(0, 0, 0)",
+              "height": "48px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 14.4,
+              "y": 837.6,
+              "width": 222.5,
+              "height": 48
+            }
+          },
+          "table.columns": [
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 7.2,
+              "y": 11175.8,
+              "width": 251.2,
+              "text": "Asllan Rusi Sport Palace Revitalisation"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 258.4,
+              "y": 11175.8,
+              "width": 125.6,
+              "text": "Tirana, AL"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 384,
+              "y": 11175.8,
+              "width": 125.6,
+              "text": "transformation"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 509.6,
+              "y": 11175.8,
+              "width": 157,
+              "text": "competition"
+            },
+            {
+              "class": "cell align-right",
+              "display": "block",
+              "x": 666.6,
+              "y": 11175.8,
+              "width": 94.2,
+              "text": "2025"
+            }
+          ],
+          "table.rowPitch": 25.9,
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        },
+        "1024": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nJihlava Municipal Arena =\na po",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "8373.53px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 8373.5
+            }
+          },
+          "body": {
+            "selector": "body",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nJihlava Municipal Arena =\na po",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "8373.53px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 8373.5
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "14.4px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 57.6
+            }
+          },
+          "nav.link": {
+            "selector": "nav a",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 14.4,
+              "y": 14.4,
+              "width": 399.7,
+              "height": 28.8
+            }
+          },
+          "nav.dim": {
+            "selector": "nav .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 110.4,
+              "y": 14.4,
+              "width": 14,
+              "height": 27
+            }
+          },
+          "table.section": {
+            "selector": "#c-other-projects",
+            "text": "Other projects\nCity\nCategory\nStatus\nYear\nAsllan Rusi Sport P",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px 0px 90px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "655.984px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 7053.6,
+              "width": 1024,
+              "height": 656
+            }
+          },
+          "table.heading": {
+            "selector": "#c-other-projects .row.heading",
+            "text": "Other projects\nCity\nCategory\nStatus\nYear",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "0px",
+              "margin": "45px 0px",
+              "gap": "normal",
+              "grid-template-columns": "336.531px 168.266px 168.281px 210.328px 126.203px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 7053.6,
+              "width": 1009.6,
+              "height": 28.8
+            }
+          },
+          "table.title": {
+            "selector": "#c-other-projects .row.heading .cell:first-child",
+            "text": "Other projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 7053.6,
+              "width": 336.5,
+              "height": 28.8
+            }
+          },
+          "table.label": {
+            "selector": "#c-other-projects .row.heading .cell:nth-child(2)",
+            "text": "City",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 343.7,
+              "y": 7053.6,
+              "width": 168.3,
+              "height": 28.8
+            }
+          },
+          "table.row": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1)",
+            "text": "Asllan Rusi Sport Palace Revitalisation\nTirana, AL\ntransform",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "3.36px 0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "336.531px 168.266px 168.281px 210.328px 126.203px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 7127.4,
+              "width": 1009.6,
+              "height": 25.9
+            }
+          },
+          "table.row2": {
+            "selector": "#c-other-projects .table__body .row:nth-child(2)",
+            "text": "Nový Červeňák\n2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "3.36px 0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "336.531px 168.266px 168.281px 210.328px 126.203px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 7153.3,
+              "width": 1009.6,
+              "height": 25.9
+            }
+          },
+          "table.rowTitle": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:first-child",
+            "text": "Asllan Rusi Sport Palace Revitalisation",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 7130.7,
+              "width": 336.5,
+              "height": 19.2
+            }
+          },
+          "table.greyCell": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:nth-child(2)",
+            "text": "Tirana, AL",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 343.7,
+              "y": 7130.7,
+              "width": 168.3,
+              "height": 19.2
+            }
+          },
+          "table.year": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell.align-right",
+            "text": "2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "right",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 890.6,
+              "y": 7130.7,
+              "width": 126.2,
+              "height": 19.2
+            }
+          },
+          "table.expand": {
+            "selector": "#c-other-projects .table__expand",
+            "text": "View more +",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "45px 0px 0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "19.1875px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 7690.4,
+              "width": 103.5,
+              "height": 19.2
+            }
+          },
+          "table.expandDim": {
+            "selector": "#c-other-projects .table__expand .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "16px",
+              "line-height": "19.2px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 94.1,
+              "y": 7691.4,
+              "width": 9.3,
+              "height": 17
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "pill": {
+            "selector": ".btn",
+            "text": "Selected projects\nSelected projects\nOther projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "48px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 19.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "24px",
+              "background-color": "rgb(0, 0, 0)",
+              "height": "48px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 14.4,
+              "y": 837.6,
+              "width": 222.5,
+              "height": 48
+            }
+          },
+          "table.columns": [
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 7.2,
+              "y": 7130.7,
+              "width": 336.5,
+              "text": "Asllan Rusi Sport Palace Revitalisation"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 343.7,
+              "y": 7130.7,
+              "width": 168.3,
+              "text": "Tirana, AL"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 512,
+              "y": 7130.7,
+              "width": 168.3,
+              "text": "transformation"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 680.3,
+              "y": 7130.7,
+              "width": 210.3,
+              "text": "competition"
+            },
+            {
+              "class": "cell align-right",
+              "display": "block",
+              "x": 890.6,
+              "y": 7130.7,
+              "width": 126.2,
+              "text": "2025"
+            }
+          ],
+          "table.rowPitch": 25.9,
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        },
+        "1440": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nJihlava Municipal Arena =\na po",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "6996.42px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 6996.4
+            }
+          },
+          "body": {
+            "selector": "body",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nJihlava Municipal Arena =\na po",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "6996.42px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 6996.4
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "14.4px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 57.6
+            }
+          },
+          "nav.link": {
+            "selector": "nav a",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 14.4,
+              "y": 14.4,
+              "width": 399.7,
+              "height": 28.8
+            }
+          },
+          "nav.dim": {
+            "selector": "nav .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 110.4,
+              "y": 14.4,
+              "width": 14,
+              "height": 27
+            }
+          },
+          "table.section": {
+            "selector": "#c-other-projects",
+            "text": "Other projects\nCity\nCategory\nStatus\nYear\nAsllan Rusi Sport P",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px 0px 90px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "924.594px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 5407.8,
+              "width": 1440,
+              "height": 924.6
+            }
+          },
+          "table.heading": {
+            "selector": "#c-other-projects .row.heading",
+            "text": "Other projects\nCity\nCategory\nStatus\nYear",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "0px",
+              "margin": "45px 0px",
+              "gap": "normal",
+              "grid-template-columns": "475.203px 237.609px 237.594px 297.016px 178.203px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 5407.8,
+              "width": 1425.6,
+              "height": 28.8
+            }
+          },
+          "table.title": {
+            "selector": "#c-other-projects .row.heading .cell:first-child",
+            "text": "Other projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 5407.8,
+              "width": 475.2,
+              "height": 28.8
+            }
+          },
+          "table.label": {
+            "selector": "#c-other-projects .row.heading .cell:nth-child(2)",
+            "text": "City",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 482.4,
+              "y": 5407.8,
+              "width": 237.6,
+              "height": 28.8
+            }
+          },
+          "table.row": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1)",
+            "text": "Asllan Rusi Sport Palace Revitalisation\nTirana, AL\ntransform",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "5.04px 0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "475.203px 237.609px 237.594px 297.016px 178.203px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 5481.6,
+              "width": 1425.6,
+              "height": 38.9
+            }
+          },
+          "table.row2": {
+            "selector": "#c-other-projects .table__body .row:nth-child(2)",
+            "text": "Nový Červeňák\n2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "grid",
+              "padding": "5.04px 0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "475.203px 237.609px 237.594px 297.016px 178.203px",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 5520.5,
+              "width": 1425.6,
+              "height": 38.9
+            }
+          },
+          "table.rowTitle": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:first-child",
+            "text": "Asllan Rusi Sport Palace Revitalisation",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 5486.7,
+              "width": 475.2,
+              "height": 28.8
+            }
+          },
+          "table.greyCell": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell:nth-child(2)",
+            "text": "Tirana, AL",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 482.4,
+              "y": 5486.7,
+              "width": 237.6,
+              "height": 28.8
+            }
+          },
+          "table.year": {
+            "selector": "#c-other-projects .table__body .row:nth-child(1) .cell.align-right",
+            "text": "2025",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "right",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "nowrap"
+            },
+            "box": {
+              "x": 1254.6,
+              "y": 5486.7,
+              "width": 178.2,
+              "height": 28.8
+            }
+          },
+          "table.expand": {
+            "selector": "#c-other-projects .table__expand",
+            "text": "View more +",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "block",
+              "padding": "0px 7.2px",
+              "margin": "45px 0px 0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 7.2,
+              "y": 6303.6,
+              "width": 148,
+              "height": 28.8
+            }
+          },
+          "table.expandDim": {
+            "selector": "#c-other-projects .table__expand .dim",
+            "text": "+",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "center",
+              "display": "inline",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgba(0, 0, 0, 0)",
+              "height": "auto",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 134,
+              "y": 6303.6,
+              "width": 14,
+              "height": 27
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "pill": {
+            "selector": ".btn",
+            "text": "Selected projects\nSelected projects\nOther projects",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "48px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(255, 255, 255)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px 19.2px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "24px",
+              "background-color": "rgb(0, 0, 0)",
+              "height": "48px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 14.4,
+              "y": 837.6,
+              "width": 222.5,
+              "height": 48
+            }
+          },
+          "table.columns": [
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 7.2,
+              "y": 5486.7,
+              "width": 475.2,
+              "text": "Asllan Rusi Sport Palace Revitalisation"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 482.4,
+              "y": 5486.7,
+              "width": 237.6,
+              "text": "Tirana, AL"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 720,
+              "y": 5486.7,
+              "width": 237.6,
+              "text": "transformation"
+            },
+            {
+              "class": "cell",
+              "display": "block",
+              "x": 957.6,
+              "y": 5486.7,
+              "width": 297,
+              "text": "competition"
+            },
+            {
+              "class": "cell align-right",
+              "display": "block",
+              "x": 1254.6,
+              "y": 5486.7,
+              "width": 178.2,
+              "text": "2025"
+            }
+          ],
+          "table.rowPitch": 38.9,
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        }
+      }
+    },
+    "programme-test": {
+      "url": "https://chybik-kristof.com/programme-test/",
+      "widths": {
+        "390": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF\nCHYBÍK + KRIŠTOF\nInstagram\nFacebook\nLinkedI",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "747.938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 747.9
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "18px",
+              "line-height": "21.6px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "10.8px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "21.5938px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 43.2
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "iframe": {
+            "selector": ".primitive.text iframe",
+            "missing": true
+          },
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        },
+        "768": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nCHYBÍK + KRIŠTOF\nInstagram\nFac",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "631.562px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 631.6
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "14.4px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 57.6
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "iframe": {
+            "selector": ".primitive.text iframe",
+            "missing": true
+          },
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        },
+        "1024": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nCHYBÍK + KRIŠTOF\nInstagram\nFac",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "631.562px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 631.6
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "14.4px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 57.6
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "iframe": {
+            "selector": ".primitive.text iframe",
+            "missing": true
+          },
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        },
+        "1440": {
+          "html": {
+            "selector": "html",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS\nCHYBÍK + KRIŠTOF\nInstagram\nFac",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(0, 0, 0)",
+              "opacity": "1",
+              "text-transform": "none",
+              "text-align": "start",
+              "display": "block",
+              "padding": "0px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "631.562px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 631.6
+            }
+          },
+          "nav": {
+            "selector": "nav",
+            "text": "CHYBÍK + KRIŠTOF = ARCHITECTS",
+            "styles": {
+              "font-family": "Arial, sans-serif",
+              "font-size": "24px",
+              "line-height": "28.8px",
+              "letter-spacing": "normal",
+              "font-weight": "400",
+              "color": "rgb(128, 128, 128)",
+              "opacity": "1",
+              "text-transform": "uppercase",
+              "text-align": "start",
+              "display": "flex",
+              "padding": "14.4px",
+              "margin": "0px",
+              "gap": "normal",
+              "grid-template-columns": "none",
+              "border-radius": "0px",
+              "background-color": "rgb(245, 245, 245)",
+              "height": "28.7969px",
+              "max-width": "none",
+              "white-space": "normal"
+            },
+            "box": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 57.6
+            }
+          },
+          "content.h2": {
+            "selector": "section.content > h2",
+            "missing": true
+          },
+          "text.block": {
+            "selector": ".primitive.text",
+            "missing": true
+          },
+          "text.paragraph": {
+            "selector": ".primitive.text p",
+            "missing": true
+          },
+          "iframe": {
+            "selector": ".primitive.text iframe",
+            "missing": true
+          },
+          "css.vars": {
+            "--dim-color": "#808080",
+            "--text-color": "black",
+            "--background-color": "#F5F5F5"
+          }
+        }
+      }
+    }
+  },
+  "stylesheets": [
+    {
+      "href": "https://chybik-kristof.com/assets/index-fabe6ffa.css",
+      "file": "css/index-fabe6ffa.css",
+      "media": [
+        "@media (hover: hover)",
+        "@media (hover: none)",
+        "@media (max-width: 109.9px)",
+        "@media (max-width: 127.65714286px)",
+        "@media (max-width: 151.33333333px)",
+        "@media (max-width: 184.48px)",
+        "@media (max-width: 234.2px)",
+        "@media (max-width: 248.6px)",
+        "@media (max-width: 284.11428571px)",
+        "@media (max-width: 317.06666667px)",
+        "@media (max-width: 331.46666667px)",
+        "@media (max-width: 397.76px)",
+        "@media (max-width: 420px)",
+        "@media (max-width: 482.8px)",
+        "@media (max-width: 497.2px)",
+        "@media (max-width: 550px)",
+        "@media (max-width: 640px)",
+        "@media (max-width: 650px)",
+        "@media (max-width: 662.93333333px)",
+        "@media (max-width: 736px)",
+        "@media (max-width: 812px)",
+        "@media (max-width: 994.4px)",
+        "@media (min-width: 1000px)",
+        "@media (min-width: 1001px)",
+        "@media (min-width: 110.9px)",
+        "@media (min-width: 128.65714286px)",
+        "@media (min-width: 1400px)",
+        "@media (min-width: 152.33333333px)",
+        "@media (min-width: 185.48px)",
+        "@media (min-width: 235.2px)",
+        "@media (min-width: 318.06666667px)",
+        "@media (min-width: 483.8px)",
+        "@media (min-width: 651px)",
+        "@media (min-width: 701px)",
+        "@media (min-width: 737px)",
+        "@media (min-width: 737px) and (max-width: 1220px)",
+        "@media (min-width: 768px)"
+      ]
+    }
+  ]
+}

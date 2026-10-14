@@ -1,0 +1,41 @@
+nav
+  a.menu__a  "CHYBÍK KRIŠTOF"
+    span.dim  "+"
+    span.optional.dim  "= ARCHITECTS"
+  div.expression.menu__b
+    div.part.fix
+      a  "CHYBÍK"
+      span.op  "+"
+    div.part.fix
+      a  "KRIŠTOF"
+      span.op  "+"
+    div.part.extra
+      span  "= ARCHITECTS"
+    div.part
+      a  "Architects"
+      span.op  "+"
+    div.part
+      a  "Clients"
+      span.op  "+"
+    div.part  "="
+      a  "Countries"
+    div.part
+      a.active  "Projects"
+      span.op  ";"
+    div.part
+      a  "Innovations"
+      span.op  ";"
+    div.part
+      a  "Product"
+      span.op  ";"
+    div.part
+      a  "Book"
+      span.op  ";"
+    div.part
+      a  "Jobs"
+      span.op  ";"
+    div.part
+      a  "Offices"
+      span.op  ";"
+  div.spacer
+  button.menu__toggle

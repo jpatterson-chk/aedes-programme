@@ -1,0 +1,83 @@
+section#c-other-projects.table.paged.content-group
+  div.table__heading
+    h2.row.heading
+      div.cell  "Other projects"
+      div.cell  "City"
+      div.cell  "Category"
+      div.cell  "Status"
+      div.cell  "Year"
+  div.table__body
+    div.row
+      a.cell  "Asllan Rusi Sport Palace Revitalisation"
+      div.cell  "Tirana, AL"
+      div.cell  "transformation"
+      div.cell  "competition"
+      div.cell.align-right  "2025"
+    div.row
+      div.cell  "Nový Červeňák"
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+      div.cell.align-right  "2025"
+    div.row
+      div.cell  "Florenc West"
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+      div.cell.align-right  "2025"
+    div.row
+      div.cell  "An der Kuhtrift"
+      div.cell  "Vienna, AT"
+      div.cell.empty
+      div.cell.empty
+      div.cell.align-right  "2024"
+    div.row
+      div.cell  "Ostrava Žofinka"
+      div.cell  "Ostrava, CZ"
+      div.cell.empty
+      div.cell  "competition"
+      div.cell.align-right  "2024—2025"
+    div.row
+      div.cell  "Dual Competition Tirana"
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+      div.cell.align-right  "2024"
+    div.row
+      div.cell  "EXPO Real 2024"
+      div.cell  "Munich, DE"
+      div.cell  "pavilion"
+      div.cell  "completed"
+      div.cell.align-right  "2024"
+    div.row
+      div.cell  "Malinovskeho kasarne"
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+    div.row
+      div.cell  "Otevreny Budvar"
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+    div.row
+      div.cell  "EXPO Albania"
+      div.cell  "Tirana, AL"
+      div.cell  "cultural"
+      div.cell  "competition"
+      div.cell.align-right  "2024"
+    div.row
+      div.cell  "Bytovy dum 3A"
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+      div.cell.empty
+    div.row
+      div.cell  "Haus der Jugend"
+      div.cell  "Vienna, AT"
+      div.cell  "mixed-use"
+      div.cell  "competition"
+      div.cell.align-right  "2023"
+  button.table__expand  "View more"
+    span.dim  "+"

@@ -1,0 +1,270 @@
+section.content
+  nav
+    a.menu__a  "CHYBÍK KRIŠTOF"
+      span.dim  "+"
+      span.optional.dim  "= ARCHITECTS"
+    div.expression.menu__b
+      div.part.fix
+        a  "CHYBÍK"
+        span.op  "+"
+      div.part.fix
+        a  "KRIŠTOF"
+        span.op  "+"
+      div.part.extra
+        span  "= ARCHITECTS"
+      div.part
+        a  "Architects"
+        span.op  "+"
+      div.part
+        a  "Clients"
+        span.op  "+"
+      div.part  "="
+        a  "Countries"
+      div.part
+        a.active  "Projects"
+        span.op  ";"
+      div.part
+        a  "Innovations"
+        span.op  ";"
+      div.part
+        a  "Product"
+        span.op  ";"
+      div.part
+        a  "Book"
+        span.op  ";"
+      div.part
+        a  "Jobs"
+        span.op  ";"
+      div.part
+        a  "Offices"
+        span.op  ";"
+    div.spacer
+    button.menu__toggle
+  section#c-selected-projects.grid.align-top.captions.margins.content-group
+    a#c-19a7a682-ce19-4e59-9631-4719f4ffa36f
+      div.label  "Jihlava Municipal Arena ="
+        span.caption  "a porous urban campus opening its multipurpose infrastructur"
+      div#c-e79e6f09-45c7-43d7-80f9-4d2be313d16f.primitive.image
+        img
+    a#c-8413af48-2d50-4930-baac-1cc40ade91ab
+      div.label  "Lahofer Winery ="
+        span.caption  "a productive landscape extended into a public destination fo"
+      div#c-bec7aaa2-f7fe-4ac4-97a3-a0e96ebf6358.primitive.image
+        img
+    a#c-3f8c04e2-39f5-4ac6-aa1f-13ec74b5dc5b
+      div.label  "Corner Building at Municipal Arena ="
+        span.caption  "mediating between arena and city, a mixed-use urban marker t"
+      div#c-b923ac36-c26a-4c71-aaa3-2274e5b5704c.primitive.image
+        img
+    a#c-22f0d33b-af5b-4d58-9758-9318d82ff975
+      div.label  "London Bowl ="
+        span.caption  "a hybrid venue reframed as part of the neighbourhood beyond "
+      div#c-3b2a0a31-580b-4675-a82f-e1a5d12f6120.primitive.image
+        img
+    a#c-25b0fb0d-2b2a-413a-951d-6d263a04b559
+      div.label  "Forestry HQ Offices in the Forest ="
+        span.caption  "the Czech Republic’s largest timber building, expanding into"
+      div#c-c01b9266-90ac-4547-874f-0fdc4b25b0c4.primitive.image
+        img
+    a#c-dcec9436-adb2-4d2a-969a-8667711f0d95
+      div.label  "Mendel's Greenhouse ="
+        span.caption  "a lost greenhouse reimagined through Mendel’s scientific leg"
+      div#c-588c8f5f-01c3-4cc8-8da8-3b5e121a2516.primitive.image
+        img
+    a#c-8ca9727b-eeef-4f7c-a73a-d1061ff88500
+      div.label  "House of Wine Tasting ="
+        span.caption  "a contemporary tasting space carved into the city's accumula"
+      div#c-de2cf76d-acf7-4624-b460-a2e4ca39faf8.primitive.image
+        img
+    a#c-f65acb00-d0e9-4699-b1e9-c19e3864a86a
+      div.label  "Zvonařka Bus Station ="
+        span.caption  "A self-initiated transformation of Brutalist infrastructure "
+      div#c-7d90d1ed-4e3d-42ce-9795-22d82d89dd23.primitive.image
+        img
+    a#c-7c9417a1-95ba-4d7a-95d2-9cdec5c7f838
+      div.label  "Nusle Brewery ="
+        span.caption  "an industrial brownfield turned into a neighbourhood, stitch"
+      div#c-db669937-0137-4961-a60b-ac0cb5d2485e.primitive.image
+        img
+    a#c-4fa25572-eafd-4f69-9c45-40b07ca0ac51
+      div.label  "Vernacular Preschool in Mulbekh ="
+        span.caption  "a place for education and community life shaped by local bui"
+      div#c-ec8d594a-6a78-4ca7-8017-2b542828472d.primitive.image
+        img
+    a#c-61ab3754-7691-424c-8edf-dc3a512f6523
+      div.label  "Waltrovka Masterplan for 630 Homes ="
+        span.caption  "a diverse residential landscape organised along a continuous"
+      div#c-63d91c28-bcac-4917-b6ff-38c8db063a02.primitive.image
+        img
+    a#c-d5158317-ef0f-4912-ac73-1e376c96f06d
+      div.label  "Mendel Square ="
+        span.caption  "a fragmented traffic intersection reclaimed as public space,"
+      div#c-84bdb445-e1a6-4b93-b521-10d612eb7c35.primitive.image
+        img
+  section#c-other-projects.table.paged.content-group
+    div.table__heading
+      h2.row.heading
+        div.cell  "Other projects"
+        div.cell  "City"
+        div.cell  "Category"
+        div.cell  "Status"
+        div.cell  "Year"
+    div.table__body
+      div.row
+        a.cell  "Asllan Rusi Sport Palace Revitalisation"
+        div.cell  "Tirana, AL"
+        div.cell  "transformation"
+        div.cell  "competition"
+        div.cell.align-right  "2025"
+      div.row
+        div.cell  "Nový Červeňák"
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+        div.cell.align-right  "2025"
+      div.row
+        div.cell  "Florenc West"
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+        div.cell.align-right  "2025"
+      div.row
+        div.cell  "An der Kuhtrift"
+        div.cell  "Vienna, AT"
+        div.cell.empty
+        div.cell.empty
+        div.cell.align-right  "2024"
+      div.row
+        div.cell  "Ostrava Žofinka"
+        div.cell  "Ostrava, CZ"
+        div.cell.empty
+        div.cell  "competition"
+        div.cell.align-right  "2024—2025"
+      div.row
+        div.cell  "Dual Competition Tirana"
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+        div.cell.align-right  "2024"
+      div.row
+        div.cell  "EXPO Real 2024"
+        div.cell  "Munich, DE"
+        div.cell  "pavilion"
+        div.cell  "completed"
+        div.cell.align-right  "2024"
+      div.row
+        div.cell  "Malinovskeho kasarne"
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+      div.row
+        div.cell  "Otevreny Budvar"
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+      div.row
+        div.cell  "EXPO Albania"
+        div.cell  "Tirana, AL"
+        div.cell  "cultural"
+        div.cell  "competition"
+        div.cell.align-right  "2024"
+      div.row
+        div.cell  "Bytovy dum 3A"
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+        div.cell.empty
+      div.row
+        div.cell  "Haus der Jugend"
+        div.cell  "Vienna, AT"
+        div.cell  "mixed-use"
+        div.cell  "competition"
+        div.cell.align-right  "2023"
+    button.table__expand  "View more"
+      span.dim  "+"
+  section.footer
+    div.footer__column
+      h2
+        a.home  "CHYBÍK KRIŠTOF"
+          span.dim  "+"
+      ul
+        li
+          a  "Instagram"
+        li
+          a  "Facebook"
+        li
+          a  "LinkedIn"
+    div.footer__column
+      h2
+        a  "Studio"
+      ul
+        li
+          a  "Team"
+        li
+          a  "Awards"
+        li
+          a  "Exhibitions"
+        li
+          a  "Lectures"
+        li
+          a  "Jobs"
+        li
+          a  "Contact"
+    div.footer__column
+      h2
+        a  "Projects"
+      ul
+        li
+          a  "All projects"
+        li
+          a  "Masterplan"
+        li
+          a  "Public space"
+        li
+          a  "Transformation"
+        li
+          a  "Educational"
+        li
+          a  "Sport"
+        li
+          a  "Cultural"
+        li
+          a  "Office"
+        li
+          a  "Residential"
+    div.footer__column
+      h2
+        a  "Contact"
+      ul
+        li
+          a  "office@chybik-kristof.com"
+        li
+          a  "+420 775 727 488"
+        li
+          a  "Office locations"
+  div.sub-nav
+    div.buttons.buttons--section
+    div.btn.select
+      div.select__label  "Selected projects"
+      select  ","
+        option  "Selected projects"
+        option  "Other projects"
+    div.btn.select
+      div.select__label  "Filter"
+      select
+        option  "Filter"
+        option  "Cultural 21"
+        option  "Educational 8"
+        option  "Infrastructure 8"
+        option  "Leisure 14"
+        option  "Masterplan 30"
+        option  "Mixed-use 25"
+        option  "Office 24"
+        option  "Other 5"
+        option  "Pavilion 6"
+        option  "Public space 39"
+        option  "Residential 56"
+    div.spacer
+    button.btn.dim  "Back to top"

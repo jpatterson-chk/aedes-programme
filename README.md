@@ -27,6 +27,9 @@ If the commit gets a red ✗, **nothing changed on the live page**. Open the run
 - Never change an event's `"id"` once it is published.
 - Descriptions are plain text. A blank line (`\n\n`) starts a new paragraph.
 - Links must start with `https://`.
+- `"registration": true` shows a "Register" link that opens an email to berlin@chybik-kristof.com, with the subject "Registration: <event title>".
+- `"missing": ["end time", "speaker"]` notes details still to be confirmed. It isn't shown on the page. The validator lists all of them, so delete each item once it's filled in.
+- Private, invitation-only events (press lunches, supper clubs) don't go in this file.
 
 ### Via an AI agent
 
@@ -35,7 +38,8 @@ Ask for the change in plain language, e.g. "Move the 12 Nov screening to 19:00 a
 ## Development
 
 ```sh
-npm run validate      # check programme.json
+npm run validate      # check programme.json, list details still to be confirmed
+npm test              # check the validator catches broken data
 npm run serve:site    # site/ on http://localhost:8000
 npm run serve:dev     # embed harness on http://localhost:8001/embed-test.html
 ```

@@ -1,0 +1,106 @@
+section.content
+  nav
+    a.menu__a  "CHYBÍK KRIŠTOF"
+      span.dim  "+"
+      span.optional.dim  "= ARCHITECTS"
+    div.expression.menu__b
+      div.part.fix
+        a  "CHYBÍK"
+        span.op  "+"
+      div.part.fix
+        a  "KRIŠTOF"
+        span.op  "+"
+      div.part.extra
+        span  "= ARCHITECTS"
+      div.part
+        a  "Architects"
+        span.op  "+"
+      div.part
+        a  "Clients"
+        span.op  "+"
+      div.part  "="
+        a  "Countries"
+      div.part
+        a  "Projects"
+        span.op  ";"
+      div.part
+        a  "Innovations"
+        span.op  ";"
+      div.part
+        a  "Product"
+        span.op  ";"
+      div.part
+        a  "Book"
+        span.op  ";"
+      div.part
+        a  "Jobs"
+        span.op  ";"
+      div.part
+        a  "Offices"
+        span.op  ";"
+    div.spacer
+    button.menu__toggle
+  section.footer
+    div.footer__column
+      h2
+        a.home  "CHYBÍK KRIŠTOF"
+          span.dim  "+"
+      ul
+        li
+          a  "Instagram"
+        li
+          a  "Facebook"
+        li
+          a  "LinkedIn"
+    div.footer__column
+      h2
+        a  "Studio"
+      ul
+        li
+          a  "Team"
+        li
+          a  "Awards"
+        li
+          a  "Exhibitions"
+        li
+          a  "Lectures"
+        li
+          a  "Jobs"
+        li
+          a  "Contact"
+    div.footer__column
+      h2
+        a  "Projects"
+      ul
+        li
+          a  "All projects"
+        li
+          a  "Masterplan"
+        li
+          a  "Public space"
+        li
+          a  "Transformation"
+        li
+          a  "Educational"
+        li
+          a  "Sport"
+        li
+          a  "Cultural"
+        li
+          a  "Office"
+        li
+          a  "Residential"
+    div.footer__column
+      h2
+        a  "Contact"
+      ul
+        li
+          a  "office@chybik-kristof.com"
+        li
+          a  "+420 775 727 488"
+        li
+          a  "Office locations"
+  div.sub-nav
+    div.buttons.buttons--section
+    div.spacer
+    button.btn.dim  "Back to top"
