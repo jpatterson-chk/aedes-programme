@@ -9,22 +9,23 @@ const FEATURES = {
 
 const DATA_URL = 'data/programme.json';
 const NARROW_MAX = 736;                    // site breakpoint: @media (max-width: 736px)
+const STACK_MAX = 860;                     // below this our own width, four columns at 24px get too cramped
 const SITE_HOST = 'chybik-kristof.com';
 const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const root = document.documentElement;
 const app = document.getElementById('app');
 
-// Two switches, both at the site's 736px breakpoint:
-//   .narrow  - type size (18px), from the viewport the reader sees, like the site's html font-size.
-//              Embedded, that's the parent page's width, reported by embed-child.js.
-//   .stacked - the one-column mobile layout, from the space we actually have (the iframe's own width),
-//              so a 576px CMS column on a 768px screen stacks at 24px instead of squeezing four columns.
+// Two switches:
+//   .narrow  - type size (18px) at the site's 736px breakpoint, from the viewport the reader sees,
+//              like the site's html font-size. Embedded, that's the parent page's width (embed-child.js).
+//   .stacked - the one-column mobile layout, from the space we actually have (our own width). The site's
+//              table copes at 737–1220px by dropping to 16px; we stay at 24px, so we stack below 860px instead.
 root.classList.toggle('embedded', window.parent !== window);
 let parentWidth = null;
 const applyWidth = () => {
   root.classList.toggle('narrow', (parentWidth ?? window.innerWidth) <= NARROW_MAX);
-  root.classList.toggle('stacked', window.innerWidth <= NARROW_MAX);
+  root.classList.toggle('stacked', window.innerWidth < STACK_MAX);
 };
 window.ckProgramme = { setViewportWidth(width) { parentWidth = width; applyWidth(); } };
 addEventListener('resize', applyWidth);

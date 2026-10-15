@@ -66,7 +66,7 @@ export async function checkAtWidth(browser, { url, frameOrigin, width, check, sc
 
   const parentFont = await ctx.page.evaluate(() => getComputedStyle(document.documentElement).fontSize);
   check(m.fontSize === parentFont, `type size matches the page around it (${parentFont})`, `programme ${m.fontSize}`);
-  const expectStacked = m.frameWidth <= 736;
+  const expectStacked = m.frameWidth < 860;   // STACK_MAX in site/app.js
   check(m.stacked === expectStacked, `${expectStacked ? 'stacked' : 'table'} layout for a ${m.frameWidth}px column`, `stacked=${m.stacked}`);
 
   const bg = await ctx.frame.evaluate(() => [getComputedStyle(document.documentElement).backgroundColor, getComputedStyle(document.body).backgroundColor]);
