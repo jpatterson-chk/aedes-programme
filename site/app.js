@@ -85,6 +85,24 @@ function googleCalendarUrl(e, meta, types) {
   return `https://calendar.google.com/calendar/render?${params}`;
 }
 
+// 📅 pill with an invisible native <select> over it, like the site's Filter pill (.btn.select).
+// Choosing an option opens that calendar in a new tab, then the menu resets.
+// A static .ics file in a new tab is more reliable than a blob download inside an iframe, especially on iOS Safari.
+function calendarPicker(googleUrl, icsUrl) {
+  const select = h('select', { 'aria-label': 'Add to calendar' },
+    h('option', { value: '' }, 'Add to calendar'),
+    h('option', { value: googleUrl }, 'Add to Google Calendar'),
+    h('option', { value: icsUrl }, 'Add to Apple / Outlook Calendar'),
+  );
+  select.addEventListener('change', () => {
+    const url = select.value;
+    select.value = '';
+    if (url) window.open(url, '_blank', 'noopener');
+  });
+  return h('span', { class: 'btn select icon', title: 'Add to calendar' },
+    h('span', { class: 'select__label', 'aria-hidden': 'true' }, '📅'), select);
+}
+
 function linkTarget(url) {
   const host = new URL(url).hostname.replace(/^www\./, '');
   return host === SITE_HOST ? { target: '_top' } : { target: '_blank', rel: 'noopener' };
@@ -143,16 +161,14 @@ function render(data, updated) {
 
     const register = e.registration && meta.registrationEmail && status !== 'cancelled'
       && h('a', { class: 'btn', href: `mailto:${meta.registrationEmail}?subject=${encodeURIComponent(`Registration: ${e.title}`)}` }, 'Register');
-    const google = calendar && h('a', { class: 'btn', href: googleCalendarUrl(e, meta, types), target: '_blank', rel: 'noopener' }, 'Add to Google Calendar');
-    // A static .ics file in a new tab: more reliable than blob downloads inside an iframe, especially on iOS Safari.
-    const ics = calendar && h('a', { class: 'btn', href: `ics/${e.id}.ics`, target: '_blank', rel: 'noopener' }, 'Add to Apple / Outlook');
+    const calendarMenu = calendar && calendarPicker(googleCalendarUrl(e, meta, types), new URL(`ics/${e.id}.ics`, location.href).href);
 
     const body = h('div', { class: 'details__body' },
       e.location && h('p', {}, `Location: ${e.location}`),  // only set when it isn't the venue
       (e.description ?? '').split(/\n\s*\n/).filter(Boolean).map((p) => h('p', {}, p)),
       e.links?.length && h('p', { class: 'details__links' },
         e.links.map((l) => h('a', { href: l.url, ...linkTarget(l.url) }, l.label))),
-      (register || calendar) && h('p', { class: 'details__actions' }, register, google, ics),
+      (register || calendar) && h('p', { class: 'details__actions' }, register, calendarMenu),
     );
     return h('li', attrs,
       h('details', {}, h('summary', {}, row), h('div', { class: 'details' }, body)));

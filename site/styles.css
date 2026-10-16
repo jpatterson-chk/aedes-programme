@@ -104,6 +104,7 @@ a { color: inherit; text-decoration: none; opacity: var(--link-opacity); }
 .btn.select:focus-within { outline: 2px solid var(--fg); outline-offset: 2px; }
 button.btn { border: 0; margin: 0; font-family: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
 .btn.dim { background: var(--fg-muted); }      /* .btn.dim, e.g. "Back to top" */
+.btn.icon { padding: 0; min-width: var(--pill-h); text-align: center; }   /* .btn.icon on the site */
 
 /* Expandable rows: native <details>, the whole row is the summary */
 summary { display: block; list-style: none; cursor: pointer; }
