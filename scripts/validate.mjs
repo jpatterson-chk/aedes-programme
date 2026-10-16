@@ -59,6 +59,10 @@ export function validate(data) {
     if (meta.registrationEmail !== undefined && !EMAIL.test(meta.registrationEmail)) {
       errors.push(`meta: "registrationEmail" is not a valid email address: ${JSON.stringify(meta.registrationEmail)}.`);
     }
+    const dur = meta.defaultDurationMinutes;
+    if (dur !== undefined && !(Number.isInteger(dur) && dur > 0 && dur <= 24 * 60)) {
+      errors.push(`meta: "defaultDurationMinutes" must be a whole number of minutes (e.g. 90), got ${JSON.stringify(dur)}.`);
+    }
     for (const f of ['title', 'intro', 'footer', 'defaultLocationShort']) {
       if (meta[f] !== undefined && typeof meta[f] !== 'string') errors.push(`meta: "${f}" must be text.`);
     }

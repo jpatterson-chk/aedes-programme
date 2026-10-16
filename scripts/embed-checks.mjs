@@ -31,7 +31,7 @@ export async function openEmbed(browser, url, frameOrigin, width) {
   await iframe.scrollIntoViewIfNeeded();          // the snippet uses loading="lazy"
   const frame = await until(async () => page.frames().find((f) => f.url().startsWith(frameOrigin)), 15000);
   if (!frame) throw new Error(`No iframe from ${frameOrigin} on ${url}`);
-  await frame.waitForSelector('.day li', { timeout: 15000 });
+  await frame.waitForSelector('.day li', { state: 'attached', timeout: 15000 });   // past rows may be hidden
   return { page, iframe, frame };
 }
 
@@ -77,6 +77,15 @@ export async function checkAtWidth(browser, { url, frameOrigin, width, check, sc
   await ctx.frame.locator('details summary').first().click();
   const opened = await settled(ctx);
   check(opened.iframeHeight > m.iframeHeight && opened.matches, 'height follows when an event is opened', `${m.iframeHeight} → ${opened.iframeHeight}`);
+
+  const filter = ctx.frame.locator('.controls select');
+  if (await filter.count()) {
+    await filter.selectOption('walk');
+    const filtered = await settled(ctx);
+    check(filtered.iframeHeight < opened.iframeHeight && filtered.matches, 'height follows the type filter', `${opened.iframeHeight} → ${filtered.iframeHeight}`);
+    await filter.selectOption('');
+    await settled(ctx);
+  }
 
   const other = width <= 736 ? 1024 : 390;
   await ctx.page.setViewportSize({ width: other, height: 900 });

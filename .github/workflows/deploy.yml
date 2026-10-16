@@ -21,6 +21,8 @@ jobs:
         run: node scripts/validate.mjs
       - name: Check the validator catches broken data
         run: node scripts/test-validate.mjs
+      - name: Check calendar files (time zones, DST, format)
+        run: node scripts/test-ics.mjs
 
   deploy:
     needs: check

@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "validate": "node scripts/validate.mjs",
-    "test": "node scripts/test-validate.mjs",
+    "test": "node scripts/test-validate.mjs && node scripts/test-ics.mjs",
     "build": "node scripts/build.mjs",
     "capture": "node scripts/capture-reference.mjs",
     "check-embed": "node scripts/check-embed.mjs",

@@ -46,6 +46,7 @@ html.is-autoheight body { overflow: hidden; }
 html.embedded #app { padding: 0; }         /* the CMS column supplies the gutter */
 
 .dim { color: var(--fg-muted); }
+[hidden] { display: none !important; }
 
 a { color: inherit; text-decoration: none; opacity: var(--link-opacity); }
 @media (hover: hover) { a:hover { opacity: 1; } }
@@ -69,10 +70,10 @@ a { color: inherit; text-decoration: none; opacity: var(--link-opacity); }
 .row.heading .programme__title { grid-column: 1 / 3; color: var(--fg); }
 #app > .programme:first-child .row.heading { margin-top: 0; }
 
-.day__date { font-size: 1em; font-weight: 700;  /* under test: the site itself uses 400 throughout */ margin: var(--day-gap) 0 0; padding: var(--row-pad) 0; color: var(--fg); }
+.day__date { font-size: 1em; font-weight: 700;  /* under test: the site itself uses 400 throughout */ margin: 0; padding: var(--row-pad) 0; color: var(--fg); }
 .day__date .cell { grid-column: 1 / -1; }
 .day__date .dim { font-weight: 400; }            /* bold applies to the date only */
-.day:first-of-type .day__date { margin-top: 0; }
+.day:not([hidden]) ~ .day .day__date { margin-top: var(--day-gap); }   /* space above every visible date but the first */
 
 .day li .row { padding: var(--row-pad) 0; }
 .lead { display: contents; }
@@ -83,6 +84,26 @@ a { color: inherit; text-decoration: none; opacity: var(--link-opacity); }
 
 /* Status */
 .cancelled .title { text-decoration: line-through; }
+
+/* Today / now / past (FEATURES.todayNowPast) */
+.day__date .label-today { font-weight: 400; }
+.label-now { color: var(--fg); }
+.day.is-past .day__date,
+.day li.is-past { opacity: .5; }              /* like the site's dimmed .row.filtered, but still readable */
+
+/* Controls: Filter select pill + past toggle, in the flow (the site's .sub-nav is position: fixed,
+   which an auto-height iframe can't use) */
+.controls { display: flex; flex-wrap: wrap; gap: .25em; margin-top: 1.2em; }   /* .sub-nav .btn margin-left: .25em */
+#app > .controls:first-child { margin-top: 0; }
+.btn.select { position: relative; cursor: pointer; }
+.btn.select select {                           /* .btn.select select: invisible native select over the pill */
+  position: absolute; inset: 0; width: 100%; min-height: 100%;
+  opacity: 0; cursor: pointer;
+  font-size: 16px;                             /* ≥16px stops iOS zooming in on focus */
+}
+.btn.select:focus-within { outline: 2px solid var(--fg); outline-offset: 2px; }
+button.btn { border: 0; margin: 0; font-family: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
+.btn.dim { background: var(--fg-muted); }      /* .btn.dim, e.g. "Back to top" */
 
 /* Expandable rows: native <details>, the whole row is the summary */
 summary { display: block; list-style: none; cursor: pointer; }
@@ -97,6 +118,7 @@ details[open] .toggle::before { content: "–"; }
 .details__body > * + * { margin-top: 1em; }
 .details__body p { white-space: pre-line; }
 .details__links a { margin-right: .6em; }
+.details__actions { display: flex; flex-wrap: wrap; gap: .25em; }
 
 /* Pill, as .btn on the site */
 .btn {
@@ -124,9 +146,10 @@ html.narrow {
 html.stacked .programme { margin: 0; color: var(--fg); }   /* line 2 is black on mobile */
 html.stacked .row { display: block; }
 html.stacked .row.heading { display: none; }           /* the CMS page already titles the programme */
-html.stacked .intro + .programme { margin-top: calc(2 * var(--row-gap-mobile)); }
-html.stacked .day__date { margin-top: calc(2 * var(--row-gap-mobile)); padding: 0; }
-html.stacked .day:first-of-type .day__date { margin-top: 0; }
+html.stacked .intro + .programme,
+html.stacked .controls + .programme { margin-top: calc(2 * var(--row-gap-mobile)); }
+html.stacked .day__date { padding: 0; }
+html.stacked .day:not([hidden]) ~ .day .day__date { margin-top: calc(2 * var(--row-gap-mobile)); }
 html.stacked .day li { margin: var(--row-gap-mobile) 0; }
 html.stacked .day li:last-child { margin-bottom: 0; }
 html.stacked .day li .row { padding: 0; }

@@ -8,6 +8,7 @@ import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { dirname, extname, join, resolve, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { calendarFiles } from './ics.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const TYPES = {
@@ -21,11 +22,24 @@ const TYPES = {
   '.svg': 'image/svg+xml',
 };
 
-export function serve(dir, port) {
+// The .ics files are build output, so locally they're generated on request from the current data.
+async function calendarFile(pathname) {
+  if (!/^\/(ics\/[\w-]+\.ics|programme\.ics)$/.test(pathname)) return null;
+  const data = JSON.parse(await readFile(join(ROOT, 'site', 'data', 'programme.json'), 'utf8'));
+  return calendarFiles(data).get(pathname.slice(1)) ?? null;
+}
+
+export function serve(dir, port, { calendars = false } = {}) {
   const root = resolve(dir);
   const server = createServer(async (req, res) => {
     try {
-      let file = resolve(join(root, decodeURIComponent(new URL(req.url, 'http://localhost').pathname)));
+      const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+      const ics = calendars && await calendarFile(pathname);
+      if (ics) {
+        res.writeHead(200, { 'content-type': TYPES['.ics'], 'cache-control': 'no-store' }).end(ics);
+        return;
+      }
+      let file = resolve(join(root, pathname));
       if (file !== root && !file.startsWith(root + sep)) throw new Error('outside root');
       let info = await stat(file);
       if (info.isDirectory()) { file = join(file, 'index.html'); info = await stat(file); }
@@ -42,7 +56,7 @@ export function serve(dir, port) {
   return new Promise((ok, fail) => server.once('error', fail).listen(port, () => ok(server)));
 }
 
-export const startDevServers = () => Promise.all([serve(join(ROOT, 'site'), 8000), serve(ROOT, 8001)]);
+export const startDevServers = () => Promise.all([serve(join(ROOT, 'site'), 8000, { calendars: true }), serve(ROOT, 8001)]);
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   await startDevServers();

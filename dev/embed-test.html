@@ -8,7 +8,8 @@
     Mimics a chybik-kristof.com CMS page (values from reference/notes.md) and embeds the
     exact snippet from embed/cms-snippet.html, pointed at the dev origin.
     Run `node scripts/serve.mjs`, then open http://localhost:8001/dev/embed-test.html
-    Add ?fallback to strip the onload handler and check the fixed-height scrolling fallback.
+    Add ?fallback to strip the onload handler and check the fixed-height scrolling fallback,
+    or ?now=2026-11-17T10:30 to see the programme as it looks at that moment.
   -->
   <style>
     html { font-size: 24px; font-family: Arial, sans-serif; line-height: 1.2; color: black; background: #F5F5F5; }
@@ -41,10 +42,13 @@
 
     (async () => {
       const snippet = await (await fetch('/embed/cms-snippet.html', { cache: 'no-store' })).text();
+      const params = new URLSearchParams(location.search);
+      // ?now=2026-11-17T10:30 is passed through to the programme to test today / now / past.
+      const page = `${DEV_ORIGIN}/${params.has('now') ? `?now=${encodeURIComponent(params.get('now'))}` : ''}`;
       const box = document.getElementById('embed');
-      box.innerHTML = snippet.replaceAll(PROD_PAGE, `${DEV_ORIGIN}/`).replaceAll(PROD_ORIGIN, DEV_ORIGIN);
+      box.innerHTML = snippet.replaceAll(PROD_PAGE, page).replaceAll(PROD_ORIGIN, DEV_ORIGIN);
       const iframe = box.querySelector('iframe');
-      const fallback = new URLSearchParams(location.search).has('fallback');
+      const fallback = params.has('fallback');
       if (fallback) iframe.removeAttribute('onload');   // runs before the iframe's load event
 
       const status = document.getElementById('harness-status');

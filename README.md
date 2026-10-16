@@ -30,7 +30,7 @@ If the commit gets a red ✗, **nothing changed on the live page**. Open the run
 - `"registration": true` shows a "Register" link that opens an email to berlin@chybik-kristof.com, with the subject "Registration: <event title>".
 - `"missing": ["end time", "speaker"]` notes details still to be confirmed. It isn't shown on the page. The validator lists all of them, so delete each item once it's filled in.
 - Private, invitation-only events (press lunches, supper clubs) don't go in this file. Nor do partner events elsewhere: only our own programme.
-- Only start times are shown on the page. `"end"` is optional and isn't displayed.
+- Only start times are shown on the page. `"end"` is optional and isn't displayed. Calendar entries use it when it's there; otherwise they last `meta.defaultDurationMinutes` (90).
 
 ### Via an AI agent
 
@@ -40,7 +40,11 @@ Ask for the change in plain language, e.g. "Move the 12 Nov screening to 19:00 a
 
 ```sh
 npm run validate      # check programme.json, list details still to be confirmed
-npm test              # check the validator catches broken data
+npm test              # check the validator catches broken data, and the .ics calendar files
 npm run serve         # programme on :8000, CMS-like harness on http://localhost:8001/dev/embed-test.html
-npm run test:embed    # Playwright: auto-height, layout and fallback in the harness (stop `serve` first)
+npm run test:embed    # Playwright: auto-height, layout, filter, past/now and fallback in the harness (stop `serve` first)
 ```
+
+To see the programme as it will look on a given day, add `?now=2026-11-17T10:30` to the page or harness address.
+
+Features can be switched off one by one at the top of `site/app.js` (`FEATURES`): the type filter, today / now / past, and add to calendar.
