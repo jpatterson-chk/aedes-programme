@@ -38,7 +38,9 @@
   <script>
     const PROD_PAGE = 'https://jpatterson-chk.github.io/aedes-programme/';
     const PROD_ORIGIN = 'https://jpatterson-chk.github.io';
-    const DEV_ORIGIN = 'http://localhost:8000';
+    // Same host the harness was opened on, so it also works from a phone at http://<Mac's IP>:8001.
+    const DEV_ORIGIN = `${location.protocol}//${location.hostname}:8000`;
+    document.querySelector('a[href="http://localhost:8000/"]').href = `${DEV_ORIGIN}/`;
 
     (async () => {
       const snippet = await (await fetch('/embed/cms-snippet.html', { cache: 'no-store' })).text();
