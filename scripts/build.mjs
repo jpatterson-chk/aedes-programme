@@ -1,6 +1,7 @@
 // Copies site/ → dist/, stamps the commit SHA into index.html (styles.css?v=SHA, app.js?v=SHA, …)
-// so a deploy never mixes old cached code with new, and writes the calendar files
-// (ics/<id>.ics per event, programme.ics for all). programme.json is fetched with ?t=<now> by app.js.
+// so a deploy never mixes old cached code with new, prerenders the programme into index.html
+// (readable without scripts), and writes the calendar files (ics/<id>.ics per event, programme.ics for all).
+// programme.json is fetched with ?t=<now> by app.js.
 //
 //   node scripts/build.mjs
 
@@ -9,6 +10,7 @@ import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { calendarFiles } from './ics.mjs';
+import { prerender } from './prerender.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = join(ROOT, 'site');
@@ -21,6 +23,7 @@ function commitSha() {
 }
 
 const sha = commitSha();
+const data = JSON.parse(await readFile(join(SITE, 'data', 'programme.json'), 'utf8'));
 await rm(DIST, { recursive: true, force: true });
 await cp(SITE, DIST, { recursive: true });
 
@@ -32,7 +35,8 @@ const out = html.replace(/(href|src)="([\w-]+\.(?:css|js))"/g, (_, attr, file) =
   return `${attr}="${file}?v=${sha}"`;
 });
 if (stamped === 0) throw new Error('build.mjs: no styles/scripts found to stamp in index.html');
-await writeFile(indexFile, out);
+// Stamp first, then prerender, so links inside the programme are never touched by the stamping.
+await writeFile(indexFile, prerender(out, data));
 
 // Module imports inside app.js get the same stamp, so a cached old render.js can't pair with new app.js.
 const appFile = join(DIST, 'app.js');
@@ -41,9 +45,8 @@ const stampedApp = appJs.replace(/from '\.\/([\w-]+\.js)'/g, (_, file) => `from 
 if (stampedApp === appJs) throw new Error('build.mjs: no module imports found to stamp in app.js');
 await writeFile(appFile, stampedApp);
 
-const data = JSON.parse(await readFile(join(SITE, 'data', 'programme.json'), 'utf8'));
 const files = calendarFiles(data);
 await mkdir(join(DIST, 'ics'), { recursive: true });
 for (const [path, body] of files) await writeFile(join(DIST, path), body);
 
-console.log(`✓ Built dist/ at ${sha} (${stamped} assets stamped, ${files.size} calendar files).`);
+console.log(`✓ Built dist/ at ${sha} (${stamped} assets stamped, programme prerendered, ${files.size} calendar files).`);

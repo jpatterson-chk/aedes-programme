@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Exhibition programme</title>
+  <!-- build: page metadata -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Shell only: all content is rendered by app.js from data/programme.json. -->
-  <main id="app"></main>
+  <!-- The build (scripts/prerender.mjs) fills #app with the programme as plain HTML, so crawlers and
+       AI tools can read it without running scripts. app.js then re-renders it from fresh data. -->
+  <main id="app"><!-- build: programme --></main>
   <script type="module" src="app.js"></script>
   <script src="embed-child.js" defer></script>
 </body>

@@ -192,6 +192,8 @@ export function renderProgramme(data, { features = FEATURES, updated = null, bas
         h('a', { href: subscribeUrl }, 'Apple / Outlook'),   // webcal: hands off to the calendar app, like mailto:
         '.'),
       updated && h('p', {}, `Updated ${updated.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: meta.timezone })}`),
+      // Back to the studio's page; hidden when embedded (it would link to itself), kept for crawlers and direct visits.
+      meta.publicUrl && h('p', { class: 'footer__home' }, h('a', { href: meta.publicUrl, target: '_top' }, 'CHYBÍK + KRIŠTOF at Aedes')),
     ),
   ].filter(Boolean).join('');
 }

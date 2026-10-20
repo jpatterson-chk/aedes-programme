@@ -56,6 +56,9 @@ export function validate(data) {
       errors.push('meta: "endDate" is before "startDate".');
     }
     if (!isText(meta.defaultLocation)) errors.push('meta: "defaultLocation" is required.');
+    if (meta.publicUrl !== undefined && !/^https:\/\/[^\s]+\.[^\s]+$/.test(meta.publicUrl)) {
+      errors.push(`meta: "publicUrl" must be the full https:// address of the programme page, got ${JSON.stringify(meta.publicUrl)}.`);
+    }
     if (meta.registrationEmail !== undefined && !EMAIL.test(meta.registrationEmail)) {
       errors.push(`meta: "registrationEmail" is not a valid email address: ${JSON.stringify(meta.registrationEmail)}.`);
     }

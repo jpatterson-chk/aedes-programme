@@ -9,6 +9,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { dirname, extname, join, resolve, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { calendarFiles } from './ics.mjs';
+import { prerender } from './prerender.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const TYPES = {
@@ -22,19 +23,22 @@ const TYPES = {
   '.svg': 'image/svg+xml',
 };
 
-// The .ics files are build output, so locally they're generated on request from the current data.
+// The .ics files and the prerendered index.html are build output, so locally they're generated
+// on request from the current data, the same way build.mjs does it.
+const readData = async () => JSON.parse(await readFile(join(ROOT, 'site', 'data', 'programme.json'), 'utf8'));
+
 async function calendarFile(pathname) {
   if (!/^\/(ics\/[\w-]+\.ics|programme\.ics)$/.test(pathname)) return null;
-  const data = JSON.parse(await readFile(join(ROOT, 'site', 'data', 'programme.json'), 'utf8'));
-  return calendarFiles(data).get(pathname.slice(1)) ?? null;
+  return calendarFiles(await readData()).get(pathname.slice(1)) ?? null;
 }
 
-export function serve(dir, port, { calendars = false } = {}) {
+// programme: serve site/ like the deployed dist/ (prerendered index.html, generated calendar files).
+export function serve(dir, port, { programme = false } = {}) {
   const root = resolve(dir);
   const server = createServer(async (req, res) => {
     try {
       const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
-      const ics = calendars && await calendarFile(pathname);
+      const ics = programme && await calendarFile(pathname);
       if (ics) {
         res.writeHead(200, { 'content-type': TYPES['.ics'], 'cache-control': 'no-store' }).end(ics);
         return;
@@ -48,7 +52,10 @@ export function serve(dir, port, { calendars = false } = {}) {
         'last-modified': info.mtime.toUTCString(),
         'cache-control': 'no-store',
       });
-      res.end(await readFile(file));
+      const isIndex = programme && file === join(root, 'index.html');
+      res.end(isIndex
+        ? prerender(await readFile(file, 'utf8'), await readData(), { baseUrl: `http://${req.headers.host}/` })
+        : await readFile(file));
     } catch {
       res.writeHead(404, { 'content-type': 'text/plain' }).end('Not found');
     }
@@ -56,7 +63,7 @@ export function serve(dir, port, { calendars = false } = {}) {
   return new Promise((ok, fail) => server.once('error', fail).listen(port, () => ok(server)));
 }
 
-export const startDevServers = () => Promise.all([serve(join(ROOT, 'site'), 8000, { calendars: true }), serve(ROOT, 8001)]);
+export const startDevServers = () => Promise.all([serve(join(ROOT, 'site'), 8000, { programme: true }), serve(ROOT, 8001)]);
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   await startDevServers();
