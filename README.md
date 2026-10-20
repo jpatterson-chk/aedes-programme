@@ -41,6 +41,7 @@ Ask for the change in plain language, e.g. "Move the 12 Nov screening to 19:00 a
 ```sh
 npm run validate      # check programme.json, list details still to be confirmed
 npm test              # check the validator catches broken data, and the .ics calendar files
+npm run test:build    # build dist/ and check the prerendered page + structured data
 npm run serve         # programme on :8000, CMS-like harness on http://localhost:8001/dev/embed-test.html
 npm run test:embed    # Playwright: auto-height, layout, filter, past/now and fallback in the harness (stop `serve` first)
 ```

@@ -40,6 +40,23 @@ console.log('\ntoday / now / past at 17 Nov 10:30, 1440px');
   await ctx.page.close();
 }
 
+console.log('\nprerendered programme (crawlers, slow or failed scripts), 1440px');
+{
+  const ctx = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } });
+  const page = await ctx.newPage();
+  await page.goto(HARNESS.replace(':8001/dev/embed-test.html', ':8000/'), { waitUntil: 'networkidle' });
+  const staticHtml = await page.locator('.programme').evaluate((e) => e.outerHTML);
+  const events = await page.locator('.day li').count();
+  check(events === 39 && await page.locator('.day li .title').first().isVisible(), 'programme readable with JavaScript off', `${events} events`);
+  await ctx.close();
+
+  const live = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await live.goto(HARNESS.replace(':8001/dev/embed-test.html', ':8000/'), { waitUntil: 'networkidle' });
+  const liveHtml = await live.locator('.programme').evaluate((e) => e.outerHTML);
+  check(liveHtml === staticHtml, 're-render from fresh data matches the prerendered markup (no flash)');
+  await live.close();
+}
+
 console.log('\nfallback (onload stripped), 1440px');
 {
   const ctx = await openEmbed(browser, `${HARNESS}?fallback`, FRAME_ORIGIN, 1440);

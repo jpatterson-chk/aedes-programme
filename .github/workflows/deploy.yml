@@ -23,6 +23,8 @@ jobs:
         run: node scripts/test-validate.mjs
       - name: Check calendar files (time zones, DST, format)
         run: node scripts/test-ics.mjs
+      - name: Build and check the prerendered page and structured data
+        run: node scripts/build.mjs && node scripts/test-build.mjs
 
   deploy:
     needs: check
