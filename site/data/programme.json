@@ -8,7 +8,8 @@
     "defaultLocationShort": "Aedes",
     "registrationEmail": "berlin@chybik-kristof.com",
     "defaultDurationMinutes": 90,
-    "intro": "Open Studio: 5 architects, 5 days a week, 8 hours a day, for 42 days. Mon–Fri 09:00–17:00. Stop by for a cuppa and a chat!",
+    "introTitle": "Open Studio",
+    "intro": "5 architects, 5 days a week, 8 hours a day, for 42 days. Mon–Fri 09:00–17:00. Stop by for a cuppa and a chat!",
     "footer": "Free entry. The programme is subject to change."
   },
   "types": [

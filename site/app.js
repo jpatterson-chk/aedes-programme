@@ -202,7 +202,7 @@ function render(data, updated) {
   );
 
   app.replaceChildren(
-    meta.intro && h('p', { class: 'intro' }, meta.intro),
+    meta.intro && h('p', { class: 'intro' }, meta.introTitle && [h('strong', {}, meta.introTitle), h('br')], meta.intro),
     controls,
     h('section', { class: 'programme', 'aria-label': meta.title ?? 'Programme' },
       h('h2', { class: 'row heading' },
