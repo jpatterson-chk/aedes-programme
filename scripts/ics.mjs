@@ -25,6 +25,14 @@ export function wallTimeToUtc(date, time, timeZone) {
   return new Date(asUtc - offsetMinutes(first, timeZone) * 60000);
 }
 
+// "2026-10-26", "18:00", "Europe/Berlin" → "2026-10-26T18:00:00+01:00" (ISO 8601 with that date's offset).
+export function isoWithOffset(date, time, timeZone) {
+  const offset = offsetMinutes(wallTimeToUtc(date, time, timeZone).getTime(), timeZone);
+  const abs = Math.abs(offset);
+  const hhmm = `${String(Math.floor(abs / 60)).padStart(2, '0')}:${String(abs % 60).padStart(2, '0')}`;
+  return `${date}T${time}:00${offset < 0 ? '-' : '+'}${hhmm}`;
+}
+
 const utcStamp = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
 
 const escapeText = (s) => String(s)
