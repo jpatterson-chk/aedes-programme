@@ -47,4 +47,4 @@ npm run test:embed    # Playwright: auto-height, layout, filter, past/now and fa
 
 To see the programme as it will look on a given day, add `?now=2026-11-17T10:30` to the page or harness address.
 
-Features can be switched off one by one at the top of `site/app.js` (`FEATURES`): the type filter, today / now / past, and add to calendar.
+Features can be switched off one by one at the top of `site/render.js` (`FEATURES`): the type filter, today / now / past, and add to calendar.

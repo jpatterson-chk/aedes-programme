@@ -34,6 +34,13 @@ const out = html.replace(/(href|src)="([\w-]+\.(?:css|js))"/g, (_, attr, file) =
 if (stamped === 0) throw new Error('build.mjs: no styles/scripts found to stamp in index.html');
 await writeFile(indexFile, out);
 
+// Module imports inside app.js get the same stamp, so a cached old render.js can't pair with new app.js.
+const appFile = join(DIST, 'app.js');
+const appJs = await readFile(appFile, 'utf8');
+const stampedApp = appJs.replace(/from '\.\/([\w-]+\.js)'/g, (_, file) => `from './${file}?v=${sha}'`);
+if (stampedApp === appJs) throw new Error('build.mjs: no module imports found to stamp in app.js');
+await writeFile(appFile, stampedApp);
+
 const data = JSON.parse(await readFile(join(SITE, 'data', 'programme.json'), 'utf8'));
 const files = calendarFiles(data);
 await mkdir(join(DIST, 'ics'), { recursive: true });
