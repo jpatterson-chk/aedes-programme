@@ -169,14 +169,6 @@
       "registration": true
     },
     {
-      "id": "2026-11-24-public-lecture-brno",
-      "date": "2026-11-24",
-      "start": "18:30",
-      "type": "lecture",
-      "title": "Public lecture & discussion: Brno",
-      "missing": ["title", "speaker", "description (listed as is for now, to be confirmed)"]
-    },
-    {
       "id": "2026-11-25-archi-breakfast-5",
       "date": "2026-11-25",
       "start": "09:00",
