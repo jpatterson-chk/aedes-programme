@@ -43,8 +43,10 @@ for (const [label, breakIt, expected] of CASES) {
   ok(Boolean(hit), `fails on ${label}`, hit ?? `expected an error containing ${JSON.stringify(expected)}, got: ${errors.join(' | ') || 'no errors'}`);
 }
 
+// Two events of our own at the same place and time, so the check doesn't depend on the programme's content.
 const overlap = structuredClone(original);
-overlap.events.push({ ...overlap.events[4], id: 'overlap-test', start: '10:00', end: '11:00' });
+const sameSlot = { date: original.meta.startDate, type: original.types[0].id, title: 'Overlap test' };
+overlap.events.push({ ...sameSlot, id: 'overlap-a', start: '10:00', end: '11:00' }, { ...sameSlot, id: 'overlap-b', start: '10:30', end: '11:30' });
 ok(validate(overlap).warnings.some((w) => w.includes('overlap')), 'warns on overlapping events at the same location');
 
 console.log(failed ? `\n${failed} check(s) failed.` : '\nAll checks passed.');

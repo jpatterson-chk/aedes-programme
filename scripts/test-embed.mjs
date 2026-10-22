@@ -4,14 +4,22 @@
 //   node scripts/test-embed.mjs
 
 import { chromium } from 'playwright';
+import { readFileSync } from 'node:fs';
 import { startDevServers } from './serve.mjs';
 import { checkAtWidth, measure, openEmbed, reporter, settled } from './embed-checks.mjs';
 
 const HARNESS = 'http://localhost:8001/dev/embed-test.html';
 const FRAME_ORIGIN = 'http://localhost:8000';
 const WIDTHS = [1440, 1024, 768, 390];
+const data = JSON.parse(readFileSync(new URL('../site/data/programme.json', import.meta.url), 'utf8'));
 
-const { check, ...result } = reporter();
+// For today / now / past: the middle event with its own end time, 30 minutes after it starts.
+const timed = data.events.filter((e) => e.end).sort((a, b) => `${a.date} ${a.start}`.localeCompare(`${b.date} ${b.start}`));
+const probe = timed[Math.floor(timed.length / 2)];
+const probeAt = `${probe.date}T${String(Number(probe.start.slice(0, 2)) + (Number(probe.start.slice(3)) + 30 >= 60 ? 1 : 0)).padStart(2, '0')}:${String((Number(probe.start.slice(3)) + 30) % 60).padStart(2, '0')}`;
+
+const report = reporter();   // read report.failed at the end (a copied value would stay 0)
+const { check } = report;
 const servers = await startDevServers();
 const browser = await chromium.launch();
 
@@ -20,9 +28,9 @@ for (const width of WIDTHS) {
   await checkAtWidth(browser, { url: HARNESS, frameOrigin: FRAME_ORIGIN, width, check });
 }
 
-console.log('\ntoday / now / past at 17 Nov 10:30, 1440px');
+console.log(`\ntoday / now / past at ${probeAt} (during "${probe.title}"), 1440px`);
 {
-  const ctx = await openEmbed(browser, `${HARNESS}?now=2026-11-17T10:30`, FRAME_ORIGIN, 1440);
+  const ctx = await openEmbed(browser, `${HARNESS}?now=${probeAt}`, FRAME_ORIGIN, 1440);
   const before = await settled(ctx);
   const s = await ctx.frame.evaluate(() => ({
     toggle: document.querySelector('.controls button')?.textContent,
@@ -31,9 +39,9 @@ console.log('\ntoday / now / past at 17 Nov 10:30, 1440px');
     firstVisible: document.querySelector('.day:not([hidden])')?.dataset.date,
   }));
   check(/^Show past events \(\d+\)$/.test(s.toggle ?? ''), 'past events folded behind the toggle', s.toggle);
-  check(s.firstVisible === '2026-11-17', 'list starts at today', s.firstVisible);
-  check(s.today.join() === '2026-11-17', 'TODAY on today’s date only', s.today.join());
-  check(s.now.join() === '2026-11-17-school-workshop', 'NOW on the running event only (10:00–12:00)', s.now.join());
+  check(s.firstVisible === probe.date, 'list starts at today', s.firstVisible);
+  check(s.today.join() === probe.date, 'TODAY on today’s date only', s.today.join());
+  check(s.now.join() === probe.id, `NOW on the running event only (${probe.start}–${probe.end})`, s.now.join());
   await ctx.frame.locator('.controls button').click();
   const after = await settled(ctx);
   check(after.iframeHeight > before.iframeHeight && after.matches, 'height follows "Show past events"', `${before.iframeHeight} → ${after.iframeHeight}`);
@@ -47,11 +55,12 @@ console.log('\nprerendered programme (crawlers, slow or failed scripts), 1440px'
   await page.goto(HARNESS.replace(':8001/dev/embed-test.html', ':8000/'), { waitUntil: 'networkidle' });
   const staticHtml = await page.locator('.programme').evaluate((e) => e.outerHTML);
   const events = await page.locator('.day li').count();
-  check(events === 39 && await page.locator('.day li .title').first().isVisible(), 'programme readable with JavaScript off', `${events} events`);
+  check(events === data.events.length && await page.locator('.day li .title').first().isVisible(), 'programme readable with JavaScript off', `${events} events`);
   await ctx.close();
 
+  // Before the exhibition, so no TODAY / NOW / past state is added on top of the prerendered markup.
   const live = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-  await live.goto(HARNESS.replace(':8001/dev/embed-test.html', ':8000/'), { waitUntil: 'networkidle' });
+  await live.goto(HARNESS.replace(':8001/dev/embed-test.html', ':8000/?now=2000-01-01T12:00'), { waitUntil: 'networkidle' });
   const liveHtml = await live.locator('.programme').evaluate((e) => e.outerHTML);
   check(liveHtml === staticHtml, 're-render from fresh data matches the prerendered markup (no flash)');
   await live.close();
@@ -71,5 +80,5 @@ console.log('\nfallback (onload stripped), 1440px');
 await browser.close();
 for (const s of servers) s.close();
 
-console.log(result.failed ? `\n${result.failed} check(s) failed.` : '\nAll embed checks passed.');
-process.exit(result.failed ? 1 : 0);
+console.log(report.failed ? `\n${report.failed} check(s) failed.` : '\nAll embed checks passed.');
+process.exit(report.failed ? 1 : 0);

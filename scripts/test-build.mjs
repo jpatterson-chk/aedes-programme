@@ -40,9 +40,14 @@ let ld = null;
 try { ld = JSON.parse(ldText); } catch (err) { ok(false, 'JSON-LD parses', err.message); }
 if (ld) {
   ok(ld['@type'] === 'ExhibitionEvent' && ld.subEvent?.length === data.events.length, `JSON-LD: ExhibitionEvent with ${data.events.length} events`, `${ld['@type']}, ${ld.subEvent?.length}`);
-  const at = (date) => ld.subEvent.find((e) => e.startDate.startsWith(date));
-  ok(at('2026-10-22')?.startDate.endsWith('+02:00'), '22 Oct event is CEST (+02:00)', at('2026-10-22')?.startDate);
-  ok(at('2026-10-26')?.startDate.endsWith('+01:00'), '26 Oct event is CET (+01:00)', at('2026-10-26')?.startDate);
+  // Summer time ends 25 Oct 2026: every event before is CEST (+02:00), every event after is CET (+01:00).
+  const wrongOffset = ld.subEvent.filter((e) => !e.startDate.endsWith(e.startDate < '2026-10-25' ? '+02:00' : '+01:00'));
+  ok(wrongOffset.length === 0, 'every event has the right offset either side of the 25 Oct DST change', wrongOffset.map((e) => e.startDate).join(', '));
+  const dst = programmeJsonLd({ ...data, events: [
+    { ...data.events[0], id: 'a', date: '2026-10-24', start: '18:00' },
+    { ...data.events[0], id: 'b', date: '2026-10-26', start: '18:00' },
+  ] }).subEvent.map((e) => e.startDate);
+  ok(dst[0] === '2026-10-24T18:00:00+02:00' && dst[1] === '2026-10-26T18:00:00+01:00', '24 Oct is +02:00 and 26 Oct is +01:00', dst.join(', '));
   ok(ld.subEvent.every((e) => e.endDate && e.endDate > e.startDate), 'every event has an end after its start (own end or default duration)');
   ok(ld.subEvent.every((e) => e.location && e.eventStatus && e.offers?.price === 0), 'every event has location, status and free offer');
 }

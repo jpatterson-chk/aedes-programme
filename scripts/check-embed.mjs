@@ -14,7 +14,8 @@ const FRAME_ORIGIN = 'https://jpatterson-chk.github.io';
 const WIDTHS = [1440, 768, 390];
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'reference', 'live');
 
-const { check, ...result } = reporter();
+const report = reporter();   // read report.failed at the end (a copied value would stay 0)
+const { check } = report;
 await mkdir(OUT, { recursive: true });
 const browser = await chromium.launch();
 
@@ -28,5 +29,5 @@ for (const width of WIDTHS) {
 }
 
 await browser.close();
-console.log(result.failed ? `\n${result.failed} check(s) failed.` : `\nAll live checks passed. Screenshots in reference/live/.`);
-process.exit(result.failed ? 1 : 0);
+console.log(report.failed ? `\n${report.failed} check(s) failed.` : `\nAll live checks passed. Screenshots in reference/live/.`);
+process.exit(report.failed ? 1 : 0);
