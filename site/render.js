@@ -173,7 +173,9 @@ export function renderProgramme(data, { features = FEATURES, updated = null, bas
   const pastToggle = features.todayNowPast && h('button', { type: 'button', class: 'btn dim past-toggle', 'aria-expanded': 'false', hidden: true });
 
   return [
-    meta.intro && h('p', { class: 'intro' }, meta.introTitle && [h('strong', {}, meta.introTitle), h('br')], meta.intro),
+    // A line break ("\n") in meta.intro starts a new line, as in the printed programme.
+    meta.intro && h('p', { class: 'intro' }, meta.introTitle && [h('strong', {}, meta.introTitle), h('br')],
+      meta.intro.split('\n').flatMap((line, i) => (i ? [h('br'), line] : [line]))),
     (filter || pastToggle) && h('div', { class: 'controls' }, filter, pastToggle),
     h('section', { class: 'programme', 'aria-label': meta.title ?? 'Programme', 'data-timezone': meta.timezone },
       h('h2', { class: 'row heading' },

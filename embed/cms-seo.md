@@ -2,7 +2,7 @@
 
 Paste these on the public programme page (https://chybik-kristof.com/aedes-programme/), around the iframe from `cms-snippet.html`. Text in the CMS page itself is the only programme content that counts for chybik-kristof.com in search; the iframe's content is credited to the github.io page.
 
-Draft copy, taken from the programme document. Check it before publishing, and update the speaker list once the final schedule is in.
+Copy taken from the final programme (22 Oct 2026). Check it before publishing.
 
 ## 1. Text block above the iframe
 
@@ -12,7 +12,7 @@ Draft copy, taken from the programme document. Check it before publishing, and u
 >
 > For six weeks, CHYBÍK + KRIŠTOF run an open studio at Aedes, investigating four sites in Berlin through the themes PLAY, LIVE, ACTIVATE and ADAPT. Open Studio: Monday to Friday, 09:00–17:00.
 >
-> The public programme brings guest lectures by 51N4E, Amin Taha (GROUPWORK), NP2F and Space Popular, film screenings on Czech and Czechoslovak architecture, workshops for schools and families, weekly public reviews of 4 Transformations for Berlin, and more. Free entry.
+> The public programme brings guest lectures by 51N4E, Amin Taha (GROUPWORK), NP2F, Space Popular and Adam Štěch, a conversation between Aileen Iverson and Ralf Pasel, film screenings on Czech and Czechoslovak architecture, family workshops and weekly Archi Breakfasts. Free entry to all events.
 
 ## 2. Link under the iframe
 
