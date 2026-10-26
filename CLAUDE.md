@@ -13,6 +13,7 @@ Exhibition programme for Chybík + Krištof at Aedes, Berlin (22 Oct – 3 Dec 2
 - Preserve accents in Czech names exactly as written (Chybík, Krištof, Ondřej).
 - Private, invitation-only events (press lunches, supper clubs) are never added to the public programme.
 - `"registration": true` adds a "Register" mailto link to `meta.registrationEmail` with the subject "Registration: <title>". Don't put registration emails in descriptions.
+- Each Tally form ends with a privacy notice linking to `site/privacy.html` (deployed at `/privacy.html`). If the forms' fields, who receives submissions, or the retention period change, update that page too.
 - `"missing"` lists details still to be confirmed (e.g. `["end time", "speaker"]`). It isn't shown on the page. Remove items as they get confirmed; never fill a gap with a guess.
 - `"themes"` uses the ids in `themes` (play, live, adapt, activate). The filter uses `type` only.
 - Always run `node scripts/validate.mjs` before committing. It prints the outstanding "to be confirmed" list too.

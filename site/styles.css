@@ -127,6 +127,17 @@ details[open] .toggle::before { content: "–"; }
 .details__links a { margin-right: .6em; }
 .details__actions { display: flex; flex-wrap: wrap; gap: .25em; }
 
+/* Privacy page (privacy.html): plain text, as .primitive.text on the site. No app.js there, so the
+   736px breakpoint is a media query (a standalone page, so the viewport is its own). */
+.policy > * { margin: 0; }
+.policy > * + * { margin-top: 1em; }   /* as .details__body */
+.policy h1, .policy h2 { font-size: 1em; font-weight: 400; }
+.policy h2, .policy > .dim { margin-top: var(--head-gap); }
+.policy h2 + * { margin-top: 0; }
+.policy ul { padding-left: 1.2em; }
+@media (min-width: 768px) { .policy { max-width: 75vw; } }
+@media (max-width: 736px) { html:has(.policy) { font-size: 18px; } }
+
 /* Pill, as .btn on the site */
 .btn {
   display: inline-block;
