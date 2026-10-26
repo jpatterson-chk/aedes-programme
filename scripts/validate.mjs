@@ -13,13 +13,14 @@ const DEFAULT_FILE = join(dirname(fileURLToPath(import.meta.url)), '..', 'site',
 
 const EVENT_FIELDS = new Set([
   'id', 'date', 'start', 'end', 'type', 'title', 'people', 'location', 'description',
-  'links', 'status', 'note', 'registration', 'themes', 'missing',
+  'links', 'status', 'note', 'registration', 'registrationForm', 'themes', 'missing',
 ]);
 const STATUSES = ['scheduled', 'cancelled', 'changed'];
 const KEBAB = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const TIME = /^([01]\d|2[0-3]):[0-5]\d$/;
 const EMAIL = /^[^\s@]+@[a-z0-9-]+(\.[a-z0-9-]+)+$/i; // ASCII domain only: catches "krištof.com"
 const HTML = /<\/?[a-z!][^>]*>/i;
+const TALLY_ID = /^[A-Za-z0-9]{4,12}$/;   // the part after tally.so/r/, e.g. "wzeAYa"
 
 const isObject = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 const isText = (v) => typeof v === 'string' && v.trim() !== '';
@@ -112,6 +113,7 @@ export function validate(data) {
   }
 
   const seen = new Map();
+  const forms = new Map();   // Tally form id → event id
   const valid = [];
   data.events.forEach((e, i) => {
     const name = isObject(e) && isText(e.id) ? `"${e.id}"` : isObject(e) && isText(e.title) ? `#${i + 1} ("${e.title}")` : `#${i + 1}`;
@@ -161,7 +163,13 @@ export function validate(data) {
     if (e.status !== undefined && !STATUSES.includes(e.status)) err('"status"', `must be one of ${STATUSES.join(', ')}, got ${JSON.stringify(e.status)}.`);
     if (e.note !== undefined && typeof e.note !== 'string') err('"note"', 'must be text.');
     if (e.registration !== undefined && typeof e.registration !== 'boolean') err('"registration"', 'must be true or false (no quotes).');
-    if (e.registration === true && isObject(meta) && !meta.registrationEmail) err('"registration"', 'is true but meta has no "registrationEmail".');
+    if (e.registration === true && !e.registrationForm && isObject(meta) && !meta.registrationEmail) err('"registration"', 'is true but there is no "registrationForm" and meta has no "registrationEmail".');
+    if (e.registrationForm !== undefined) {
+      if (typeof e.registrationForm !== 'string' || !TALLY_ID.test(e.registrationForm)) err('"registrationForm"', `must be the Tally form id only, the part after tally.so/r/ (e.g. "wzeAYa"), got ${JSON.stringify(e.registrationForm)}.`);
+      else if (forms.has(e.registrationForm)) err('"registrationForm"', `"${e.registrationForm}" is also used by "${forms.get(e.registrationForm)}". Every event needs its own form.`);
+      else forms.set(e.registrationForm, e.id);
+      if (e.registration !== true) err('"registrationForm"', 'needs "registration": true as well.');
+    }
     if (e.themes !== undefined) {
       if (!Array.isArray(e.themes)) err('"themes"', 'must be a list of theme ids.');
       else e.themes.forEach((t) => { if (!themeIds.has(t)) err('"themes"', `"${t}" is not one of the themes: ${[...themeIds].join(', ') || '(none defined)'}.`); });
@@ -175,6 +183,12 @@ export function validate(data) {
 
     if (errors.length === before) valid.push(e);
   });
+
+  // Once some events register through Tally, flag the ones still registering by email (likely a form not yet added).
+  const byEmail = valid.filter((e) => e.registration === true && !e.registrationForm && e.status !== 'cancelled');
+  if (forms.size && byEmail.length) {
+    warnings.push(`${byEmail.length} event${byEmail.length > 1 ? 's' : ''} with registration still register by email (no "registrationForm"): ${byEmail.map((e) => e.id).join(', ')}.`);
+  }
 
   // overlaps at the same location (only events with both start and end, not cancelled)
   const byPlace = new Map();

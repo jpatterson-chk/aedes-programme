@@ -4,6 +4,8 @@
 // Times in programme.json are wall-clock times in meta.timezone. They are converted to UTC using
 // the offset that applies on that date, so events either side of the 25 Oct DST change are right.
 
+import { registrationText } from '../site/render.js';
+
 const PRODID = '-//CHYBIK + KRISTOF//Aedes programme//EN';
 const UID_DOMAIN = 'aedes-programme.jpatterson-chk.github.io';
 
@@ -71,7 +73,7 @@ function vevent(e, data, stamp) {
     type && `${type.label[0].toUpperCase()}${type.label.slice(1)}`,
     e.note,
     e.description,
-    e.registration && meta.registrationEmail && `Registration: ${meta.registrationEmail} (subject: Registration: ${e.title})`,
+    registrationText(e, meta),
   ].filter(Boolean).join('\n\n');
 
   return [

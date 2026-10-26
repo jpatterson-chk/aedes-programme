@@ -74,7 +74,7 @@ export async function checkAtWidth(browser, { url, frameOrigin, width, check, sc
 
   if (screenshot) await ctx.page.screenshot({ path: screenshot, fullPage: true });
 
-  await ctx.frame.locator('details summary').first().click();
+  await ctx.frame.locator('li:not([hidden]) details summary').first().click();   // past events are folded away
   const opened = await settled(ctx);
   check(opened.iframeHeight > m.iframeHeight && opened.matches, 'height follows when an event is opened', `${m.iframeHeight} → ${opened.iframeHeight}`);
 

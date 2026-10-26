@@ -24,6 +24,7 @@ const data = {
   events: [
     { id: 'a', date: '2026-10-26', start: '18:00', end: '19:30', type: 'lecture', title: 'Ondřej Chybík: Building, the; Existing City', people: ['Ondřej Chybík'], description: 'Line one.\n\nŠrámková, Chytilová — ' + 'long text '.repeat(20), registration: true },
     { id: 'b', date: '2026-10-27', start: '18:30', type: 'lecture', title: 'Gone', status: 'cancelled' },
+    { id: 'c', date: '2026-10-28', start: '18:30', type: 'lecture', title: 'With a form', registration: true, registrationForm: 'wzeAYa' },
   ],
 };
 const ics = calendar(data, data.events, { name: 'Test', stamp: new Date('2026-10-15T12:00:00Z') });
@@ -37,6 +38,8 @@ ok(unfolded.includes('SUMMARY:Ondřej Chybík: Building\\, the\\; Existing City'
 ok(unfolded.includes('Line one.\\n\\nŠrámková'), 'paragraph breaks become \\n');
 ok(/BEGIN:VEVENT\r\nUID:b@[^]*?STATUS:CANCELLED/.test(ics), 'cancelled event has STATUS:CANCELLED');
 ok(!/UID:b@[^]*?DTEND/.test(ics.split('BEGIN:VEVENT')[2]), 'no end and no default duration → no DTEND');
+ok(unfolded.includes('Registration: berlin@chybik-kristof.com (subject: Registration: Ondřej Chybík'), 'registration by email: address and subject');
+ok(unfolded.includes('Register: https://tally.so/r/wzeAYa') && !ics.split('BEGIN:VEVENT')[3].replace(/\r\n /g, '').includes('berlin@'), 'registration with a form: the form link, no email');
 
 const withDefault = { ...data, meta: { ...data.meta, defaultDurationMinutes: 90 } };
 const ics90 = calendar(withDefault, withDefault.events, { stamp: new Date('2026-10-15T12:00:00Z') }).replace(/\r\n /g, '');

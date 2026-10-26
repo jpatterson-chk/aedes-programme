@@ -27,7 +27,8 @@ If the commit gets a red ✗, **nothing changed on the live page**. Open the run
 - Never change an event's `"id"` once it is published.
 - Descriptions are plain text. A blank line (`\n\n`) starts a new paragraph.
 - Links must start with `https://`.
-- `"registration": true` shows a "Register" link that opens an email to berlin@chybik-kristof.com, with the subject "Registration: <event title>".
+- `"registration": true` shows a "Register" button. Add `"registrationForm": "wzeAYa"` (the Tally form's id, the part after `tally.so/r/`) and the button opens that event's registration form on the page; submissions are emailed to berlin@chybik-kristof.com. Without a form id, the button opens an email to berlin@chybik-kristof.com with the subject "Registration: <event title>".
+- If an event with a registration form changes its title, date, time or place, update its Tally form too: the form repeats those details.
 - `"missing": ["end time", "speaker"]` notes details still to be confirmed. It isn't shown on the page. The validator lists all of them, so delete each item once it's filled in.
 - Private, invitation-only events (press lunches, supper clubs) don't go in this file. Nor do partner events elsewhere: only our own programme.
 - Only start times are shown on the page. `"end"` is optional and isn't displayed. Calendar entries use it when it's there; otherwise they last `meta.defaultDurationMinutes` (90).

@@ -53,6 +53,25 @@ export function endOf(e, meta) {
   return meta.defaultDurationMinutes ? addMinutes(e.date, e.start, meta.defaultDurationMinutes) : null;
 }
 
+// Registration: the event's Tally form (registrationForm) when it has one, else an email to meta.registrationEmail.
+// tally.so/r/ is the form on its own page; tally.so/embed/ is the same form for the inline iframe (app.js).
+const TALLY = 'https://tally.so';
+export const tallyFormUrl = (id) => `${TALLY}/r/${id}`;
+export const tallyEmbedUrl = (id) => `${TALLY}/embed/${id}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`;
+
+export function registrationUrl(e, meta) {
+  if (!e.registration) return null;
+  if (e.registrationForm) return tallyFormUrl(e.registrationForm);
+  return meta.registrationEmail ? `mailto:${meta.registrationEmail}?subject=${encodeURIComponent(`Registration: ${e.title}`)}` : null;
+}
+
+// The registration line in calendar entries (Google Calendar here, .ics in scripts/ics.mjs).
+export function registrationText(e, meta) {
+  if (!e.registration) return null;
+  if (e.registrationForm) return `Register: ${tallyFormUrl(e.registrationForm)}`;
+  return meta.registrationEmail ? `Registration: ${meta.registrationEmail} (subject: Registration: ${e.title})` : null;
+}
+
 // Google Calendar's "add event" page, pre-filled. Times are wall-clock with ctz, so no UTC conversion
 // is needed and Google applies the right offset either side of the DST change.
 function googleCalendarUrl(e, meta, types) {
@@ -63,7 +82,7 @@ function googleCalendarUrl(e, meta, types) {
     e.people?.length && `With ${e.people.join(', ')}`,
     type && type[0].toUpperCase() + type.slice(1),
     e.description,
-    e.registration && meta.registrationEmail && `Registration: ${meta.registrationEmail} (subject: Registration: ${e.title})`,
+    registrationText(e, meta),
   ].filter(Boolean).join('\n\n');
   const params = new URLSearchParams({
     action: 'TEMPLATE',
@@ -132,8 +151,13 @@ export function renderProgramme(data, { features = FEATURES, updated = null, bas
     );
     if (!hasDetails) return h('li', attrs, row);
 
-    const register = e.registration && meta.registrationEmail && status !== 'cancelled'
-      && h('a', { class: 'btn', href: `mailto:${meta.registrationEmail}?subject=${encodeURIComponent(`Registration: ${e.title}`)}` }, 'Register');
+    // With a Tally form, Register is a link to the form's own page (no scripts, crawlers), which app.js turns
+    // into a toggle for the form inline, in .register-form. Without one, it's the email as before.
+    const registerUrl = status !== 'cancelled' && registrationUrl(e, meta);
+    const form = registerUrl && e.registrationForm;
+    const register = registerUrl && h('a', form
+      ? { class: 'btn register', href: registerUrl, target: '_blank', rel: 'noopener', 'aria-expanded': 'false', 'aria-controls': `register-${e.id}` }
+      : { class: 'btn', href: registerUrl }, 'Register');
 
     const body = h('div', { class: 'details__body' },
       e.location && h('p', {}, `Location: ${e.location}`),  // only set when it isn't the venue
@@ -143,6 +167,7 @@ export function renderProgramme(data, { features = FEATURES, updated = null, bas
       (register || calendar) && h('p', { class: 'details__actions' },
         register,
         calendar && calendarPicker(googleCalendarUrl(e, meta, types), `ics/${e.id}.ics`)),
+      form && h('div', { class: 'register-form', id: `register-${e.id}`, 'data-tally-src': tallyEmbedUrl(e.registrationForm), hidden: true }),
     );
     return h('li', attrs,
       h('details', {}, h('summary', {}, row), h('div', { class: 'details' }, body)));

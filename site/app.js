@@ -8,6 +8,8 @@ const DATA_URL = 'data/programme.json';
 const NARROW_MAX = 736;                    // site breakpoint: @media (max-width: 736px)
 const STACK_MAX = 860;                     // below this our own width, four columns at 24px get too cramped
 const CLOCK_INTERVAL = 60_000;             // re-evaluate today / now / past every minute
+const TALLY_SCRIPT = 'https://tally.so/widgets/embed.js';
+const FORM_HEIGHT = 600;                   // registration form before Tally sizes it (or for good, if its script fails)
 
 const root = document.documentElement;
 const app = document.getElementById('app');
@@ -85,6 +87,37 @@ function update() {
   }
 }
 
+// Registration forms (Tally). Register opens the event's form inline, in its .register-form, and closes it again.
+// Tally's script is the one runtime dependency, loaded only when a form is first opened: it sizes the form to
+// its content (iframe-resizer inside), #app grows, and embed-child.js passes the new height on to the CMS page.
+// If the script fails, the form still loads at FORM_HEIGHT and scrolls inside its frame.
+let tallyScript = null;
+const loadTally = () => (tallyScript ??= new Promise((resolve, reject) => {
+  const s = document.createElement('script');
+  s.src = TALLY_SCRIPT;
+  s.onload = resolve;
+  s.onerror = reject;
+  document.head.append(s);
+}));
+
+function toggleForm(button) {
+  const box = document.getElementById(button.getAttribute('aria-controls'));
+  const open = box.hidden;
+  box.hidden = !open;
+  button.setAttribute('aria-expanded', String(open));
+  if (!open || box.firstElementChild) return;
+
+  const iframe = document.createElement('iframe');
+  iframe.title = `Registration: ${button.closest('li').querySelector('.title').textContent}`;
+  iframe.width = '100%';
+  iframe.height = String(FORM_HEIGHT);
+  iframe.dataset.tallySrc = box.dataset.tallySrc;
+  box.append(iframe);
+  loadTally()
+    .then(() => window.Tally.loadEmbeds())
+    .catch(() => { if (!iframe.src) iframe.src = iframe.dataset.tallySrc; });
+}
+
 // Event wiring by delegation, so it survives the re-render from fresh data.
 app.addEventListener('change', (e) => {
   const select = e.target;
@@ -99,6 +132,13 @@ app.addEventListener('change', (e) => {
   }
 });
 app.addEventListener('click', (e) => {
+  const register = e.target.closest('.register[aria-controls]');
+  if (register) {
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;   // ⌘/Ctrl/Shift-click: the form's own page in a new tab or window
+    e.preventDefault();
+    toggleForm(register);
+    return;
+  }
   if (!e.target.closest('.past-toggle')) return;
   state.showPast = !state.showPast;
   update();

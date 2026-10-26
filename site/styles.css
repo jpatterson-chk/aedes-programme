@@ -127,6 +127,11 @@ details[open] .toggle::before { content: "–"; }
 .details__links a { margin-right: .6em; }
 .details__actions { display: flex; flex-wrap: wrap; gap: .25em; }
 
+/* Registration form (Tally), opened inline by Register. Its theme is set in Tally to match: Arimo (Arial's
+   metrics), black text, button and accent; transparent here, so the page shows through. */
+.register-form iframe { display: block; width: 100%; border: 0; }
+.btn.register[aria-expanded="true"] { background: var(--fg-muted); }   /* grey like .btn.dim while the form is open */
+
 /* Privacy page (privacy.html): plain text, as .primitive.text on the site. No app.js there, so the
    736px breakpoint is a media query (a standalone page, so the viewport is its own). */
 .policy > * { margin: 0; }

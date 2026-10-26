@@ -2,7 +2,7 @@
 // Search engines and AI tools read this to show and quote events (name, time, place, free entry).
 // Generated from programme.json at build time by prerender.mjs; never edited by hand.
 
-import { endOf } from '../site/render.js';
+import { endOf, tallyFormUrl } from '../site/render.js';
 import { isoWithOffset } from './ics.mjs';
 import { ORGANIZER, PAGES_URL, pageDescription, venueName } from './page-meta.mjs';
 
@@ -54,7 +54,9 @@ export function programmeJsonLd(data) {
       location: e.location ? { '@type': 'Place', name: e.location, address: e.location } : venue,
       organizer,
       isAccessibleForFree: true,
-      offers: { '@type': 'Offer', price: 0, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: `${pageUrl}#${e.id}` },
+      // Where to register: the event's Tally form if it has one, else the event on the page.
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'EUR', availability: 'https://schema.org/InStock',
+        url: e.registration && e.registrationForm ? tallyFormUrl(e.registrationForm) : `${pageUrl}#${e.id}` },
       url: `${pageUrl}#${e.id}`,
     };
   });

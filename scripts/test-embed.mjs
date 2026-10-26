@@ -6,7 +6,7 @@
 import { chromium } from 'playwright';
 import { readFileSync } from 'node:fs';
 import { startDevServers } from './serve.mjs';
-import { checkAtWidth, measure, openEmbed, reporter, settled } from './embed-checks.mjs';
+import { checkAtWidth, measure, openEmbed, reporter, settled, until } from './embed-checks.mjs';
 
 const HARNESS = 'http://localhost:8001/dev/embed-test.html';
 const FRAME_ORIGIN = 'http://localhost:8000';
@@ -64,6 +64,69 @@ console.log('\nprerendered programme (crawlers, slow or failed scripts), 1440px'
   const liveHtml = await live.locator('.programme').evaluate((e) => e.outerHTML);
   check(liveHtml === staticHtml, 're-render from fresh data matches the prerendered markup (no flash)');
   await live.close();
+}
+
+console.log('\nregistration form (Tally stubbed), 1440px');
+{
+  // Two registrable events get forms (the real data may not have any yet); tally.so is faked, so this runs offline.
+  const withForms = structuredClone(data);
+  const registrable = withForms.events.filter((e) => e.registration && e.status !== 'cancelled').slice(0, 2);
+  registrable.forEach((e, i) => { e.registrationForm = `test${i}A`; });
+  let scriptLoads = 0;
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  await context.route('**/data/programme.json*', (r) => r.fulfill({ contentType: 'application/json', body: JSON.stringify(withForms) }));
+  await context.route('https://tally.so/widgets/embed.js', (r) => {
+    scriptLoads++;
+    // Like Tally's script: load the waiting embeds, then size them to their content.
+    r.fulfill({ contentType: 'text/javascript', body: `window.Tally = { loadEmbeds() {
+      document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((f) => { f.src = f.dataset.tallySrc; f.style.height = '800px'; });
+    } };` });
+  });
+  await context.route('https://tally.so/embed/**', (r) => r.fulfill({ contentType: 'text/html', body: '<p>Form</p>' }));
+
+  // Before the exhibition, so no event is folded away as past.
+  const ctx = await openEmbed({ newPage: () => context.newPage() }, `${HARNESS}?now=2000-01-01T12:00`, FRAME_ORIGIN, 1440);
+  const [a, b] = registrable.map((e) => ({
+    summary: ctx.frame.locator(`li[id="${e.id}"] summary`),
+    button: ctx.frame.locator(`li[id="${e.id}"] .register`),
+    box: ctx.frame.locator(`#register-${e.id}`),
+    id: e.registrationForm,
+  }));
+  await until(async () => (await a.button.count()) > 0);   // after the re-render from the (routed) fresh data
+  await a.summary.click();
+  const closed = await settled(ctx);
+
+  await a.button.click();
+  await until(async () => (await a.box.locator('iframe[src]').count()) > 0);
+  const opened = await settled(ctx);
+  const frameSrc = await a.box.locator('iframe').getAttribute('src');
+  check(await a.box.isVisible() && await a.button.getAttribute('aria-expanded') === 'true', 'Register opens the form inline');
+  check(frameSrc?.startsWith(`https://tally.so/embed/${a.id}?`) && frameSrc.includes('dynamicHeight=1'), 'the form is the event’s own Tally embed', frameSrc);
+  check(opened.iframeHeight > closed.iframeHeight + 700 && opened.matches, 'height follows when Tally sizes the form', `${closed.iframeHeight} → ${opened.iframeHeight}`);
+
+  await a.button.click();
+  const shut = await settled(ctx);
+  check(await a.box.isHidden() && await a.button.getAttribute('aria-expanded') === 'false' && Math.abs(shut.iframeHeight - closed.iframeHeight) <= 2, 'Register again closes it', `${shut.iframeHeight}`);
+
+  await b.summary.click();
+  await b.button.click();
+  await until(async () => (await b.box.locator('iframe[src]').count()) > 0);
+  check(scriptLoads === 1, 'Tally’s script loads once, on first use', `${scriptLoads} loads`);
+  await context.close();
+
+  // Tally's script blocked (e.g. by a content blocker): the form still loads, at a fixed height.
+  const blocked = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  await blocked.route('**/data/programme.json*', (r) => r.fulfill({ contentType: 'application/json', body: JSON.stringify(withForms) }));
+  await blocked.route('https://tally.so/widgets/embed.js', (r) => r.abort());
+  await blocked.route('https://tally.so/embed/**', (r) => r.fulfill({ contentType: 'text/html', body: '<p>Form</p>' }));
+  const ctx2 = await openEmbed({ newPage: () => blocked.newPage() }, `${HARNESS}?now=2000-01-01T12:00`, FRAME_ORIGIN, 1440);
+  const li = ctx2.frame.locator(`li[id="${registrable[0].id}"]`);
+  await until(async () => (await li.locator('.register').count()) > 0);
+  await li.locator('summary').click();
+  await li.locator('.register').click();
+  const src = await until(() => li.locator('.register-form iframe').getAttribute('src'));
+  check(src?.startsWith(`https://tally.so/embed/${registrable[0].registrationForm}?`), 'without Tally’s script, the form still loads', src);
+  await blocked.close();
 }
 
 console.log('\nfallback (onload stripped), 1440px');

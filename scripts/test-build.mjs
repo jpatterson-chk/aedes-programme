@@ -59,5 +59,19 @@ const out = renderProgramme(tricky, { baseUrl: 'https://example.com/' });
 ok(out.includes('A &amp; B &lt;script&gt;alert(1)&lt;/script&gt; &quot;quoted&quot;') && !out.includes('<script>'), 'titles and descriptions are HTML-escaped');
 ok(!jsonLdScript(programmeJsonLd(tricky)).slice(0, -'</script>'.length).includes('</script'), 'JSON-LD can’t be closed early by text in the data');
 
+// Registration: a Tally form when the event has one, else the email as before
+const reg = structuredClone(data);
+reg.events = [
+  { ...data.events[0], id: 'with-form', status: undefined, registration: true, registrationForm: 'wzeAYa' },
+  { ...data.events[0], id: 'by-email', status: undefined, registration: true, registrationForm: undefined },
+];
+const regHtml = renderProgramme(reg, { baseUrl: 'https://example.com/' });
+const item = (id) => regHtml.slice(regHtml.indexOf(`<li id="${id}"`)).split('</li>')[0];
+ok(item('with-form').includes('href="https://tally.so/r/wzeAYa"') && !item('with-form').includes('mailto:'), 'with a form, Register links to the form, not email');
+ok(item('with-form').includes('data-tally-src="https://tally.so/embed/wzeAYa?') && !/<iframe/.test(regHtml), 'the inline form is prepared but not prerendered as an iframe');
+ok(item('by-email').includes(`href="mailto:${data.meta.registrationEmail}?subject=`), 'without a form, Register still emails');
+const regLd = programmeJsonLd(reg).subEvent;
+ok(regLd[0].offers.url === 'https://tally.so/r/wzeAYa' && regLd[1].offers.url.endsWith('#by-email'), 'JSON-LD: offer URL is the form, or the event on the page', regLd.map((e) => e.offers.url).join(', '));
+
 console.log(failed ? `\n${failed} check(s) failed.` : '\nAll build checks passed.');
 process.exit(failed ? 1 : 0);
