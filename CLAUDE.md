@@ -27,6 +27,7 @@ Exhibition programme for Chybík + Krištof at Aedes, Berlin (22 Oct – 3 Dec 2
 - Style tokens in `site/styles.css` come from `reference/computed.json` only. No guessed values.
 - Work phase by phase (PLAN.md §12) and stop for review at the end of each phase.
 - Items marked **TODO (designer)** in PLAN.md need the designer's input. Ask instead of guessing.
+- Dark mode copies the site's rule: `html.dark` from 21:00 to 07:59 local time, set by an inline script in the `<head>` of `index.html` and `privacy.html`. Dark tokens live in the `html.dark` block in `styles.css` (values from `html.dark` in `reference/css`). Keep `color-scheme: light`. Preview it with `?theme=dark` (also works on the dev harness).
 - `reference/` is not deployed but the repo is public; source documents there are git-ignored.
 - All markup comes from `site/render.js` (an HTML string, no DOM). The build prerenders it into `index.html`, with schema.org JSON-LD (`scripts/jsonld.mjs`), so crawlers and AI tools can read the page without scripts; `app.js` re-renders from fresh data. Change markup in `render.js` only, and keep `npm run test:build` passing.
-- `meta.publicUrl` is the public CMS page (`https://chybik-kristof.com/aedes-programme/`). After changing the exhibition name, dates or venue, run `node scripts/cms-snippets.mjs` and re-paste `embed/cms-jsonld.html` into the CMS.
+- `meta.publicUrl` is the public CMS page (`https://chybik-kristof.com/aedes-programme/`). `embed/cms-jsonld.html` can't go in a CMS text block (it breaks the CMS); it's only for the developer to add to the page head, regenerated with `node scripts/cms-snippets.mjs`.

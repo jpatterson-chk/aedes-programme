@@ -6,6 +6,12 @@
   <meta name="color-scheme" content="light">
   <title>Exhibition programme</title>
   <!-- build: page metadata -->
+  <!-- chybik-kristof.com turns dark from 21:00 to 07:59, visitor's local time (html.dark, set once on load).
+       Same rule here, before first paint. ?theme=dark or ?theme=light overrides it, for testing. -->
+  <script>(function () {
+    var t = new URLSearchParams(location.search).get('theme'), h = new Date().getHours();
+    if (t === 'dark' || (t !== 'light' && (h < 8 || h > 20))) document.documentElement.classList.add('dark');
+  })();</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>

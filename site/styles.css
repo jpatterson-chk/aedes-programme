@@ -9,6 +9,7 @@
   --fg: black;                     /* --text-color */
   --fg-muted: #808080;             /* --dim-color */
   --site-bg: #F5F5F5;              /* --background-color; the iframe itself stays transparent */
+  --light-bg: #F5F5F5;             /* --background-color in light mode, also in dark (Tally panel) */
   --gutter: .6rem;                 /* nav / .primitive.text padding */
   --cell-pad: .3rem;               /* table section + cell padding (desktop) */
   --row-pad: .21em;                /* #c-other-projects .table__body .row */
@@ -23,6 +24,15 @@
   --time-col: 4em;
   --cols: var(--time-col) 2fr 1fr 1fr;
   --day-gap: 1.2em;                /* one blank line above each date */
+}
+
+/* Dark, as html.dark on the site: 21:00–07:59 local, set by the inline script in <head>.
+   --dim-color stays #808080 there too. color-scheme stays light: the CMS iframe is color-scheme:light,
+   and a mismatch would paint an opaque backdrop behind it. */
+html.dark {
+  --fg: white;                     /* html.dark --text-color */
+  --site-bg: #0a0a0a;              /* html.dark --background-color */
+  --pill-bg: #fff; --pill-fg: #000;   /* html.dark .btn */
 }
 
 /* Base: html { font-size: 24px } on the site; 18px at max-width 736px (html.narrow, set by app.js). */
@@ -109,6 +119,7 @@ html.embedded .footer__home { display: none; }   /* inside the CMS page it would
 .btn.select:focus-within { outline: 2px solid var(--fg); outline-offset: 2px; }
 button.btn { border: 0; margin: 0; font-family: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
 .btn.dim { background: var(--fg-muted); }      /* .btn.dim, e.g. "Back to top" */
+html.dark .btn.dim { background: var(--pill-bg); }   /* html.dark .btn outranks .btn.dim on the site */
 .btn.icon { padding: 0; min-width: var(--pill-h); text-align: center; }   /* .btn.icon on the site */
 .btn.icon.select { background: transparent; }    /* 📅: pill-sized so it lines up with Register, but no fill */
 
@@ -131,6 +142,7 @@ details[open] .toggle::before { content: "–"; }
    metrics), black text, button and accent; transparent here, so the page shows through. */
 .register-form iframe { display: block; width: 100%; border: 0; }
 .btn.register[aria-expanded="true"] { background: var(--fg-muted); }   /* grey like .btn.dim while the form is open */
+html.dark .register-form { background: var(--light-bg); padding: var(--gutter); }   /* the Tally theme is black text: a light panel keeps it legible */
 
 /* Privacy page (privacy.html): plain text, as .primitive.text on the site. No app.js there, so the
    736px breakpoint is a media query (a standalone page, so the viewport is its own). */

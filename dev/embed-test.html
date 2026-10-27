@@ -9,7 +9,8 @@
     exact snippet from embed/cms-snippet.html, pointed at the dev origin.
     Run `node scripts/serve.mjs`, then open http://localhost:8001/dev/embed-test.html
     Add ?fallback to strip the onload handler and check the fixed-height scrolling fallback,
-    or ?now=2026-11-17T10:30 to see the programme as it looks at that moment.
+    or ?now=2026-11-17T10:30 to see the programme as it looks at that moment,
+    or ?theme=dark to see both the page and the programme in the site's night mode (html.dark, 21:00–07:59).
   -->
   <style>
     html { font-size: 24px; font-family: Arial, sans-serif; line-height: 1.2; color: black; background: #F5F5F5; }
@@ -24,6 +25,9 @@
     .primitive.text > *:first-child { margin-top: 0; }
     .primitive.text > *:last-child { margin-bottom: 0; }
     a { color: inherit; text-decoration: none; opacity: .6; }
+    html.dark { color: white; background: #0a0a0a; }   /* html.dark on the site */
+    html.dark nav { background: #0a0a0a; }
+    html.dark nav b { color: white; }
     #harness-status { position: fixed; right: 8px; bottom: 8px; z-index: 9; font: 12px/1.4 ui-monospace, monospace; background: #fff; padding: 4px 8px; border: 1px solid #ccc; }
   </style>
 </head>
@@ -45,8 +49,12 @@
     (async () => {
       const snippet = await (await fetch('/embed/cms-snippet.html', { cache: 'no-store' })).text();
       const params = new URLSearchParams(location.search);
-      // ?now=2026-11-17T10:30 is passed through to the programme to test today / now / past.
-      const page = `${DEV_ORIGIN}/${params.has('now') ? `?now=${encodeURIComponent(params.get('now'))}` : ''}`;
+      // ?now=2026-11-17T10:30 and ?theme=dark|light are passed through to the programme.
+      const query = new URLSearchParams([...params].filter(([k]) => k === 'now' || k === 'theme')).toString();
+      const page = `${DEV_ORIGIN}/${query ? `?${query}` : ''}`;
+      // The site's own rule (dark 21:00–07:59 local), with the same override as the programme.
+      const theme = params.get('theme'), hour = new Date().getHours();
+      document.documentElement.classList.toggle('dark', theme === 'dark' || (theme !== 'light' && (hour < 8 || hour > 20)));
       const box = document.getElementById('embed');
       box.innerHTML = snippet.replaceAll(PROD_PAGE, page).replaceAll(PROD_ORIGIN, DEV_ORIGIN);
       const iframe = box.querySelector('iframe');

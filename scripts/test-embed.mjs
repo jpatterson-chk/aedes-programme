@@ -129,6 +129,58 @@ console.log('\nregistration form (Tally stubbed), 1440px');
   await blocked.close();
 }
 
+console.log('\ndark mode (the site’s html.dark, 21:00–07:59 local), 1440px');
+{
+  // The browser clock is faked; ?now keeps the programme before the exhibition, so nothing is folded away.
+  const withForm = structuredClone(data);
+  const registrable = withForm.events.find((e) => e.registration && e.status !== 'cancelled');
+  if (registrable) registrable.registrationForm = 'testDark';
+  const colours = (frame) => frame.evaluate(() => {
+    const css = (sel, prop) => { const el = document.querySelector(sel); return el && getComputedStyle(el)[prop]; };
+    return {
+      dark: document.documentElement.classList.contains('dark'),
+      text: css('.cell.name', 'color'),
+      pill: css('.btn.filter', 'backgroundColor'),
+      page: css('html', 'backgroundColor'),
+    };
+  });
+  const at = async (time, url) => {
+    const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, timezoneId: 'Europe/Berlin' });
+    await context.clock.setFixedTime(new Date(`2026-11-10T${time}:00+01:00`));
+    await context.route('**/data/programme.json*', (r) => r.fulfill({ contentType: 'application/json', body: JSON.stringify(withForm) }));
+    await context.route('https://tally.so/**', (r) => r.fulfill({ contentType: 'text/html', body: '<p>Form</p>' }));
+    return { context, ctx: url ? null : await openEmbed({ newPage: () => context.newPage() }, `${HARNESS}?now=2000-01-01T12:00`, FRAME_ORIGIN, 1440) };
+  };
+
+  const night = await at('22:00');
+  const n = await colours(night.ctx.frame);
+  check(n.dark && n.text === 'rgb(255, 255, 255)', 'at 22:00 the text is white', JSON.stringify(n));
+  check(n.pill === 'rgb(255, 255, 255)', 'pills are white, as html.dark .btn', n.pill);
+  check(n.page === 'rgba(0, 0, 0, 0)', 'the embedded page stays transparent', n.page);
+  check((await settled(night.ctx)).matches, 'height still matches');
+  if (registrable) {
+    const li = night.ctx.frame.locator(`li[id="${registrable.id}"]`);
+    await until(async () => (await li.locator('.register').count()) > 0);
+    await li.locator('summary').click();
+    await li.locator('.register').click();
+    const panel = await li.locator('.register-form').evaluate((e) => getComputedStyle(e).backgroundColor);
+    check(panel === 'rgb(245, 245, 245)', 'an open Tally form sits on a light panel', panel);
+  }
+  await night.context.close();
+
+  const morning = await at('08:00');
+  const m = await colours(morning.ctx.frame);
+  check(!m.dark && m.text === 'rgb(0, 0, 0)', 'at 08:00 the text is black again', JSON.stringify(m));
+  await morning.context.close();
+
+  const noon = await at('12:00', true);
+  const page = await noon.context.newPage();
+  await page.goto(`${FRAME_ORIGIN}/?theme=dark`, { waitUntil: 'networkidle' });
+  const s = await colours(page.mainFrame());
+  check(s.dark && s.page === 'rgb(10, 10, 10)', 'standalone ?theme=dark at noon: dark, on #0a0a0a', JSON.stringify(s));
+  await noon.context.close();
+}
+
 console.log('\nfallback (onload stripped), 1440px');
 {
   const ctx = await openEmbed(browser, `${HARNESS}?fallback`, FRAME_ORIGIN, 1440);
