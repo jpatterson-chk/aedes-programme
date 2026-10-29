@@ -13,8 +13,9 @@
   },
   "types": [
     { "id": "lecture", "label": "lecture", "group": "Lectures" },
+    { "id": "screening", "label": "film screening", "group": "Film screenings" },
     { "id": "workshop", "label": "workshop", "group": "Workshops" },
-    { "id": "review", "label": "public review", "group": "Public reviews" },
+    { "id": "review", "label": "public preview", "group": "Public previews" },
     { "id": "meetup", "label": "meet-up", "group": "Talks & meet-ups" },
     { "id": "walk", "label": "walk / run", "group": "Walks & runs" },
     { "id": "opening", "label": "special event", "group": "Opening & finissage" }
@@ -50,7 +51,7 @@
       "type": "lecture",
       "title": "CHYBÍK + KRIŠTOF: opening lecture & discussion",
       "people": ["Ondřej Chybík"],
-      "description": "Ondřej Chybík: Building the Existing City.\n\nHow can architecture contribute to the future of cities by working with what already exists rather than continuously building anew? In his opening lecture, Ondřej Chybík, founding partner of CHYBÍK + KRIŠTOF Architects, introduces the ideas and architectural approach behind Building the Existing City. Drawing on selected projects from the studio’s practice, he explores how adaptive reuse, urban regeneration and carefully considered interventions can unlock the potential of existing buildings, public spaces and urban structures.\n\nMoving between different scales and contexts, the lecture reflects on architecture as a catalyst for social interaction, cultural continuity and sustainable urban development. It also considers the evolving role of architects — not only as designers of buildings, but as active participants in shaping the future of cities. The lecture sets the conceptual framework for the six-week open studio at Aedes, where CHYBÍK + KRIŠTOF will investigate four sites in Berlin through the themes of PLAY, LIVE, ACTIVATE and ADAPT, inviting dialogue between architectural practice, local expertise and the wider public.\n\nLanguage: English.",
+      "description": "Ondřej Chybík: Building the Existing City.\n\nHow can architecture contribute to the future of cities by working with what already exists rather than continuously building anew?\n\nIn his opening lecture, Ondřej Chybík, founding partner of CHYBÍK + KRIŠTOF Architects, introduces the ideas and architectural approach behind Building the Existing City. Drawing on selected projects from the studio’s practice, he explores how adaptive reuse, urban regeneration and carefully considered interventions can unlock the potential of existing buildings, public spaces and urban structures.\n\nMoving between different scales and contexts, the lecture reflects on architecture as a catalyst for social interaction, cultural continuity and sustainable urban development. It also considers the evolving role of architects — not only as designers of buildings, but as active participants in shaping the future of cities. The lecture sets the conceptual framework for the six-week open studio at Aedes, where CHYBÍK + KRIŠTOF will investigate four sites in Berlin through the themes of PLAY, LIVE, ACTIVATE and ADAPT, inviting dialogue between architectural practice, local expertise and the wider public.\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "BEExrN"
     },
@@ -61,6 +62,7 @@
       "end": "10:30",
       "type": "meetup",
       "title": "Archi Breakfast #2",
+      "description": "Meet the CHYBÍK + KRIŠTOF team over breakfast!\n\nStart your day with coffee, breakfast and a conversation about architecture and the future of our cities. Join us at our open studio at Aedes, meet the architects and the team behind CHYBÍK + KRIŠTOF = Building the Existing City, discover what 4 Transformations for Berlin they are working on and exchange ideas in an informal atmosphere. Everyone is welcome.",
       "registration": true,
       "registrationForm": "GeeEqo"
     },
@@ -72,7 +74,7 @@
       "title": "Amin Taha: guest lecture & discussion",
       "people": ["Amin Taha"],
       "themes": ["live"],
-      "description": "How can architecture respond to the changing ways we live while addressing the environmental challenges of our time? In this lecture, Amin Taha, founding partner of London-based architecture practice GROUPWORK, explores the relationship between materials, construction and architectural expression. Drawing on the studio’s experimental approach and innovative use of structural stone, he reflects on new possibilities for creating sustainable, resource-conscious and inspiring spaces. As part of Building the Existing City, the lecture contributes to the theme LIVE, opening a broader discussion on how architecture can shape the places we inhabit and the ways we live together.\n\n+ Thursday Beer\n\nLanguage: English.",
+      "description": "How can architecture respond to the changing ways we live while addressing the environmental challenges of our time?\n\nIn this lecture, Amin Taha, founding partner of London-based architecture practice GROUPWORK, explores the relationship between materials, construction and architectural expression. Drawing on the studio’s experimental approach and innovative use of structural stone, he reflects on new possibilities for creating sustainable, resource-conscious and inspiring spaces.\n\nAs part of Building the Existing City, the lecture contributes to the theme LIVE, opening a broader discussion on how architecture can shape the places we inhabit and the ways we live together.\n\n+ Thursday Beer\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "LDDP81"
     },
@@ -84,7 +86,7 @@
       "title": "51N4E (BE): guest lecture & discussion",
       "people": ["51N4E"],
       "themes": ["adapt"],
-      "description": "How can we transform existing buildings and urban structures to respond to changing social, environmental and spatial needs? In this lecture, Brussels-based architecture practice 51N4E explores the potential of adaptation as a creative approach to architecture and urban transformation. Drawing on its experience with adaptive reuse, urban regeneration and the reactivation of existing spaces, the studio reflects on how architecture can build upon what is already there while introducing new uses, meanings and possibilities. As part of Building the Existing City, the lecture contributes to the theme ADAPT, opening a broader discussion on how thoughtful transformation can shape more resilient, inclusive and sustainable cities.\n\n+ Tuesday Beer\n\nLanguage: English.",
+      "description": "How can we transform existing buildings and urban structures to respond to changing social, environmental and spatial needs?\n\nIn this lecture, Brussels-based architecture practice 51N4E explores the potential of adaptation as a creative approach to architecture and urban transformation. Drawing on its experience with adaptive reuse, urban regeneration and the reactivation of existing spaces, the studio reflects on how architecture can build upon what is already there while introducing new uses, meanings and possibilities. As part of Building the Existing City, the lecture contributes to the theme ADAPT, opening a broader discussion on how thoughtful transformation can shape more resilient, inclusive and sustainable cities.\n\n+ Tuesday Beer\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "Z992Bz"
     },
@@ -95,6 +97,7 @@
       "end": "10:30",
       "type": "meetup",
       "title": "Archi Breakfast #3",
+      "description": "Meet the CHYBÍK + KRIŠTOF team over breakfast!\n\nStart your day with coffee, breakfast and a conversation about architecture and the future of our cities. Join us at our open studio at Aedes, meet the architects and the team behind CHYBÍK + KRIŠTOF = Building the Existing City, discover what 4 Transformations for Berlin they are working on and exchange ideas in an informal atmosphere. Everyone is welcome.",
       "registration": true,
       "registrationForm": "2jjdlV"
     },
@@ -104,7 +107,7 @@
       "start": "18:30",
       "type": "lecture",
       "title": "What’s Cooking? Whose Idea Is It? Thinking Through Making",
-      "description": "Aileen Iverson in conversation with Prof. Ralf Pasel.\n\nWhose idea is it, really? When we cook, build, compose, and especially design with the latest technology, how much of what emerges comes from our own intentions—and how much from the materials, tools, and conditions we work with? Architect and computational design researcher Aileen Iverson joins Professor Ralf Pasel, Chair of Architectural Design and Construction Technologies (CODE) to explore how making can shape not only what we create, but also what we think, discover and come to know.\n\nDr. Aileen Iverson is a Berlin-based architect, researcher and educator and founder of air-architecture. Her work explores the intersection of architectural design, computational intelligence and spatiomateriality. Through hybrid analogue-digital methodologies, she connects computational design processes directly with physical, environmental and human conditions, investigating how situated, responsive computational systems can contribute to new forms of design intelligence and knowledge production, with growing applications in regenerative architectural design.\n\nProf. Ralf Pasel is an architect and founding partner of Pasel-K architects in Berlin and pasel.künzel architects in Rotterdam. Since 2012, he has headed the Chair of Architectural Design and Construction Technologies (CODE) at TU Berlin. His internationally recognised practice and research explore the intersection of architectural design, construction and knowledge production, with a particular focus on experimental housing, Design-Build and Design-Driven Research. He is also a co-founder of TU Berlin’s Practice-based Research Programme (PEP).\n\nLanguage: English. No registration required.",
+      "description": "Aileen Iverson in conversation with Prof. Ralf Pasel.\n\nWhose idea is it, really? When we cook, build, compose, and especially design with the latest technology, how much of what emerges comes from our own intentions—and how much from the materials, tools, and conditions we work with? Architect and computational design researcher Aileen Iverson joins Professor Ralf Pasel, Chair of Architectural Design and Construction Technologies (CODE) to explore how making can shape not only what we create, but also what we think, discover and come to know.\n\nDr. Aileen Iverson is a Berlin-based architect, researcher and educator and founder of air-architecture. Her work explores the intersection of architectural design, computational intelligence and spatiomateriality. Through hybrid analogue-digital methodologies, she connects computational design processes directly with physical, environmental and human conditions, investigating how situated, responsive computational systems can contribute to new forms of design intelligence and knowledge production, with growing applications in regenerative architectural design.\n\nProf. Ralf Pasel is an architect and founding partner of Pasel-K architects in Berlin and pasel.künzel architects in Rotterdam. Since 2012, he has headed the Chair of Architectural Design and Construction Technologies (CODE) at TU Berlin. His internationally recognised practice and research explore the intersection of architectural design, construction and knowledge production, with a particular focus on experimental housing, Design-Build and Design-Driven Research. He is also a co-founder of TU Berlin’s Practice-based Research Programme (PEP).\n\nLanguage: English.",
       "people": ["Aileen Iverson", "Ralf Pasel"],
       "missing": ["type (lecture for now, to be confirmed)"]
     },
@@ -116,7 +119,7 @@
       "title": "NP2F (FR): guest lecture & discussion",
       "people": ["NP2F"],
       "themes": ["play"],
-      "description": "How can architecture create new opportunities for play, movement and social interaction within the city? In this lecture, Paris-based architecture practice NP2F explores the role of sport, leisure and collective activities in shaping contemporary urban spaces. Drawing on its architectural approach, the studio reflects on how buildings and public spaces can encourage movement, experimentation and new forms of shared experience. As part of Building the Existing City, the lecture contributes to the theme PLAY, opening a broader discussion on how playful and inclusive environments can transform the way we experience and inhabit our cities.\n\n+ Thursday Beer\n\nLanguage: English.",
+      "description": "How can architecture create new opportunities for play, movement and social interaction within the city? In this lecture, Paris-based architecture practice NP2F explores the role of sport, leisure and collective activities in shaping contemporary urban spaces. Drawing on its architectural approach, the studio reflects on how buildings and public spaces can encourage movement, experimentation and new forms of shared experience.\n\nAs part of Building the Existing City, the lecture contributes to the theme PLAY, opening a broader discussion on how playful and inclusive environments can transform the way we experience and inhabit our cities.\n\n+ Thursday Beer\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "J11Oyd"
     },
@@ -135,7 +138,7 @@
       "type": "lecture",
       "title": "Brno–Berlin: Modernism Across Borders",
       "people": ["Adam Štěch"],
-      "description": "Modernism was never confined by national borders. Architects, ideas, publications and new models of living circulated across Central Europe, creating a dense network of influences between cities and cultures. In this lecture, architecture and design historian Adam Štěch explores connections between Czech and German modernism through a personal selection of buildings, interiors and lesser-known architectural stories. Brno, one of the key centres of interwar modern architecture, becomes an important point of departure: from the experimental housing of Nový dům and the city’s remarkable functionalist landscape to parallel developments in Berlin and Germany. Moving between Brno, Prague, Berlin and other sites across the Czech-German cultural space, the lecture traces shared ideas of modern housing, new forms of domestic life, standardisation, craftsmanship and the Gesamtkunstwerk, as well as the architects and designers who moved between these worlds. Rather than presenting modernism as a collection of isolated national histories, Štěch approaches it as a network of exchanges, encounters and unexpected parallels — revealing both celebrated icons and overlooked details that connect Czech and German architectural culture.\n\nLanguage: English.",
+      "description": "Modernism was never confined by national borders. Architects, ideas, publications and new models of living circulated across Central Europe, creating a dense network of influences between cities and cultures. In this lecture, architecture and design historian Adam Štěch explores connections between Czech and German modernism through a personal selection of buildings, interiors and lesser-known architectural stories. Brno, one of the key centres of interwar modern architecture, becomes an important point of departure: from the experimental housing of Nový dům and the city’s remarkable functionalist landscape to parallel developments in Berlin and Germany.\n\nMoving between Brno, Prague, Berlin and other sites across the Czech-German cultural space, the lecture traces shared ideas of modern housing, new forms of domestic life, standardisation, craftsmanship and the Gesamtkunstwerk, as well as the architects and designers who moved between these worlds.\n\nRather than presenting modernism as a collection of isolated national histories, Štěch approaches it as a network of exchanges, encounters and unexpected parallels — revealing both celebrated icons and overlooked details that connect Czech and German architectural culture.\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "X554j4"
     },
@@ -146,8 +149,19 @@
       "end": "10:30",
       "type": "meetup",
       "title": "Archi Breakfast #4",
+      "description": "Meet the CHYBÍK + KRIŠTOF team over breakfast!\n\nStart your day with coffee, breakfast and a conversation about architecture and the future of our cities. Join us at our open studio at Aedes, meet the architects and the team behind CHYBÍK + KRIŠTOF = Building the Existing City, discover what 4 Transformations for Berlin they are working on and exchange ideas in an informal atmosphere. Everyone is welcome.",
       "registration": true,
       "registrationForm": "xVVbRo"
+    },
+    {
+      "id": "2026-11-20-public-preview",
+      "date": "2026-11-20",
+      "start": "12:00",
+      "end": "17:00",
+      "type": "review",
+      "title": "Public preview: 4 Transformations for Berlin",
+      "themes": ["activate", "live", "adapt", "play"],
+      "description": "Collaborative workshop / work in progress.\n\nHow can we shape the future of Berlin together? Join the CHYBÍK + KRIŠTOF team for an open, informal exchange around four ongoing urban projects: ACTIVATE at Innsbrucker Platz, LIVE at Frankfurter Allee, ADAPT at Dragonerareal in Kreuzberg, and PLAY at Sommerbad Seestraße.\n\nExplore the ideas taking shape, meet the architects, ask questions and share your own perspectives, experiences and suggestions. Whether you live nearby, work in the area or are simply interested in Berlin’s future, your input is welcome and can help inform the developing proposals.\n\nDrop in anytime between 12:00 and 17:00."
     },
     {
       "id": "2026-11-22-umherum-family-workshop",
@@ -164,6 +178,7 @@
       "end": "10:30",
       "type": "meetup",
       "title": "Archi Breakfast #5",
+      "description": "Meet the CHYBÍK + KRIŠTOF team over breakfast!\n\nStart your day with coffee, breakfast and a conversation about architecture and the future of our cities. Join us at our open studio at Aedes, meet the architects and the team behind CHYBÍK + KRIŠTOF = Building the Existing City, discover what 4 Transformations for Berlin they are working on and exchange ideas in an informal atmosphere. Everyone is welcome.",
       "registration": true,
       "registrationForm": "RWWebl"
     },
@@ -175,7 +190,7 @@
       "title": "Space Popular: guest lecture & discussion",
       "people": ["Space Popular"],
       "themes": ["activate"],
-      "description": "How can architecture activate new forms of interaction, participation and collective experience across physical and digital spaces? In this lecture, architecture and design studio Space Popular explores the evolving relationship between the built environment, digital technologies and the ways we experience space. Drawing on its experimental practice across architecture, research and virtual environments, the studio reflects on how emerging forms of spatial interaction can reshape our understanding of public space and urban life. As part of Building the Existing City, the lecture contributes to the theme ACTIVATE, opening a broader discussion on how architecture can connect people, places and new forms of shared experience.\n\n+ Wednesday Beer\n\nLanguage: English.",
+      "description": "How can architecture activate new forms of interaction, participation and collective experience across physical and digital spaces?\n\nIn this lecture, architecture and design studio Space Popular explores the evolving relationship between the built environment, digital technologies and the ways we experience space. Drawing on its experimental practice across architecture, research and virtual environments, the studio reflects on how emerging forms of spatial interaction can reshape our understanding of public space and urban life.\n\nAs part of Building the Existing City, the lecture contributes to the theme ACTIVATE, opening a broader discussion on how architecture can connect people, places and new forms of shared experience.\n\n+ Wednesday Beer\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "zEE7Vq"
     },
@@ -191,10 +206,22 @@
       "missing": ["meeting point", "registration (no longer mentioned in the final programme)"]
     },
     {
+      "id": "2026-11-30-film-bohuslav-fuchs",
+      "date": "2026-11-30",
+      "start": "18:30",
+      "type": "screening",
+      "title": "European Architect Bohuslav Fuchs",
+      "themes": ["activate"],
+      "description": "Director: Pavel Jirásek, Czech Republic, 2016, 57 min, English subtitles.\n\nThis documentary traces the work of Bohuslav Fuchs, a leading figure of Brno functionalism whose projects — including the Avion Hotel and Zeman Café — shaped the social and architectural life of the city. His attention to openness, light and public purpose makes his legacy a compelling starting point for the ACTIVATE theme.\n\nWith CHYBÍK + KRIŠTOF’s roots firmly established in Brno, the screening also offers a connection to the studio’s hometown and its rich architectural heritage. It brings a distinctly Brno perspective to the Berlin programme, linking the city’s functionalist legacy with contemporary questions of architecture and public space.\n\nLanguage: English (subtitles).",
+      "registration": true,
+      "registrationForm": "Z99r1V"
+    },
+    {
       "id": "2026-12-01-lecture-public-space-in-progress",
       "date": "2026-12-01",
       "start": "18:30",
       "type": "lecture",
+      "status": "cancelled",
       "title": "Building the Existing City: Public Space in Progress",
       "description": "Supported by mmcité.\n\nCan public life begin before a place is fully built? Bringing together Mendel Square in Brno and Haus der Statistik in Berlin, this discussion explores how urban spaces can evolve through temporary interventions, adaptation and everyday use. While Mendel Square demonstrates how a targeted redesign can transform a fragmented transport hub into a welcoming public space, Haus der Statistik uses temporary cultural and social activities to test new possibilities during an ongoing transformation. Both projects raise a shared question: how can activation, experimentation and public participation shape the future of our cities? Can public space be designed through use — before it is fully designed through architecture?\n\nLanguage: English.",
       "registration": true,
