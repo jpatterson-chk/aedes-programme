@@ -100,6 +100,12 @@ html.embedded .footer__home { display: none; }   /* inside the CMS page it would
 /* Status */
 .cancelled .title { text-decoration: line-through; }
 
+/* Recommended events elsewhere: the whole row grey (--dim-color), so they read as secondary to the
+   studio's own events; on hover the title turns black, the reverse of other rows. Opened details stay black. */
+.recommended .row,
+.recommended .cell.name { color: var(--fg-muted); }
+@media (hover: hover) { .recommended summary:hover .title { color: var(--fg); } }
+
 /* Today / now / past (FEATURES.todayNowPast) */
 .day__date .label-today { font-weight: 400; }
 .label-now { color: var(--fg); }

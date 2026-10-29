@@ -2,7 +2,7 @@
 // Search engines and AI tools read this to show and quote events (name, time, place, free entry).
 // Generated from programme.json at build time by prerender.mjs; never edited by hand.
 
-import { endOf, tallyFormUrl } from '../site/render.js';
+import { endOf, isRecommended, tallyFormUrl } from '../site/render.js';
 import { isoWithOffset } from './ics.mjs';
 import { ORGANIZER, PAGES_URL, pageDescription, venueName } from './page-meta.mjs';
 
@@ -34,7 +34,9 @@ export function programmeJsonLd(data) {
   const venue = venuePlace(meta);
   const pageUrl = meta.publicUrl ?? PAGES_URL;
   const types = new Map(data.types.map((t) => [t.id, t]));
-  const events = [...data.events].sort((a, b) => `${a.date} ${a.start}`.localeCompare(`${b.date} ${b.start}`));
+  // Recommended events elsewhere aren't part of the exhibition, organised by the studio or necessarily free.
+  const events = data.events.filter((e) => !isRecommended(e))
+    .sort((a, b) => `${a.date} ${a.start}`.localeCompare(`${b.date} ${b.start}`));
 
   const subEvent = events.map((e) => {
     const end = endOf(e, meta);

@@ -17,6 +17,7 @@ Exhibition programme for Chybík + Krištof at Aedes, Berlin (22 Oct – 3 Dec 2
 - Each Tally form repeats its event's title, date, time and place (header and thank-you screen). When any of those change for an event with a `registrationForm`, update its Tally form too, and say so in the summary.
 - Each Tally form ends with a privacy notice linking to `site/privacy.html` (deployed at `/privacy.html`). If the forms' fields, who receives submissions, or the retention period change, update that page too.
 - `"missing"` lists details still to be confirmed (e.g. `["end time", "speaker"]`). It isn't shown on the page. Remove items as they get confirmed; never fill a gap with a guess.
+- Events elsewhere that the studio recommends ("CHYBÍK + KRIŠTOF = ARCHITECTS recommend", e.g. ARCHINT at BHROX) use `"type": "recommended"` with their own `"location"`. They show greyed out and stay out of the exhibition's JSON-LD. No registration or Tally form for them.
 - `"themes"` uses the ids in `themes` (play, live, adapt, activate). The filter uses `type` only.
 - Always run `node scripts/validate.mjs` before committing. It prints the outstanding "to be confirmed" list too.
 - Then: show the diff, commit with a descriptive message (e.g. "Move 12 Nov screening to 19:00"), push.

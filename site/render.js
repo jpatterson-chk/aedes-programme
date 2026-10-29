@@ -53,6 +53,10 @@ export function endOf(e, meta) {
   return meta.defaultDurationMinutes ? addMinutes(e.date, e.start, meta.defaultDurationMinutes) : null;
 }
 
+// Events elsewhere that the studio recommends ("CHYBÍK + KRIŠTOF = ARCHITECTS recommend"), not its own programme:
+// shown greyed out, and left out of the exhibition's structured data (scripts/jsonld.mjs).
+export const isRecommended = (e) => e.type === 'recommended';
+
 // Registration: the event's Tally form (registrationForm) when it has one, else an email to meta.registrationEmail.
 // tally.so/r/ is the form on its own page; tally.so/embed/ is the same form for the inline iframe (app.js).
 const TALLY = 'https://tally.so';
@@ -132,7 +136,7 @@ export function renderProgramme(data, { features = FEATURES, updated = null, bas
     const calendar = features.addToCalendar && status !== 'cancelled';
     const hasDetails = Boolean(e.description || e.links?.length || e.registration || e.location || calendar);
     const end = endOf(e, meta);
-    const attrs = { id: e.id, class: status, 'data-type': e.type, 'data-date': e.date, 'data-start': e.start, 'data-end-at': end && `${end.date} ${end.time}` };
+    const attrs = { id: e.id, class: isRecommended(e) ? `${status} recommended` : status, 'data-type': e.type, 'data-date': e.date, 'data-start': e.start, 'data-end-at': end && `${end.date} ${end.time}` };
 
     const row = h('div', { class: 'row' },
       // .lead is display: contents on desktop (two grid cells) and one line on mobile ("18:30 Title").

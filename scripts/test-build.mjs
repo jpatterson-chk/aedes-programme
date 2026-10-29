@@ -6,7 +6,7 @@
 import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderProgramme } from '../site/render.js';
+import { isRecommended, renderProgramme } from '../site/render.js';
 import { jsonLdScript, programmeJsonLd } from './jsonld.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -39,7 +39,8 @@ const ldText = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/scr
 let ld = null;
 try { ld = JSON.parse(ldText); } catch (err) { ok(false, 'JSON-LD parses', err.message); }
 if (ld) {
-  ok(ld['@type'] === 'ExhibitionEvent' && ld.subEvent?.length === data.events.length, `JSON-LD: ExhibitionEvent with ${data.events.length} events`, `${ld['@type']}, ${ld.subEvent?.length}`);
+  const own = data.events.filter((e) => !isRecommended(e));
+  ok(ld['@type'] === 'ExhibitionEvent' && ld.subEvent?.length === own.length, `JSON-LD: ExhibitionEvent with ${own.length} events (recommended ones left out)`, `${ld['@type']}, ${ld.subEvent?.length}`);
   // Summer time ends 25 Oct 2026: every event before is CEST (+02:00), every event after is CET (+01:00).
   const wrongOffset = ld.subEvent.filter((e) => !e.startDate.endsWith(e.startDate < '2026-10-25' ? '+02:00' : '+01:00'));
   ok(wrongOffset.length === 0, 'every event has the right offset either side of the 25 Oct DST change', wrongOffset.map((e) => e.startDate).join(', '));
@@ -70,6 +71,10 @@ const item = (id) => regHtml.slice(regHtml.indexOf(`<li id="${id}"`)).split('</l
 ok(item('with-form').includes('href="https://tally.so/r/wzeAYa"') && !item('with-form').includes('mailto:'), 'with a form, Register links to the form, not email');
 ok(item('with-form').includes('data-tally-src="https://tally.so/embed/wzeAYa?') && !/<iframe/.test(regHtml), 'the inline form is prepared but not prerendered as an iframe');
 ok(item('by-email').includes(`href="mailto:${data.meta.registrationEmail}?subject=`), 'without a form, Register still emails');
+
+// Recommended events elsewhere: marked for the grey style
+const recommendedIds = data.events.filter(isRecommended).map((e) => e.id);
+ok(recommendedIds.every((id) => new RegExp(`<li id="${id}" class="[^"]*\\brecommended\\b`).test(app)), 'recommended events carry the recommended class', recommendedIds.join(', '));
 const regLd = programmeJsonLd(reg).subEvent;
 ok(regLd[0].offers.url === 'https://tally.so/r/wzeAYa' && regLd[1].offers.url.endsWith('#by-email'), 'JSON-LD: offer URL is the form, or the event on the page', regLd.map((e) => e.offers.url).join(', '));
 

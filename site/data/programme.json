@@ -18,7 +18,8 @@
     { "id": "review", "label": "public preview", "group": "Public previews" },
     { "id": "meetup", "label": "meet-up", "group": "Talks & meet-ups" },
     { "id": "walk", "label": "walk / run", "group": "Walks & runs" },
-    { "id": "opening", "label": "special event", "group": "Opening & finissage" }
+    { "id": "opening", "label": "special event", "group": "Opening & finissage" },
+    { "id": "recommended", "label": "recommended", "group": "Recommended elsewhere" }
   ],
   "themes": [
     { "id": "play", "label": "PLAY" },
@@ -91,6 +92,16 @@
       "registrationForm": "Z992Bz"
     },
     {
+      "id": "2026-11-10-archint-transition-times",
+      "date": "2026-11-10",
+      "start": "18:30",
+      "end": "21:00",
+      "type": "recommended",
+      "title": "Transition Times – Learnings from Architecture and Urban Development of the 1990s",
+      "location": "BHROX bauhaus reuse, Ernst-Reuter-Platz, Berlin",
+      "description": "CHYBÍK + KRIŠTOF = ARCHITECTS recommend: archint2026#02, ARCHINT at BHROX.\n\nLanguage: English."
+    },
+    {
       "id": "2026-11-11-archi-breakfast-3",
       "date": "2026-11-11",
       "start": "09:00",
@@ -136,7 +147,7 @@
       "date": "2026-11-17",
       "start": "18:00",
       "type": "lecture",
-      "title": "Brno–Berlin: Modernism Across Borders",
+      "title": "Guest lecture: Brno–Berlin / Modernism Across Borders",
       "people": ["Adam Štěch"],
       "description": "Modernism was never confined by national borders. Architects, ideas, publications and new models of living circulated across Central Europe, creating a dense network of influences between cities and cultures. In this lecture, architecture and design historian Adam Štěch explores connections between Czech and German modernism through a personal selection of buildings, interiors and lesser-known architectural stories. Brno, one of the key centres of interwar modern architecture, becomes an important point of departure: from the experimental housing of Nový dům and the city’s remarkable functionalist landscape to parallel developments in Berlin and Germany.\n\nMoving between Brno, Prague, Berlin and other sites across the Czech-German cultural space, the lecture traces shared ideas of modern housing, new forms of domestic life, standardisation, craftsmanship and the Gesamtkunstwerk, as well as the architects and designers who moved between these worlds.\n\nRather than presenting modernism as a collection of isolated national histories, Štěch approaches it as a network of exchanges, encounters and unexpected parallels — revealing both celebrated icons and overlooked details that connect Czech and German architectural culture.\n\nLanguage: English.",
       "registration": true,
@@ -152,6 +163,16 @@
       "description": "Meet the CHYBÍK + KRIŠTOF team over breakfast!\n\nStart your day with coffee, breakfast and a conversation about architecture and the future of our cities. Join us at our open studio at Aedes, meet the architects and the team behind CHYBÍK + KRIŠTOF = Building the Existing City, discover what 4 Transformations for Berlin they are working on and exchange ideas in an informal atmosphere. Everyone is welcome.",
       "registration": true,
       "registrationForm": "xVVbRo"
+    },
+    {
+      "id": "2026-11-19-archint-film-night",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "end": "22:00",
+      "type": "recommended",
+      "title": "Film night at Kino Klick: Veřejně prospěšné práce / Urban Disobedience Toolkit",
+      "location": "KLICK Kino, Windscheidstr. 19, 10627 Berlin",
+      "description": "CHYBÍK + KRIŠTOF = ARCHITECTS recommend: archint2026#02A, ARCHINT at BHROX.\n\nCZ 2025, OmEU, dir. Vladimír Turner.\n\nIn collaboration with the film series Architektur & Film by AkB.\n\nLanguage: English."
     },
     {
       "id": "2026-11-20-public-preview",
@@ -215,18 +236,6 @@
       "description": "Director: Pavel Jirásek, Czech Republic, 2016, 57 min, English subtitles.\n\nThis documentary traces the work of Bohuslav Fuchs, a leading figure of Brno functionalism whose projects — including the Avion Hotel and Zeman Café — shaped the social and architectural life of the city. His attention to openness, light and public purpose makes his legacy a compelling starting point for the ACTIVATE theme.\n\nWith CHYBÍK + KRIŠTOF’s roots firmly established in Brno, the screening also offers a connection to the studio’s hometown and its rich architectural heritage. It brings a distinctly Brno perspective to the Berlin programme, linking the city’s functionalist legacy with contemporary questions of architecture and public space.\n\nLanguage: English (subtitles).",
       "registration": true,
       "registrationForm": "Z99r1V"
-    },
-    {
-      "id": "2026-12-01-lecture-public-space-in-progress",
-      "date": "2026-12-01",
-      "start": "18:30",
-      "type": "lecture",
-      "status": "cancelled",
-      "title": "Building the Existing City: Public Space in Progress",
-      "description": "Supported by mmcité.\n\nCan public life begin before a place is fully built? Bringing together Mendel Square in Brno and Haus der Statistik in Berlin, this discussion explores how urban spaces can evolve through temporary interventions, adaptation and everyday use. While Mendel Square demonstrates how a targeted redesign can transform a fragmented transport hub into a welcoming public space, Haus der Statistik uses temporary cultural and social activities to test new possibilities during an ongoing transformation. Both projects raise a shared question: how can activation, experimentation and public participation shape the future of our cities? Can public space be designed through use — before it is fully designed through architecture?\n\nLanguage: English.",
-      "registration": true,
-      "registrationForm": "dbb97A",
-      "people": ["Ondřej Chybík"]
     },
     {
       "id": "2026-12-03-finissage",
