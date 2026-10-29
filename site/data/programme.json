@@ -13,7 +13,6 @@
   },
   "types": [
     { "id": "lecture", "label": "lecture", "group": "Lectures" },
-    { "id": "screening", "label": "film screening", "group": "Film screenings" },
     { "id": "workshop", "label": "workshop", "group": "Workshops" },
     { "id": "review", "label": "public review", "group": "Public reviews" },
     { "id": "meetup", "label": "meet-up", "group": "Talks & meet-ups" },
@@ -61,7 +60,9 @@
       "start": "09:00",
       "end": "10:30",
       "type": "meetup",
-      "title": "Archi Breakfast #2"
+      "title": "Archi Breakfast #2",
+      "registration": true,
+      "registrationForm": "GeeEqo"
     },
     {
       "id": "2026-11-05-amin-taha-guest-lecture",
@@ -74,17 +75,6 @@
       "description": "How can architecture respond to the changing ways we live while addressing the environmental challenges of our time? In this lecture, Amin Taha, founding partner of London-based architecture practice GROUPWORK, explores the relationship between materials, construction and architectural expression. Drawing on the studio’s experimental approach and innovative use of structural stone, he reflects on new possibilities for creating sustainable, resource-conscious and inspiring spaces. As part of Building the Existing City, the lecture contributes to the theme LIVE, opening a broader discussion on how architecture can shape the places we inhabit and the ways we live together.\n\n+ Thursday Beer\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "LDDP81"
-    },
-    {
-      "id": "2026-11-09-film-panelstory",
-      "date": "2026-11-09",
-      "start": "18:30",
-      "type": "screening",
-      "title": "PanelStory, or How a Housing Development Is Born",
-      "themes": ["live"],
-      "description": "Original title: Panelstory aneb Jak se rodí sídliště. Director: Věra Chytilová, Czechoslovakia, 1979, 100 min. English subtitles.\n\nSet in a still-unfinished housing estate in late-1970s Prague, Věra Chytilová’s sharp, energetic satire examines what it means to inhabit a city before it is ready. Amid mud, construction materials and interrupted routines, residents negotiate their homes, neighbours and shared spaces. The film exposes the friction between large-scale planning and the unpredictability of everyday life — a provocative point of departure for LIVE.\n\nLanguage: English.",
-      "registration": true,
-      "registrationForm": "peeDgb"
     },
     {
       "id": "2026-10-29-51n4e-guest-lecture",
@@ -104,7 +94,9 @@
       "start": "09:00",
       "end": "10:30",
       "type": "meetup",
-      "title": "Archi Breakfast #3"
+      "title": "Archi Breakfast #3",
+      "registration": true,
+      "registrationForm": "2jjdlV"
     },
     {
       "id": "2026-11-11-whats-cooking",
@@ -153,7 +145,9 @@
       "start": "09:00",
       "end": "10:30",
       "type": "meetup",
-      "title": "Archi Breakfast #4"
+      "title": "Archi Breakfast #4",
+      "registration": true,
+      "registrationForm": "xVVbRo"
     },
     {
       "id": "2026-11-22-umherum-family-workshop",
@@ -164,23 +158,14 @@
       "title": "UMHERUM: open family workshop about architecture and city life"
     },
     {
-      "id": "2026-11-23-film-first-lady-of-czech-architecture",
-      "date": "2026-11-23",
-      "start": "18:00",
-      "type": "screening",
-      "title": "First Lady of Czech Architecture",
-      "themes": ["adapt"],
-      "description": "Director: Jana Chytilová, Czech Republic, 2017, 53 min, English subtitles.\n\nJana Chytilová’s documentary portrays architect Alena Šrámková and her uncompromising approach to form, material and purpose. Through her life and work — from Prague’s Main Railway Station concourse to the Faculty of Architecture at CTU — the film opens a conversation about architectural endurance, shifting needs and the cultural value of buildings over time.\n\nLanguage: English.",
-      "registration": true,
-      "registrationForm": "8NNZ9x"
-    },
-    {
       "id": "2026-11-25-archi-breakfast-5",
       "date": "2026-11-25",
       "start": "09:00",
       "end": "10:30",
       "type": "meetup",
-      "title": "Archi Breakfast #5"
+      "title": "Archi Breakfast #5",
+      "registration": true,
+      "registrationForm": "RWWebl"
     },
     {
       "id": "2026-11-25-space-popular-guest-lecture",
@@ -204,17 +189,6 @@
       "themes": ["live", "play", "activate", "adapt"],
       "description": "A 5 km route tracking the themes LIVE, PLAY, ACTIVATE and ADAPT.",
       "missing": ["meeting point", "registration (no longer mentioned in the final programme)"]
-    },
-    {
-      "id": "2026-11-30-film-bohuslav-fuchs",
-      "date": "2026-11-30",
-      "start": "18:30",
-      "type": "screening",
-      "title": "European Architect Bohuslav Fuchs",
-      "themes": ["activate"],
-      "description": "Director: Pavel Jirásek, Czech Republic, 2016, 57 min, English subtitles.\n\nThis documentary traces the work of Bohuslav Fuchs, a leading figure of Brno functionalism whose projects — including the Avion Hotel and Zeman Café — shaped the social and architectural life of the city. His attention to openness, light and public purpose makes his legacy a compelling starting point for the ACTIVATE theme.\n\nLanguage: English.",
-      "registration": true,
-      "registrationForm": "5XXZNd"
     },
     {
       "id": "2026-12-01-lecture-public-space-in-progress",
