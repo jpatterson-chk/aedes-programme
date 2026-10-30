@@ -72,6 +72,12 @@ ok(item('with-form').includes('href="https://tally.so/r/wzeAYa"') && !item('with
 ok(item('with-form').includes('data-tally-src="https://tally.so/embed/wzeAYa?') && !/<iframe/.test(regHtml), 'the inline form is prepared but not prerendered as an iframe');
 ok(item('by-email').includes(`href="mailto:${data.meta.registrationEmail}?subject=`), 'without a form, Register still emails');
 
+// Themes: "#LIVE" etc. in grey after the title
+const themed = data.events.filter((e) => e.themes?.length);
+const themeLabel = new Map(data.themes.map((t) => [t.id, t.label]));
+const missingThemes = themed.filter((e) => !app.includes(`<span class="dim themes">${e.themes.map((id) => `#${themeLabel.get(id)}`).join(' ')}</span>`));
+ok(themed.length > 0 && missingThemes.length === 0, `themes follow the title in grey (${themed.length} events)`, missingThemes.map((e) => e.id).join(', '));
+
 // Recommended events elsewhere: marked for the grey style
 const recommendedIds = data.events.filter(isRecommended).map((e) => e.id);
 ok(recommendedIds.every((id) => new RegExp(`<li id="${id}" class="[^"]*\\brecommended\\b`).test(app)), 'recommended events carry the recommended class', recommendedIds.join(', '));

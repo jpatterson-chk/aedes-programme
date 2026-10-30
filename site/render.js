@@ -122,6 +122,7 @@ function linkTarget(url) {
 export function renderProgramme(data, { features = FEATURES, updated = null, baseUrl } = {}) {
   const { meta } = data;
   const types = new Map(data.types.map((t) => [t.id, t]));
+  const themes = new Map((data.themes ?? []).map((t) => [t.id, t]));
   const events = [...data.events].sort((a, b) => `${a.date} ${a.start}`.localeCompare(`${b.date} ${b.start}`));
   // webcal:// makes calendar apps subscribe to programme.ics (and keep it updated) rather than import it once.
   const subscribeUrl = new URL('programme.ics', baseUrl).href.replace(/^https?:/, 'webcal:');
@@ -144,6 +145,8 @@ export function renderProgramme(data, { features = FEATURES, updated = null, bas
         h('div', { class: 'cell time' }, h('time', { datetime: `${e.date}T${e.start}` }, e.start)),  // start only; "end" is kept for calendar/now features
         h('div', { class: 'cell name' },
           h('span', { class: 'title' }, e.title),
+          // Themes in grey after the title, as in the printed programme: "#LIVE #PLAY".
+          e.themes?.length && [' ', h('span', { class: 'dim themes' }, e.themes.map((id) => `#${themes.get(id)?.label ?? id}`).join(' '))],
           status === 'cancelled' && [' ', h('span', { class: 'dim status' }, 'CANCELLED')],
           status !== 'scheduled' && e.note && [' ', h('span', { class: 'dim note' }, e.note)],
           features.todayNowPast && h('span', { class: 'label-now', hidden: true }, ' NOW'),
