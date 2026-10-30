@@ -15,7 +15,7 @@
     { "id": "lecture", "label": "lecture", "group": "Lectures" },
     { "id": "screening", "label": "film screening", "group": "Film screenings" },
     { "id": "workshop", "label": "workshop", "group": "Workshops" },
-    { "id": "review", "label": "public preview", "group": "Public previews" },
+    { "id": "review", "label": "public review", "group": "Public reviews" },
     { "id": "meetup", "label": "meet-up", "group": "Talks & meet-ups" },
     { "id": "walk", "label": "walk / run", "group": "Walks & runs" },
     { "id": "opening", "label": "special event", "group": "Opening & finissage" },
@@ -175,16 +175,6 @@
       "description": "CHYBÍK + KRIŠTOF = ARCHITECTS recommend: archint2026#02A, ARCHINT at BHROX.\n\nCZ 2025, OmEU, dir. Vladimír Turner.\n\nIn collaboration with the film series Architektur & Film by AkB.\n\nLanguage: English."
     },
     {
-      "id": "2026-11-20-public-preview",
-      "date": "2026-11-20",
-      "start": "12:00",
-      "end": "17:00",
-      "type": "review",
-      "title": "Public preview: 4 Transformations for Berlin",
-      "themes": ["activate", "live", "adapt", "play"],
-      "description": "Collaborative workshop / work in progress.\n\nHow can we shape the future of Berlin together? Join the CHYBÍK + KRIŠTOF team for an open, informal exchange around four ongoing urban projects: ACTIVATE at Innsbrucker Platz, LIVE at Frankfurter Allee, ADAPT at Dragonerareal in Kreuzberg, and PLAY at Sommerbad Seestraße.\n\nExplore the ideas taking shape, meet the architects, ask questions and share your own perspectives, experiences and suggestions. Whether you live nearby, work in the area or are simply interested in Berlin’s future, your input is welcome and can help inform the developing proposals.\n\nDrop in anytime between 12:00 and 17:00."
-    },
-    {
       "id": "2026-11-22-umherum-family-workshop",
       "date": "2026-11-22",
       "start": "13:00",
@@ -214,6 +204,16 @@
       "description": "How can architecture activate new forms of interaction, participation and collective experience across physical and digital spaces?\n\nIn this lecture, architecture and design studio Space Popular explores the evolving relationship between the built environment, digital technologies and the ways we experience space. Drawing on its experimental practice across architecture, research and virtual environments, the studio reflects on how emerging forms of spatial interaction can reshape our understanding of public space and urban life.\n\nAs part of Building the Existing City, the lecture contributes to the theme ACTIVATE, opening a broader discussion on how architecture can connect people, places and new forms of shared experience.\n\n+ Wednesday Beer\n\nLanguage: English.",
       "registration": true,
       "registrationForm": "zEE7Vq"
+    },
+    {
+      "id": "2026-11-20-public-preview",
+      "date": "2026-11-26",
+      "start": "12:00",
+      "end": "17:00",
+      "type": "review",
+      "title": "Public review: 4 Transformations for Berlin",
+      "themes": ["activate", "live", "adapt", "play"],
+      "description": "Collaborative workshop / work in progress.\n\nHow can we shape the future of Berlin together? Join the CHYBÍK + KRIŠTOF team for an open, informal exchange around four ongoing urban projects: ACTIVATE at Innsbrucker Platz, LIVE at Frankfurter Allee, ADAPT at Dragonerareal in Kreuzberg, and PLAY at SpOrt365 Sommerbad Seestraße.\n\nExplore the ideas taking shape, meet the architects, ask questions and share your own perspectives, experiences and suggestions. Whether you live nearby, work in the area or are simply interested in Berlin’s future, your input is welcome and can help inform the developing proposals.\n\n12:00–13:00 Press preview\n13:00–14:00 SpOrt365 Sommerbad Seestraße\n14:00–15:00 Dragonerareal\n15:00–16:00 Frankfurter Allee\n16:00–17:00 Innsbrucker Platz"
     },
     {
       "id": "2026-11-29-community-run-ride",
