@@ -147,7 +147,8 @@ export function renderProgramme(data, { features = FEATURES, updated = null, bas
           h('span', { class: 'title' }, e.title),
           // Themes in grey after the title, as in the printed programme: "#LIVE #PLAY".
           e.themes?.length && [' ', h('span', { class: 'dim themes' }, e.themes.map((id) => `#${themes.get(id)?.label ?? id}`).join(' '))],
-          status === 'cancelled' && [' ', h('span', { class: 'dim status' }, 'CANCELLED')],
+          // A cancelled event's note replaces the CANCELLED label, e.g. "MOVED to 22 Nov".
+          status === 'cancelled' && !e.note && [' ', h('span', { class: 'dim status' }, 'CANCELLED')],
           status !== 'scheduled' && e.note && [' ', h('span', { class: 'dim note' }, e.note)],
           features.todayNowPast && h('span', { class: 'label-now', hidden: true }, ' NOW'),
           hasDetails && [' ', h('span', { class: 'dim toggle', 'aria-hidden': 'true' })],  // nbsp keeps "+" with the last word

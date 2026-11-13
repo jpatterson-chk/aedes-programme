@@ -6,7 +6,7 @@ Exhibition programme for Chybík + Krištof at Aedes, Berlin (22 Oct – 3 Dec 2
 
 - Programme changes touch `site/data/programme.json` only.
 - Never rename an existing `id`. It is used for anchors and `.ics` filenames.
-- Cancel events with `"status": "cancelled"`; do not delete them. Use `"note"` for a short public line, e.g. "Moved from 12 Nov".
+- Cancel events with `"status": "cancelled"`; do not delete them. Use `"note"` for a short public line, e.g. "Moved from 12 Nov". On a cancelled event the note replaces the CANCELLED label, so make it say what happened (e.g. "MOVED to 22 Nov"); with no note it shows CANCELLED.
 - Times are 24-hour `HH:MM` wall-clock time in Berlin. Never convert time zones.
 - `description` is plain text; separate paragraphs with a blank line (`\n\n`). No HTML.
 - Never invent missing details (times, names, descriptions). Ask instead.
