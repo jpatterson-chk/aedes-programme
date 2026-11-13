@@ -164,8 +164,6 @@
       "end": "10:00",
       "type": "meetup",
       "title": "Archi Breakfast #4",
-      "status": "changed",
-      "note": "Moved from 18 Nov",
       "description": "Meet the CHYBÍK + KRIŠTOF team over breakfast!\n\nStart your day with coffee, breakfast and a conversation about architecture and the future of our cities. Join us at our open studio at Aedes, meet the architects and the team behind CHYBÍK + KRIŠTOF = Building the Existing City, discover what 4 Transformations for Berlin they are working on and exchange ideas in an informal atmosphere. Everyone is welcome.",
       "registration": true,
       "registrationForm": "xVVbRo"
@@ -228,8 +226,6 @@
       "start": "18:30",
       "type": "lecture",
       "title": "Space Popular: guest lecture & discussion",
-      "status": "changed",
-      "note": "Moved from 25 Nov",
       "people": ["Space Popular"],
       "themes": ["activate"],
       "description": "How can architecture activate new forms of interaction, participation and collective experience across physical and digital spaces?\n\nIn this lecture, architecture and design studio Space Popular explores the evolving relationship between the built environment, digital technologies and the ways we experience space. Drawing on its experimental practice across architecture, research and virtual environments, the studio reflects on how emerging forms of spatial interaction can reshape our understanding of public space and urban life.\n\nAs part of Building the Existing City, the lecture contributes to the theme ACTIVATE, opening a broader discussion on how architecture can connect people, places and new forms of shared experience.\n\n+ Thursday Beer\n\nLanguage: English.",
